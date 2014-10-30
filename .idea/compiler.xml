@@ -22,7 +22,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="scattered=items" />
+        <module name="items-thkinjava" />
       </profile>
     </annotationProcessing>
   </component>

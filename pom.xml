@@ -6,7 +6,18 @@
 
     <groupId>org.andy.items</groupId>
     <artifactId>scattered-items</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>items-thkinjava</module>
+    </modules>
 
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.1</version>
+        </dependency>
+    </dependencies>
 
 </project>

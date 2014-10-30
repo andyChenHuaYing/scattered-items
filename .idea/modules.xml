@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/items-thkinjava/items-thkinjava.iml" filepath="$PROJECT_DIR$/items-thkinjava/items-thkinjava.iml" />
       <module fileurl="file://$PROJECT_DIR$/scattered=items.iml" filepath="$PROJECT_DIR$/scattered=items.iml" />
     </modules>
   </component>
