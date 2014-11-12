@@ -22,9 +22,19 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="items-arithmetic" />
+        <module name="items-javaoriginalcode" />
+        <module name="items-spring" />
         <module name="items-thkinjava" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="items-arithmetic" target="1.7" />
+      <module name="items-javaoriginalcode" target="1.7" />
+      <module name="items-mavenweb" target="1.7" />
+      <module name="items-thkinjava" target="1.7" />
+      <module name="scattered=items" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
 

@@ -10,14 +10,158 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>items-thkinjava</module>
+        <module>items-arithmetic</module>
+        <module>items-javaoriginalcode</module>
+        <module>items-spring</module>
     </modules>
 
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.1</version>
-        </dependency>
-    </dependencies>
+    <properties>
+        <junit.version>4.1</junit.version>
+        <testng.version>6.8.8</testng.version>
+        <sources.plugin.verion>2.1.1</sources.plugin.verion>
+        <org.springframework>4.1.1.RELEASE</org.springframework>
+    </properties>
 
+    <name>scattered-items</name>
+
+    <description>Normal study items collection</description>
+
+    <url>Coming soon...</url>
+
+    <inceptionYear>2014-10-29</inceptionYear>
+
+    <organization>
+        <name>Andy chen</name>
+        <url>Coming soon...</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>andy chen's license</name>
+            <url>Coming soon...</url>
+            <distribution>Coming soon...</distribution>
+            <comments>All Right revers!</comments>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>AndyChen</id>
+            <name>Andy chen</name>
+            <email>461857202@qq.com</email>
+            <url>Coming soon...</url>
+            <organization>Andy chen's organization</organization>
+            <organizationUrl>Coming soon...</organizationUrl>
+            <roles>
+                <role>Administrator</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <contributors>
+        <contributor>
+            <name/>
+            <email/>
+            <url/>
+            <organization/>
+            <organizationUrl/>
+            <roles/>
+            <timezone/>
+            <properties>
+                <key>value</key>
+            </properties>
+        </contributor>
+    </contributors>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>${sources.plugin.verion}</version>
+                    <executions>
+                        <execution>
+                            <id>attach-sources</id>
+                            <phase>verify</phase>
+                            <goals>
+                                <goal>jar-no-fork</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.12.4</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>cobertura-maven-plugin</artifactId>
+                    <version>2.6</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+                <version>2.6</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>${testng.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${org.springframework}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <repositories>
+        <repository>
+            <id>jboss-maven2-release-repository</id>
+            <name>jboss</name>
+            <url>http://repository.jboss.org/maven2/</url>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus-release</id>
+            <name>Project release repository</name>
+            <url>http://localhost:8081/nexus/content/repositories/releases/</url>
+            <!--<url>http://localhost:8081/nexus/content/repositories/Foo_Release/</url>-->
+        </repository>
+
+        <snapshotRepository>
+            <id>nexus-snapshot</id>
+            <name>Project snapshot repositories</name>
+            <url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
+            <!--<url>http://localhost:8081/nexus/content/repositories/Foo_Snapshots/</url>-->
+        </snapshotRepository>
+    </distributionManagement>
 </project>

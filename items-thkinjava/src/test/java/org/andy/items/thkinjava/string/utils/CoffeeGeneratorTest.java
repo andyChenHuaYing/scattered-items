@@ -2,7 +2,6 @@ package org.andy.items.thkinjava.string.utils;
 
 import junit.framework.Assert;
 import org.andy.items.thkinjava.string.dto.Coffee;
-import org.andy.items.thkinjava.string.dto.Latte;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -32,10 +31,5 @@ public class CoffeeGeneratorTest {
             coffees1.add(it.next());
         }
         Assert.assertEquals(10, coffees1.size());
-    }
-
-    @Test
-    public void testNext() throws Exception {
-        Assert.assertEquals(true, coffees.next() instanceof Latte);
     }
 }
