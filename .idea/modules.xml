@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/items-arithmetic/items-arithmetic.iml" filepath="$PROJECT_DIR$/items-arithmetic/items-arithmetic.iml" />
       <module fileurl="file://$PROJECT_DIR$/items-javaoriginalcode/items-javaoriginalcode.iml" filepath="$PROJECT_DIR$/items-javaoriginalcode/items-javaoriginalcode.iml" />
       <module fileurl="file://$PROJECT_DIR$/items-spring/items-spring.iml" filepath="$PROJECT_DIR$/items-spring/items-spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/items-springMVC/items-springMVC.iml" filepath="$PROJECT_DIR$/items-springMVC/items-springMVC.iml" />
       <module fileurl="file://$PROJECT_DIR$/items-thkinjava/items-thkinjava.iml" filepath="$PROJECT_DIR$/items-thkinjava/items-thkinjava.iml" />
       <module fileurl="file://$PROJECT_DIR$/scattered=items.iml" filepath="$PROJECT_DIR$/scattered=items.iml" />
     </modules>

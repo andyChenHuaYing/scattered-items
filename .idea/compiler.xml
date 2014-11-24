@@ -25,6 +25,7 @@
         <module name="items-arithmetic" />
         <module name="items-javaoriginalcode" />
         <module name="items-spring" />
+        <module name="items-springMVC" />
         <module name="items-thkinjava" />
       </profile>
     </annotationProcessing>
