@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="movieFinder" class="org.springframework.samples.annotations.MovieFinder"/>
+    <bean id="bar" class="org.springframework.samples.ioc.Bar"/>
+    <bean id="baz" class="org.springframework.samples.ioc.Baz"/>
+
+    <!-- Injected by constructor -->
+    <bean id="simpleMovieLister" class="org.springframework.samples.ioc.SimpleMovieLister">
+        <property name="movieFinder" ref="movieFinder"/>
+        <property name="foo" ref="foo"/>
+        <!--<constructor-arg ref="movieFinder"/>-->
+    </bean>
+
+    <bean id="cda" class="org.springframework.samples.ioc.CircularDependencyA">
+        <!--<constructor-arg ref="cdb"/>-->
+        <property name="circularDependencyB" ref="cdb"/>
+    </bean>
+
+    <bean id="cdb" class="org.springframework.samples.ioc.CircularDependencyB">
+        <!--<constructor-arg ref="cda"/>-->
+        <property name="circularDependencyA" ref="cda"/>
+    </bean>
+
+    <!-- c-namespace declaration -->
+    <bean id="foo" class="org.springframework.samples.ioc.Foo"
+          c:bar-ref="bar"
+          c:baz-ref="baz">
+        <!--<constructor-arg ref="bar"/>-->
+        <!--<constructor-arg ref="baz"/>-->
+
+
+
+        <property name="accounts">
+            <map>
+                <entry key="one" value="9.99"/>
+                <entry key="two" value="6.29"/>
+                <entry key="six" value="3.99"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="exampleBean" class="org.springframework.samples.ioc.ExampleBean">
+        <!--<constructor-arg type="int" value="750000"/>-->
+        <!--<constructor-arg type="java.lang.String" value="No answer..."/>-->
+
+        <!-- injected constructor arguments by argument's name -->
+        <!--<constructor-arg name="ultimateAnswer" value="No answer...name"/>-->
+        <!--<constructor-arg name="year" value="750000"/>-->
+
+        <!-- injected constructor arguments by index -->
+        <!--<constructor-arg index="0" value="75000"/>-->
+        <!--<constructor-arg index="1" value="Still no answer..."/>-->
+        <property name="email">
+            <value>""</value>
+        </property>
+        <property name="gmail">
+            <null/>
+        </property>
+    </bean>
+
+    <!-- depends on-->
+    <!--<bean id="dependsBean" class="org.springframework.samples.ioc.DependsOnSomeBean" depends-on="beDependsOnBean"/>-->
+    <bean id="beDependsOnBean" class="org.springframework.samples.ioc.BeDependsOnBean"/>
+    <bean id="accountDaoDepends" class="org.springframework.samples.ioc.AccountDao"/>
+
+    <!-- depends on multiple -->
+    <bean id="dependsBean" class="org.springframework.samples.ioc.DependsOnSomeBean" depends-on="beDependsOnBean, accountDaoDepends">
+        <property name="beDependsOnBean" ref="beDependsOnBean"/>
+    </bean>
+
+
+    <bean class="org.springframework.samples.utils.OrderUtils"/>
+</beans>

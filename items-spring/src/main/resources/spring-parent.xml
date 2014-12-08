@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--<bean id="inheritedTestBean" abstract="true" class="org.springframework.samples.parent.TestBean">-->
+        <!--<property name="name" value="parent"/>-->
+        <!--<property name="age" value="1"/>-->
+    <!--</bean>-->
+    <bean id="inheritedTestBean" abstract="true">
+        <property name="name" value="parent"/>
+        <property name="age" value="1"/>
+    </bean>
+
+    <bean id="inheritsWithDifferentClass" class="org.springframework.samples.parent.DerivedTestBean"
+          parent="inheritedTestBean" init-method="initialize">
+        <property name="name" value="override"/>
+    </bean>
+</beans>

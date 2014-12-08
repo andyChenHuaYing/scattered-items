@@ -1,0 +1,19 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+      <bean id="andy-classic" class="org.springframework.samples.ioc.Person">
+          <property name="name" value="andy_husband"/>
+          <property name="spouse" ref="star-classic"/>
+      </bean>
+
+    <bean id="star-classic" class="org.springframework.samples.ioc.Person"
+          p:name="star_wife"
+          p:spouse-ref="andy-classic"/>
+
+      <bean id="year" class="org.springframework.samples.ioc.Person">
+          <property name="name" value="Year"/>
+      </bean>
+</beans>
