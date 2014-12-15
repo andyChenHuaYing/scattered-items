@@ -16,6 +16,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/items-mavenweb/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-aop/pom.xml" />
       </set>
     </option>
   </component>

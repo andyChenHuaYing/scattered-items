@@ -23,6 +23,10 @@
           <file>file://$MODULE_DIR$/src/main/resources/spring-i18nDefault.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-importResource.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-resources.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-aspectSchemaBase.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-1.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-aop-schema-base.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-aop-aspectj.xml</file>
         </fileset>
       </configuration>
     </facet>
@@ -38,6 +42,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.7.4" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:4.1.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.1.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />

@@ -23,6 +23,9 @@
         <org.springframework>4.1.1.RELEASE</org.springframework>
         <servlet-api>3.1.0</servlet-api>
         <javax.inject>1</javax.inject>
+        <javax.el>2.2.4</javax.el>
+        <org.hibernate>5.0.2.Final</org.hibernate>
+        <org.aspectj>1.7.4</org.aspectj>
     </properties>
 
     <name>scattered-items</name>  
@@ -126,6 +129,24 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>${org.aspectj}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${org.hibernate}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.el</groupId>
+                <artifactId>javax.el-api</artifactId>
+                <version>${javax.el}</version>
+            </dependency>
+
             <dependency>
                 <groupId>javax.inject</groupId>
                 <artifactId>javax.inject</artifactId>

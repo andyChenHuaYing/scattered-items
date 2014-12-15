@@ -27,6 +27,7 @@
         <module name="items-spring" />
         <module name="items-springMVC" />
         <module name="items-thkinjava" />
+        <module name="spring-aop" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

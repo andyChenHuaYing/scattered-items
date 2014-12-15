@@ -1,6 +1,6 @@
 package org.springframework.samples.aop.annotation.dao;
 
-import org.springframework.samples.aop.schameBase.dto.User;
+import org.springframework.samples.aop.dto.User;
 
 /**
  * Happy day, happy life.
