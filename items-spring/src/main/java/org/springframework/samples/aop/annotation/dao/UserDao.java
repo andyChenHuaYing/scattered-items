@@ -11,4 +11,6 @@ import org.springframework.samples.aop.dto.User;
  */
 public interface UserDao {
     public void addUser(User user);
+
+    User proceedUser(User user, String description);
 }

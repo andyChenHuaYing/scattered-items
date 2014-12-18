@@ -3,6 +3,7 @@ package org.springframework.samples.aop.schemaBase.action;
 import org.springframework.samples.aop.dto.User;
 import org.springframework.samples.aop.schemaBase.service.UserService;
 import org.springframework.samples.exceptions.ProceedFailException;
+import org.springframework.util.StringUtils;
 
 /**
  * Happy day, happy life.
@@ -32,5 +33,16 @@ public class UserAction {
 
     public void setUserService(UserService userService) {
         this.userService = userService;
+    }
+
+    protected boolean checkUserInfo(User user) {
+        if (StringUtils.isEmpty(user.getUserName())) {
+            System.out.println("user name is null...");
+            return false;
+        }else if (StringUtils.isEmpty(user.getPassword())) {
+            System.out.println("password is null...");
+            return false;
+        }
+        return true;
     }
 }

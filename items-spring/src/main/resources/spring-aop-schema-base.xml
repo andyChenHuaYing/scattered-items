@@ -72,8 +72,11 @@
                     types-matching="org.springframework.samples.aop.schemaBase.action.*+"
                     implement-interface="org.springframework.samples.aop.schemaBase.introduction.FilterService"
                     default-impl="org.springframework.samples.aop.schemaBase.introduction.FilterServiceImpl"/>
-        </aop:aspect>
 
+            <!-- validate : As a consequence, any given pointcut will be matched against public methods only! -->
+            <aop:before method="before"
+                        pointcut="execution(* org.springframework.samples.aop.schemaBase.action.*.*(..))"/>
+        </aop:aspect>
 
     </aop:config>
 
