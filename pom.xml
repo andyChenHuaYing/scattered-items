@@ -9,11 +9,13 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>items-thkinjava</module>
+        <module>items-thinking-in-java</module>
         <module>items-arithmetic</module>
-        <module>items-javaoriginalcode</module>
+        <module>items-java-source</module>
         <module>items-spring</module>
         <module>items-springMVC</module>
+        <module>items-design-pattern</module>
+        <module>items-java-reflection</module>
     </modules>
 
     <properties>

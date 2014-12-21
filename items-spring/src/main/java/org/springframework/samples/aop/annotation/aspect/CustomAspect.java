@@ -1,7 +1,9 @@
 package org.springframework.samples.aop.annotation.aspect;
 
+import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 /**
@@ -14,10 +16,17 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
+@Order(value = 1)
 public class CustomAspect {
 
     @Before("execution(* org.springframework.samples.aop.annotation.action.*.*(..))")
     public void before() {
         System.out.println("before...");
+    }
+
+
+    @AfterReturning(pointcut = "bean(*Action)", returning = "user")
+    public void afterReturningWithReturnValue(org.springframework.samples.aop.dto.User user) {
+        System.out.println("after returning and the return value : " + user + ", order : 1");
     }
 }

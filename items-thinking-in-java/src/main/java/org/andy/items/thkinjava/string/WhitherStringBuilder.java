@@ -10,16 +10,16 @@ package org.andy.items.thkinjava.string;
 public class WhitherStringBuilder {
     public String implicit(String[] fields) {
         String str = "";
-        for (int i = 0; i <fields.length; i++) {
-            str += fields[i];
+        for (String field : fields) {
+            str += field;
         }
-        return str.toString();
+        return str;
     }
 
     public String explicit(String[] fields) {
         StringBuilder stringBuilder = new StringBuilder();
-        for (int i = 0; i < fields.length; i++) {
-            stringBuilder.append(fields[i]);
+        for (String field : fields) {
+            stringBuilder.append(field);
         }
         return stringBuilder.toString();
     }

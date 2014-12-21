@@ -2,6 +2,7 @@ package org.springframework.samples.aop.annotation.aspect;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
+import org.springframework.core.annotation.Order;
 import org.springframework.samples.exceptions.ProceedFailException;
 import org.springframework.stereotype.Component;
 
@@ -17,6 +18,7 @@ import org.springframework.stereotype.Component;
 @SuppressWarnings("unused")
 @Component
 @Aspect
+@Order(value = 0)
 public class TransactionAdvisor{
 
 /*-----------------------------------------------------Execution------------------------------------------------------*/
@@ -150,7 +152,7 @@ public class TransactionAdvisor{
      * wildcard expression *Action.
      */
     @Pointcut("bean(*Action)")
-    private void beanNameEndWithAction(){}
+    public void beanNameEndWithAction(){}
 
 
 /*-----------------------------------------------------pointcut usage demonstrate-------------------------------------*/
@@ -231,43 +233,16 @@ public class TransactionAdvisor{
         return object;
     }
 
-
-
-
+    /**
+     * Demonstrate the usage of Order annotation.
+     * @param user
+     *        Join point's parameter, it will be full filled automatically.
+     */
     @AfterReturning(pointcut = "beanNameEndWithAction()", returning = "user")
     public void afterReturningWithReturnValue(org.springframework.samples.aop.dto.User user) {
-        System.out.println("after returning and the return value : " + user);
+        System.out.println("after returning and the return value : " + user + ", order : 0");
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

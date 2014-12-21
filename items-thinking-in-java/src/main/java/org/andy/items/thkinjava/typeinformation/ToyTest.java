@@ -15,9 +15,11 @@ interface Shoots {}
 class Toy {
     // Comment out the following default constructor
     // to see NoSuchMethodError from (*1*)
+    @SuppressWarnings("unused")
     Toy() {}
     Toy(int i) {}
 }
+@SuppressWarnings("unused")
 class FancyToy extends Toy
         implements HasBatteries, Waterproof, Shoots {
     FancyToy() { super(1); }

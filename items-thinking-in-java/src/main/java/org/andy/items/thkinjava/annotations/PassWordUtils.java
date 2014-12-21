@@ -9,6 +9,7 @@ import java.util.List;
  * @version 1.0-SNAPSHOT
  *          Created date: 2014-11-06 20:52
  */
+@SuppressWarnings("unused")
 public class PassWordUtils {
 
     @UseCase(id = 47, description = "Check the password is number.")

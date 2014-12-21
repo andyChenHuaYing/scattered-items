@@ -66,7 +66,8 @@ public class UserAction implements SuperActionService{
      */
     @CustomDeprecatedAnnotation
     public User demonstrateOtherPointcutPatternExpression(User user, String description) {
-        System.out.println(user +  ", description : " + description);
+        userService.proceedUser(user, description);
+        System.out.println(user + ", description : " + description);
         return userService.proceedUser(user, description);
     }
 

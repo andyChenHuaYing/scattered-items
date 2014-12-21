@@ -43,6 +43,7 @@ class Star {
     }
 }
 
+@SuppressWarnings("unused")
 class Year {
     static{
         Print.ln("Year : child");

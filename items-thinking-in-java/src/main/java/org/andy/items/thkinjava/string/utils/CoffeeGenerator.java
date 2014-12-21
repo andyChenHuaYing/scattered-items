@@ -17,6 +17,7 @@ public class CoffeeGenerator implements Generator ,Iterable<Coffee>{
     private int size;
     private static Random random = new Random(47);
 
+    @SuppressWarnings("unused")
     public CoffeeGenerator(){}
     public CoffeeGenerator(int sz){
         this.size = sz;
