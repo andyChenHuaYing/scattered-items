@@ -119,9 +119,9 @@ public class TransactionAdvisor{
 
     /**
      * Any join point (method execution only in Spring AOP) which takes two parameters,
-     * and where the first argument passed at runtime is org.springframework.samples.aop.dto.User
+     * and where the first argument passed at runtime is org.springframework.samples.aop.demo.User
      * the second is java.lang.String.
-     * args(org.springframework.samples.aop.dto.User,..) -- the first parameter not change, but .. means the release
+     * args(org.springframework.samples.aop.demo.User,..) -- the first parameter not change, but .. means the release
      * parameter(s) could be any number and any type.
      */
     @Pointcut("args(org.springframework.samples.aop.dto.User, java.lang.String)")
@@ -179,7 +179,7 @@ public class TransactionAdvisor{
 
 //    @After("execution(public * *(..))")
 //    @After("execution(public * *())")
-//    @After("execution(public * *(org.springframework.samples.aop.dto.User, String))")
+//    @After("execution(public * *(org.springframework.samples.aop.demo.User, String))")
 //    @After("execution(public * *(*))")
 //    @After("execution(* *(..))")
 //    @After("execution(* )")
