@@ -16,6 +16,12 @@ public class ShowClassDetailInfoTest {
     }
 
     @Test
+    public void testShowAllDirectInstanceFieldsValue() throws Exception {
+        ShowClassDetailInfo.showAllDirectInstanceFieldsValue(new TargetClass("changed private string value."));
+
+    }
+
+    @Test
     public void testShowClassAllInfo() throws Exception {
         System.out.println(ShowClassDetailInfo.showClassFullInfo(String.class));
     }

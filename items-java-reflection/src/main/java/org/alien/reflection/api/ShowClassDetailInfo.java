@@ -136,7 +136,33 @@ public class ShowClassDetailInfo {
         return stringBuffer.toString();
     }
 
+    /**
+     * Show all fields value declared by target class instance.
+     * @param object
+     *        Target class instance.
+     * @return
+     *        The object array of fields value.
+     * @throws IllegalAccessException
+     *        Execution failed.
+     */
+    public static Object[] showAllDirectInstanceFieldsValue(Object object) throws IllegalAccessException {
+        Field[] fields = object.getClass().getDeclaredFields();
+        Object[] objects = new Object[fields.length];
 
+        for (int i = 0; i < fields.length; i++) {
+            Field field = fields[i];
+            /*
+            change the access privilege so that we could obtain or change the private Field ,
+            Constructor(except Class) or private method action.
+            */
+            field.setAccessible(true);
+            Object obj = fields[i].get(object);
+            objects[i] = obj;
+            System.out.println(fields[i].get(object));
+            System.out.println(Modifier.toString(fields[i].getModifiers()));
+        }
+        return objects;
+    }
 
     /**
      * Show class's declared field.
