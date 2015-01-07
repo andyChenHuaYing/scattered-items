@@ -25,7 +25,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="E:\IdeaProjects\scattered=items\items-springMVC\target/MANIFEST.MF" />
+        <element id="file-copy" path="F:\storage_java\java_item_list\IdeaProjects\scattered-items\items-springMVC\target/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="items-springMVC/web/Web" />
     </root>

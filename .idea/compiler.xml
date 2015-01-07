@@ -31,15 +31,8 @@
         <module name="items-springMVC" />
         <module name="items-thinking-in-java" />
         <module name="items-thkinjava" />
-        <module name="spring-aop" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="items-arithmetic" target="1.7" />
-      <module name="items-javaoriginalcode" target="1.7" />
-      <module name="items-mavenweb" target="1.7" />
-      <module name="items-thkinjava" target="1.7" />
-      <module name="scattered=items" target="1.7" />
-    </bytecodeTargetLevel>
   </component>
 </project>
+

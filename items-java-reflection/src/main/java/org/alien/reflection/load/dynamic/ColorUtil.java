@@ -21,16 +21,20 @@ public class ColorUtil {
      * just add an class which achieve the color interface and implements the showRGB method. 
      */
     public void showRGB() {
+        Class colorClazz = null;
         try {
-            Class colorClazz = Class.forName(colorClass);
-            Color color = (Color) colorClazz.newInstance();
-            color.showRGB();
+            colorClazz = Class.forName(colorClass);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
+        }
+        Color color = null;
+        try {
+            color = (Color) colorClazz.newInstance();
         } catch (InstantiationException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
+        color.showRGB();
     }
 }

@@ -6,10 +6,11 @@
       <module fileurl="file://$PROJECT_DIR$/items-design-pattern/items-design-pattern.iml" filepath="$PROJECT_DIR$/items-design-pattern/items-design-pattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/items-java-reflection/items-java-reflection.iml" filepath="$PROJECT_DIR$/items-java-reflection/items-java-reflection.iml" />
       <module fileurl="file://$PROJECT_DIR$/items-java-source/items-java-source.iml" filepath="$PROJECT_DIR$/items-java-source/items-java-source.iml" />
+      <module fileurl="file://$PROJECT_DIR$/items-javascript/items-javascript.iml" filepath="$PROJECT_DIR$/items-javascript/items-javascript.iml" />
       <module fileurl="file://$PROJECT_DIR$/items-spring/items-spring.iml" filepath="$PROJECT_DIR$/items-spring/items-spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/items-springMVC/items-springMVC.iml" filepath="$PROJECT_DIR$/items-springMVC/items-springMVC.iml" />
       <module fileurl="file://$PROJECT_DIR$/items-thinking-in-java/items-thinking-in-java.iml" filepath="$PROJECT_DIR$/items-thinking-in-java/items-thinking-in-java.iml" />
-      <module fileurl="file://$PROJECT_DIR$/scattered=items.iml" filepath="$PROJECT_DIR$/scattered=items.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scattered-items.iml" filepath="$PROJECT_DIR$/scattered-items.iml" />
     </modules>
   </component>
 </project>

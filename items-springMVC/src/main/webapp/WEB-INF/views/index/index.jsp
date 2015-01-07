@@ -9,10 +9,11 @@
 <html>
 <head>
     <title>Hello World</title>
+    <script language="JavaScript" src="../js/index.js"/>
 </head>
-<body>
+<body onload="init();">
 <h2>Hello World!</h2>
 
-<h3>${msg}</h3>
+<%--<h3>${msg}</h3>--%>
 </body>
 </html>
