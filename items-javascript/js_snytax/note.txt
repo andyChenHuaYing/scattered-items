@@ -1,0 +1,88 @@
+/**
+ * variable definition
+ */
+var name = "alien", age = 25;
+
+/**
+ *date type 
+ */
+var stringType = "alien";
+var numberType = 25;
+var booleanType = true;
+
+//Array type
+var arrayType1 = new Array(3);
+arrayType1[0] = "stringValue1";
+arrayType1[1] = "stringValue2";
+arrayType1[2] = "stringValue3";
+
+var arrayType2 = new Array();
+arrayType2[0] = "stringValue1";
+arrayType2[1] = "stringValue2";
+arrayType2[2] = "stringValue3";
+
+
+var arrayType3 = Array("stringValue1", "stringValue2", "stringValue3");
+var arrayType4 = ["stringValue1", "stringValue2", "stringValue3"];
+
+
+/**
+ * user-defined object;
+ * Object Object.property;Object.method();
+ */
+var Person = Object();
+Person.name = "alien";
+Person.age = "25";
+console.log("name : " + Person.name + ", age : " + Person.age);
+
+/**
+ * native Object
+ */
+var nativeArrayObject = new Array();
+var nativeMathObject = new Math();
+var nativeDataObject = new Date();
+
+/**
+ * host Object Form, Image, Element, document, window;
+ */
+
+/**
+ * operation
+ */
+//arithmetic operation
++ - * / ++ --;
+
+//conditional statement
+if (condition) {
+	statements;
+}else if (condition) {
+	statements;
+}else{
+	statements;
+}
+
+//equal operation
+> < >= <= == !=;
+
+//operand
+&& || 
+
+//while circulation
+while (condition) {
+	statements;
+}
+
+do{
+	statements;
+}while(condition);
+
+for (initial condition; test condition; alter condition) {
+	statements;
+}
+
+/**
+ * function definition
+ */
+function method_name ( parameter ... ) {
+	//body statements;
+}
