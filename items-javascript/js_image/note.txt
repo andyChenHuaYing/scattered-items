@@ -1,0 +1,51 @@
+/**
+ * JavaScript picture repository
+ */
+
+/**
+ * All knowledge points in this chapter.
+ */
+function switchPicture (whichPitcure) {
+	var source = whichPitcure.href;
+	var placeholder = document.getElementById('placeholder');
+	placeholder.setAttribute('src', source);
+	var text = whichPitcure.getAttribute('title');
+	document.getElementById('description').firstChild.nodeValue = text;
+}
+
+/**
+ * a == img
+ */
+<a href = "../picture/xxx.jpg" title = "some picture"> picture description </a>
+
+/**
+ * element method
+ */
+var element = document.getElementById('id');
+var hrefValue = element.getAttribute('href');
+element.setAttribute('src', hrefValue);
+
+
+/**
+ * Node method or property
+ */
+var node = 
+element.childNodes; // All child nodes of the element, return an array.
+element.firstChild;
+element.lastChild;
+node.nodeType; // 1-element node , 2 - attribute node, 3 - text node.
+element.firstChild.nodeValue; 
+element.firstChild.nodeValue = value;
+
+/**
+ * active functino when html first load.
+ */
+window.onload = methodName;// without ()
+
+/**
+ * Stop a's href action, just active onlick event.
+ */
+<a href = "www.example.com"  onclick = "methodName(this); return false">Click me to open link</a>
+
+
+
