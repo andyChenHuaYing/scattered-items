@@ -1,5 +1,5 @@
 /**
- * Attach onlick even on a link tag.
+ * Attach onclick even on a link tag.
  */
 function prepareGallery () {
 	if (!document.getElementById) { return false }
@@ -17,7 +17,7 @@ function prepareGallery () {
 					a link will not work if return false.
 				 */
 				return showPicture(this) ? false : true;
-			}
+			};
 			links[i].onkeypress = links[i].onclick;
 		}
 	}
@@ -31,7 +31,7 @@ function insertAfter (newNode, targetElement) {
 	if (parentNode.lastChild == targetElement) {
 		parentNode.appendChild(newNode);
 	} else {
-		parent.insertBefore(newNode, targetElement.nextSibling);
+		parentNode.insertBefore(newNode, targetElement.nextSibling);
 	}
 }
 
@@ -89,7 +89,7 @@ function showPicture(whichPicture){
  */
 function addEvent(fun){
 	var oldFunction = window.onload;
-	if (typeof window.onload != 'function') {
+	if (!oldFunction) {
 		window.onload = fun;
 	} else {
 		window.onload = function () {
