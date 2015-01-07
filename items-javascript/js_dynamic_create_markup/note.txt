@@ -95,7 +95,7 @@ function getNewContent() {
                 document.getElementById("new").appendChild(para);
             }
         };
-        request.send(null);
+        request.send(null); //aaa
     }
 }
 
