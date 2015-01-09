@@ -14,10 +14,10 @@ function prepareSlideShow() {
     var links = document.getElementsByTagName("a");
     links[0].onmouseover = function () {
         moveElementImprove("preview", -100, 0, 10);
-    }
+    };
     links[1].onmouseover = function () {
         moveElementImprove("preview", -200, 0, 10);
-    }
+    };
     links[2].onmouseover = function () {
         moveElementImprove("preview", -300, 0, 10);
     }
