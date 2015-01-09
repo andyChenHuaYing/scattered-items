@@ -1,0 +1,23 @@
+Web browsers' three successive layers:
+    1. Structure        HTML-DOM
+    2. Presentation     DOM-CORE
+    3. Behavior         CSS-DOM
+
+//Note the js loading order!
+style:
+element.style.property
+element.style.property = value;
+element.style.fontSize;
+element.style.fontSize = 1em;
+CSS
+tr:nth-child(odd) {}
+tr:nth-child(even) {}
+
+element.event;
+element.onmouseover = function () {}
+element.onmouseout = function () {}
+
+className
+element.className = "className";
+element.className = " className";
+addClass(elem, className);
