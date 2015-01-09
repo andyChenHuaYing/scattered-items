@@ -62,7 +62,7 @@ if (condition) {
 }
 
 //equal operation
-> < >= <= == !=;
+> < >= <= == != ===;
 
 //operand
 && || 
