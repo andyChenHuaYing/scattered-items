@@ -32,5 +32,4 @@ function insertAfter(targetTag, newTag) {
     }
 }
 
-addEvent(prepareSlideShow);
 
