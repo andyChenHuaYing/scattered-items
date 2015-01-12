@@ -15,7 +15,7 @@ node.innerHTML = htmlValue;
  * DOM methods
  */
 var parent = document.getElementById('id');
-var ndoe = document.createElement(nodeName);
+var node = document.createElement(nodeName);
 parent.appendChild(node);
 
 var txt = document.createTextNode("hello world");
@@ -63,8 +63,8 @@ function insertAfter (newElement, targetElement) {
  * 3. request.onreadystatechange = function(){ //key request.readystate == 4}
  * 4. request.send(parameter);
  *
- * request.readyState hava five possible values:
- * 0 : unintialized
+ * request.readyState have five possible values:
+ * 0 : uninitialized
  * 1 : loading
  * 2 : loaded
  * 3 : interactive
