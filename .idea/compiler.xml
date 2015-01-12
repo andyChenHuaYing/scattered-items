@@ -22,17 +22,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="items-arithmetic" />
-        <module name="items-design-pattern" />
-        <module name="items-java-reflection" />
-        <module name="items-java-source" />
         <module name="items-javaoriginalcode" />
-        <module name="items-spring" />
-        <module name="items-springMVC" />
-        <module name="items-thinking-in-java" />
         <module name="items-thkinjava" />
       </profile>
     </annotationProcessing>
   </component>
 </project>
-
