@@ -60,7 +60,40 @@ var str4 = 'alien';
 console.info("str4.length : " + str4.length);
 console.info("str4.p : " + (str4.p = 'star'));
 console.info("str4.p : " + str4.p);
+console.info("=========================================\r\n");
 
+console.info("typeof 1: " + typeof 1);
+console.info("typeof '1': " + typeof '1');
+console.info("typeof boolean: " + typeof false);
+console.info("typeof null: " + typeof null);
+console.info("typeof undefined: " + typeof undefined);
+console.info("typeof [1, 2]: " + typeof [1, 2]);
+console.info("typeof Math: " + typeof Math);
+function fun (){}
+console.info("typeof fun: " + typeof fun);
+console.info("typeof NaN: " + typeof NaN);
+console.info("=========================================\r\n");
+
+console.info("[1, 2] instanceof Array : " + [1, 2] instanceof Array);
+function Person(){}
+function Student(){}
+Student.prototype = new Person();
+Student.prototype.constructor = Student;
+var alien = new Person();
+console.info("alien instanceof Person : " + alien instanceof Person);
+var student = new Student();
+console.info("student instanceof Person : " + student instanceof Person);
+console.info("=========================================\r\n");
+
+Object.prototype.toString.apply([]); //"[object Array]"
+Object.prototype.toString.apply(function(){}); //"[object Function]"
+Object.prototype.toString.apply(Math); //"[object Math]"
+Object.prototype.toString.apply(new Person()); //"[object Object]"
+Object.prototype.toString.apply(null); //"[object Null]"
+Object.prototype.toString.apply(NaN); //"[object Number]"
+Object.prototype.toString.apply('alien'); //"[object String]"
+Object.prototype.toString.apply(undefined); //"[object Undefined]"
+console.info("=========================================\r\n");
 /*
  * Result :
 
@@ -101,5 +134,15 @@ console.info("str4.p : " + str4.p);
  str4.length : 5
  str4.p : star
  str4.p : undefined
+
+
+ typeof 1: number
+ typeof '1': string
+ typeof boolean: boolean
+ typeof null: object
+ typeof undefined: undefined
+ typeof [1, 2]: object
+ typeof Math: object
+ typeof fun: function
  */
 
