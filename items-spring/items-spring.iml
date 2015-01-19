@@ -11,7 +11,6 @@
           <file>file://$MODULE_DIR$/src/main/resources/spring-i18n.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-event.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-parent.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-annotationcomponentscan.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/org/springframework/samples/resources/spring-resourceLoad.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-annotationEvent.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring.xml</file>
@@ -21,13 +20,15 @@
           <file>file://$MODULE_DIR$/src/main/resources/spring-i18nDefault.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-autowired.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/services.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-lazyinit.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-ioc.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/daos.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-annotation.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-method-injection.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-aop.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-resources.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-circular-dependency.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-annotation-component-scan.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-lazy-init.xml</file>
         </fileset>
       </configuration>
     </facet>
@@ -55,4 +56,3 @@
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.1" level="project" />
   </component>
 </module>
-

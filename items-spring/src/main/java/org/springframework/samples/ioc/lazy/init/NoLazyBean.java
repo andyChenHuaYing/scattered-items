@@ -1,4 +1,4 @@
-package org.springframework.samples.ioc;
+package org.springframework.samples.ioc.lazy.init;
 
 /**
  * Happy day, happy life.

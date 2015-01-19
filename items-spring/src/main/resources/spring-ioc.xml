@@ -16,16 +16,6 @@
         <!--<constructor-arg ref="movieFinder"/>-->
     </bean>
 
-    <bean id="cda" class="org.springframework.samples.ioc.CircularDependencyA">
-        <!--<constructor-arg ref="cdb"/>-->
-        <property name="circularDependencyB" ref="cdb"/>
-    </bean>
-
-    <bean id="cdb" class="org.springframework.samples.ioc.CircularDependencyB">
-        <!--<constructor-arg ref="cda"/>-->
-        <property name="circularDependencyA" ref="cda"/>
-    </bean>
-
     <!-- c-namespace declaration -->
     <bean id="foo" class="org.springframework.samples.ioc.Foo"
           c:bar-ref="bar"

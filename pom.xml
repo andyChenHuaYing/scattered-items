@@ -185,6 +185,7 @@
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
+                <scope>compile</scope>
                 <version>${servlet-api}</version>
             </dependency>
 

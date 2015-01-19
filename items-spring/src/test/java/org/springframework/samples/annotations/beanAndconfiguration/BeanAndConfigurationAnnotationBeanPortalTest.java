@@ -6,7 +6,7 @@ import org.springframework.samples.utils.ShowReferencesUtil;
 
 public class BeanAndConfigurationAnnotationBeanPortalTest extends TestBase{
     public BeanAndConfigurationAnnotationBeanPortalTest() {
-        super("spring-annotationcomponentscan.xml");
+        super("spring-annotation-component-scan.xml");
     }
 
     @Test
