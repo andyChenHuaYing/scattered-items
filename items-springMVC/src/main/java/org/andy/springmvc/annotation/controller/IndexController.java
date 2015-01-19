@@ -1,15 +1,13 @@
-package org.andy.springmvc.controller;
+package org.andy.springmvc.annotation.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
- * Happy day, happy life.
- *
- * @author andy
- * @version 1.0-SNAPSHOT
- *          Created date: 2014-11-18 19:12
+ * Happy daily, happy life.
+ * Created by andychen on 2015/1/19.
+ * Version 1.0-SNAPSHOT
  */
 @Controller
 public class IndexController {
