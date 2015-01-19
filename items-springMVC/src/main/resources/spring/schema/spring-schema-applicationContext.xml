@@ -13,4 +13,7 @@
 
         <bean name="/helloAbstractController"
               class="org.andy.springmvc.schema.controller.HelloSchemaControllerExtendsAbstractController"/>
+
+        <bean name="/helloWithoutModelAndView"
+               class="org.andy.springmvc.schema.controller.HelloSchemaAbstractControllerWithoutModelAndView"/>
 </beans>
