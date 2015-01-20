@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="items-springMVC:war exploded">
+  <artifact type="exploded-war" build-on-make="true" name="items-springMVC:war exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/items_springMVC_war_exploded</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
