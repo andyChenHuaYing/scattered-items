@@ -16,7 +16,7 @@ public class HelloSchemaController implements Controller{
     @Override
     public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
         ModelAndView modelAndView = new ModelAndView();
-        String msg = "Hello Schema SpringMVC Project !";
+        String msg = "Hello Schema SpringMVC Project , Finally i am win and the jrebel seems nice!";
         modelAndView.addObject("msg", msg);
         modelAndView.setViewName("schema/hello");
         return modelAndView;
