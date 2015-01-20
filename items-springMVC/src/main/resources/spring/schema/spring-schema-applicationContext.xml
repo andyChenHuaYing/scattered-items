@@ -16,4 +16,22 @@
 
         <bean name="/helloWithoutModelAndView"
                class="org.andy.springmvc.schema.controller.HelloSchemaAbstractControllerWithoutModelAndView"/>
+
+    <bean name="/helloOnlyPostMethod"
+          class="org.andy.springmvc.schema.controller.HelloSchemaOnlyPostController">
+        <!-- Only support POST -->
+        <property name="supportedMethods" value="POST"/>
+        <!-- Session must exist when this request reach the specified controller -->
+        <property name="requireSession" value="true"/>
+    </bean>
+
+    <!-- Control browser cache time -->
+    <bean name="/helloCacheSeconds"
+          class="org.andy.springmvc.schema.controller.HelloSchemaCacheTimeController">
+        <property name="cacheSeconds" value="5"/>
+    </bean>
+
+    <!-- LastModified in spring -->
+    <bean name="/helloLastModified"
+          class="org.andy.springmvc.schema.controller.HelloSchemaLastModifiedController"/>
 </beans>
