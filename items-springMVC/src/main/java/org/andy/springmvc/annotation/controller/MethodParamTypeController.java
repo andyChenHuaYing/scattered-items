@@ -34,11 +34,6 @@ import java.util.Map;
 @SuppressWarnings("unused")
 public class MethodParamTypeController {
 
-    @RequestMapping("/showLoginForm")
-    public String showForm() {
-        return "annotation/index";
-    }
-
     /**
      * After execution, springMVC will find /WEB-INF/views/param/methodParamType/modelParam.jsp.
      * If you want to stop it, just return null to tell springMVC it's end.

@@ -9,6 +9,24 @@ package org.andy.springmvc.model;
 public class UserModel {
     private String userName;
     private String password;
+    private SchoolModel schoolModel;
+
+    public UserModel() {}
+
+    public UserModel(String userName, String password, SchoolModel schoolModel) {
+
+        this.userName = userName;
+        this.password = password;
+        this.schoolModel = schoolModel;
+    }
+
+    public SchoolModel getSchoolModel() {
+        return schoolModel;
+    }
+
+    public void setSchoolModel(SchoolModel schoolModel) {
+        this.schoolModel = schoolModel;
+    }
 
     public String getUserName() {
         return userName;
@@ -31,6 +49,7 @@ public class UserModel {
         return "UserModel{" +
                 "userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
+                ", schoolModel=" + schoolModel +
                 '}';
     }
 }

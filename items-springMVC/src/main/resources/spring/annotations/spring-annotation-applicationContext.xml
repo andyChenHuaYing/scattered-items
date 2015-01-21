@@ -23,4 +23,18 @@
     <bean class="org.andy.springmvc.annotation.controller.RequestHeaderMappingController"/>
 
     <bean class="org.andy.springmvc.annotation.controller.MethodParamTypeController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.RequestParamAnnotationController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.PathVariableAnnotationController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.CookieAnnotationController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.RequestHeaderAnnotationController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.ShowFormController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.ModelAttributeAnnotationController"/>
 </beans>
+
+
