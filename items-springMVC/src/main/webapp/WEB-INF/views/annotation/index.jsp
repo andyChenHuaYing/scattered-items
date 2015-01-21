@@ -11,10 +11,10 @@
     <title>Hello World</title>
 </head>
 <body>
-<h2>Hello World!</h2>
-<h2>Hello World!</h2>
-<h2>Hello World!</h2>
-
-<%--<h3>${msg}</h3>--%>
+<form action="methodParamType/modelParam" method="post">
+  userName: <input type="text" name="userName" id="userName" title="userName"/><br/>
+  password: <input type="password" name="password" id="password" title="password"/><br/>
+  <input type="submit" value="submit"/>
+</form>
 </body>
 </html>

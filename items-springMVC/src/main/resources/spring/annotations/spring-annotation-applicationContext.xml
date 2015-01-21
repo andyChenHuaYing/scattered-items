@@ -11,4 +11,16 @@
     <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"/>
 
     <bean class="org.andy.springmvc.annotation.controller.IndexController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.ClassRequestMappingController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.UrlMappingRuleController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.MethodTypeMappingController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.ParametersMappingController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.RequestHeaderMappingController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.MethodParamTypeController"/>
 </beans>
