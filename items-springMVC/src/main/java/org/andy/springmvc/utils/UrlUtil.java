@@ -28,5 +28,9 @@ public class UrlUtil {
         }
         return stringBuffer.substring(0, stringBuffer.lastIndexOf(","));
     }
+
+    public static String getMethodType(HttpServletRequest request) {
+        return request.getMethod();
+    }
 }
 

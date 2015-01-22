@@ -20,6 +20,16 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>forwarding</servlet-name>
+        <servlet-class>org.andy.springmvc.servlet.ForwardingServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>forwarding</servlet-name>
+        <url-pattern>/forwardingServlet</url-pattern>
+    </servlet-mapping>
+
     <filter>
         <filter-name>characterEncodingFilter</filter-name>
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>

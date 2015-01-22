@@ -1,5 +1,7 @@
 package org.andy.springmvc.model;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * Happy daily, happy life.
  * Created by andychen on 2015/1/20.
@@ -7,6 +9,8 @@ package org.andy.springmvc.model;
  */
 @SuppressWarnings("unused")
 public class UserModel {
+    @NotNull(message = "userName.not.empty")//userName.not.empty
+//    @NotNull  //不能为null.
     private String userName;
     private String password;
     private SchoolModel schoolModel;

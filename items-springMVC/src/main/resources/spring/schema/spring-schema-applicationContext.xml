@@ -3,12 +3,17 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd ">
 
-        <!-- HandlerMapping -->
+    <!--################################### HandlerMapping&HandlerAdapter ###############################################-->
+
+    <!-- HandlerMapping -->
         <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
         <!-- HandlerAdapter -->
         <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+    <!--#################################################################################################################-->
 
-        <!-- HandlerAdapter adapter /hello url to HelloSchemaController -->
+    <!--#################################### Controller&AbstractController ##############################################-->
+
+    <!-- HandlerAdapter adapter /hello url to HelloSchemaController -->
         <bean name="/hello" class="org.andy.springmvc.schema.controller.HelloSchemaController"/>
 
         <bean name="/helloAbstractController"
@@ -34,4 +39,121 @@
     <!-- LastModified in spring -->
     <bean name="/helloLastModified"
           class="org.andy.springmvc.schema.controller.HelloSchemaLastModifiedController"/>
+    <!--#################################################################################################################-->
+
+
+    <!--#################################### ServletForwardingController ################################################-->
+
+    <!-- Forwarding springMVC request to the specified Servlet.-->
+    <bean name="/forwardingController"
+          class="org.springframework.web.servlet.mvc.ServletForwardingController">
+        <property name="servletName" value="forwarding"/>
+    </bean>
+    <!--#################################################################################################################-->
+
+    <!--############################################### ViewController ##################################################-->
+
+    <!-- ParameterizableWizardViewController, dynamically specified static view page by viewName
+         when project is running -->
+    <bean name="/parameterizableWizardView"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+        <property name="viewName" value="annotation/index"/>
+    </bean>
+
+    <!--"/index" -> "index"
+    "/index.html" -> "index"
+    "/index.html" + prefix "pre_" and suffix "_suf" -> "pre_index_suf"
+    "/products/view.html" -> "products/view"
+
+         pattern       match             not match                              view
+    ?    /index?    -> /index1       !-> /index !-> /index12                 pre_1_suf
+    *    /index1/*  -> /index1/demo  !-> /index1/demo/demo                   pre_demo_suf
+    **   /index2/** -> /index2/demo                                          pre_demo_suf
+                    -> /index2/demo/demo                                     pre_demo/demo_suf
+    Longest match pattern:
+        pattern                  match              view
+    /long/long                /long/long          pre_long/long_suf
+    /long/**/abc              /long/aa/abc        pre_aa_suf
+    /long/*/abc/*/efg         /long/1/abc/2/efg   pre_1/abc/2/efg_suf
+    /long/**                  /long/acd           pre_acd_suf
+    /**                        /abc               pre_abc_suf
+    -->
+    <bean name="/long/*/long/?"
+          class="org.springframework.web.servlet.mvc.UrlFilenameViewController"/>
+    <bean name="/annotation/?"
+          class="org.springframework.web.servlet.mvc.UrlFilenameViewController"/>
+    <bean name="/annotation/*"
+          class="org.springframework.web.servlet.mvc.UrlFilenameViewController"/>
+    <bean name="/annotation/**"
+          class="org.springframework.web.servlet.mvc.UrlFilenameViewController"/>
+    <bean name="/annotation/**/index.html"
+          class="org.springframework.web.servlet.mvc.UrlFilenameViewController"/>
+    <!--#################################################################################################################-->
+
+    <!--################################################ MultiActionController ##########################################-->
+    <!--
+        PropertiesMethodNameResolver
+        http://localhost:8080/myMultiAction/list == MyMultiActionController.list()
+        http://localhost:8080/myMultiAction/create == MyMultiActionController.create()
+        http://localhost:8080/myMultiAction/update == MyMultiActionController.update()
+        http://localhost:8080/myMultiAction/delete == MyMultiActionController.delete()
+        http://localhost:8080/myMultiAction/xxx/xxx == MyMultiActionController.list()
+    -->
+    <bean id="methodNameResolver"
+          class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+        <property name="mappings">
+            <props>
+                <prop key="/myMultiAction/create">create</prop>
+                <prop key="/myMultiAction/update">update</prop>
+                <prop key="/myMultiAction/delete">delete</prop>
+                <prop key="/myMultiAction/list">list</prop>
+                <!--default action -->
+                <prop key="/**">list</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!--
+        ParameterMethodNameResolver
+        http://localhost:8080/myMultiAction/user?create=alien  ==  MyMultiActionController.create()
+        http://localhost:8080/myMultiAction/user?delete=alien  ==  MyMultiActionController.delete()
+        http://localhost:8080/myMultiAction/user?update=alien  ==  MyMultiActionController.update()
+        http://localhost:8080/myMultiAction/user?list=alien  ==  MyMultiActionController.list()
+        http://localhost:8080/myMultiAction/user?doList=alien  ==  MyMultiActionController.list()
+        http://localhost:8080/myMultiAction/user?xxx=alien  ==  MyMultiActionController.list()
+
+     -->
+    <bean id="parameterMethodNameResolver"
+          class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+        <property name="methodParamNames" value="create,list,update,delete"/>
+        <property name="logicalMappings">
+            <props>
+                <prop key="doList">list</prop>
+            </props>
+        </property>
+        <property name="defaultMethodName" value="list"/>
+    </bean>
+
+    <!--
+        Default MethodNameResolver - InternalPathMethodNameResolver, pattern :
+        http://localhost:8080/myMultiAction/list == MyMultiActionController.list()
+        http://localhost:8080/myMultiAction/create == MyMultiActionController.create()
+        http://localhost:8080/myMultiAction/update == MyMultiActionController.update()
+        http://localhost:8080/myMultiAction/delete == MyMultiActionController.delete()
+     -->
+    <bean name="/myMultiAction/**"
+          class="org.andy.springmvc.schema.controller.MyMultiActionController">
+        <!--<property name="methodNameResolver" ref="methodNameResolver"/>-->
+        <!--<property name="methodNameResolver" ref="parameterMethodNameResolver"/>-->
+    </bean>
+
+    <!-- delegate -->
+    <bean id="multiActionDelegate"
+          class="org.andy.springmvc.schema.controller.MyMultiActionDelegate"/>
+
+    <bean name="/myMultiActionDelegate/**"
+          class="org.springframework.web.servlet.mvc.multiaction.MultiActionController">
+        <property name="delegate" ref="multiActionDelegate"/>
+        <property name="methodNameResolver" ref="parameterMethodNameResolver"/>
+    </bean>
 </beans>
