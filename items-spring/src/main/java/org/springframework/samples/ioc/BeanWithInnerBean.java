@@ -1,6 +1,6 @@
 package org.springframework.samples.ioc;
 
-import org.springframework.samples.ioc.dto.InnerBean;
+import org.springframework.samples.model.InnerBeanModel;
 
 /**
  * /**
@@ -12,14 +12,14 @@ import org.springframework.samples.ioc.dto.InnerBean;
  * Version 1.0-SNAPSHOT
  */
 public class BeanWithInnerBean {
-    private InnerBean innerBean;
+    private InnerBeanModel innerBeanModel;
 
     @SuppressWarnings("unused")
-    public void setInnerBean(InnerBean innerBean) {
-        this.innerBean = innerBean;
+    public void setInnerBeanModel(InnerBeanModel innerBeanModel) {
+        this.innerBeanModel = innerBeanModel;
     }
 
     public String showInnerBean() {
-        return innerBean.toString();
+        return innerBeanModel.toString();
     }
 }

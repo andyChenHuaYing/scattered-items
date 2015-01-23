@@ -45,9 +45,7 @@
         <!-- injected constructor arguments by index -->
         <!--<constructor-arg index="0" value="75000"/>-->
         <!--<constructor-arg index="1" value="Still no answer..."/>-->
-        <property name="email">
-            <value>""</value>
-        </property>
+        <property name="email" value="&quot;&quot;"/>
         <property name="gmail">
             <null/>
         </property>

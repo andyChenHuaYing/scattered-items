@@ -3,8 +3,8 @@ package org.springframework.samples.ioc;
 import org.junit.Test;
 import org.springframework.samples.testbase.TestBase;
 
-public class BeanWithInnerBeanTest extends TestBase {
-    public BeanWithInnerBeanTest() {
+public class BeanWithInnerBeanModelTest extends TestBase {
+    public BeanWithInnerBeanModelTest() {
         super("spring-ioc.xml");
     }
 
