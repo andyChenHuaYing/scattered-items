@@ -11,7 +11,7 @@ public class BeanAndConfigurationAnnotationBeanPortalTest extends TestBase{
 
     @Test
     public void testBeanAndConfigurationAnnotation() throws Exception {
-        SimpleBeanOne simpleBeanOne = getBean("simpleBeanOne");
+        SimpleBeanOne simpleBeanOne = (SimpleBeanOne) getBean("simpleBeanOne");
         SimpleBeanOne simpleBeanOne1 = getBean(SimpleBeanOne.class);
         ShowReferencesUtil.showReferences(simpleBeanOne, simpleBeanOne1);
     }

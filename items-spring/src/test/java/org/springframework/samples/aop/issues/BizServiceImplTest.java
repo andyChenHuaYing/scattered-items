@@ -10,7 +10,7 @@ public class BizServiceImplTest extends TestBase{
 
     @Test
     public void testProxiedMethod() throws Exception {
-        BizService bizService = getBean("bizServiceImpl");
+        BizService bizService = (BizService) getBean("bizServiceImpl");
         bizService.proxiedMethod();
         bizService.withoutThisMethod();
     }

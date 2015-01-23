@@ -10,7 +10,7 @@ public class StoreFactoryTest extends TestBase{
 
     @Test
     public void testBeanAnnotation() throws Exception {
-        StringStore stringStore = getBean("stringStores");
+        StringStore stringStore = (StringStore) getBean("stringStores");
         stringStore.showInstanceType();
     }
 }

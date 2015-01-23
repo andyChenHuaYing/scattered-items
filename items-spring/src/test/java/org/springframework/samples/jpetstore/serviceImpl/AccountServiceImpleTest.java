@@ -8,7 +8,7 @@ public class AccountServiceImpleTest extends TestBase{
 
     @Test
     public void testSaveAccount() throws Exception {
-        AccountService accountService = getBean("accountService");
+        AccountService accountService = (AccountService) getBean("accountService");
         accountService.saveAccount("Andy", "firefox");
     }
 }

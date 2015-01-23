@@ -12,8 +12,8 @@ public class CircularDependencySingletonTest extends TestBase{
 
     @Test
     public void testCircularDependency() throws Exception {
-        CircularDependencyASingleton a = getBean("cda");
-        CircularDependencyBSingleton b = getBean("cdb");
+        CircularDependencyASingleton a = (CircularDependencyASingleton) getBean("cda");
+        CircularDependencyBSingleton b = (CircularDependencyBSingleton) getBean("cdb");
         a.invokingB();
         b.invokingA();
     }

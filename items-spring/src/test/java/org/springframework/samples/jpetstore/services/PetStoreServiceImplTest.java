@@ -12,7 +12,7 @@ public class PetStoreServiceImplTest extends TestBase{
 
     @Test
     public void testSavePetInfo() throws Exception {
-        PetStoreServiceImpl petStoreService = getBean("petStore");
+        PetStoreServiceImpl petStoreService = (PetStoreServiceImpl) getBean("petStore");
         petStoreService.savePetInfo("Lulu", "198925", "pet");
     }
 }

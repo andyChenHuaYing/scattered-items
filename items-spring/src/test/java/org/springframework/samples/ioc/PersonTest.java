@@ -10,9 +10,9 @@ public class PersonTest extends TestBase{
 
     @Test
     public void testPersonInfo() throws Exception {
-        Person andy = getBean("andy-classic");
-        Person star = getBean("star-classic");
-        Person year = getBean("year");
+        Person andy = (Person) getBean("andy-classic");
+        Person star = (Person) getBean("star-classic");
+        Person year = (Person) getBean("year");
         andy.personInfo();
         star.personInfo();
         year.personInfo();
