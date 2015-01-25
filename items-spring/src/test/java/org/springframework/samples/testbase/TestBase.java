@@ -18,7 +18,7 @@ import org.springframework.util.StringUtils;
  */
 public class TestBase {
     private String springXmlPath;
-    private ClassPathXmlApplicationContext context;
+    protected ClassPathXmlApplicationContext context;
 
     public TestBase() {
     }

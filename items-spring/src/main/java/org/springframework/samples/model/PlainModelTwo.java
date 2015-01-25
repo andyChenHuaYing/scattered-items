@@ -9,7 +9,7 @@ package org.springframework.samples.model;
  * Version 1.0-SNAPSHOT
  */
 @SuppressWarnings("unused")
-public class PlainModelTwo {
+public class PlainModelTwo extends AbstractPlainModel{
     private boolean protoBoolean;
     private char protoChar;
     private short protoShort;

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Bean factory with basic instance method, the InstantiateBeanNormalFactory'scope property will not work! that's
+         means Spring bean scop just associate with scope="singleton/prototype/request/session/gloableSession"-->
+
+    <bean id="instantiateBeanNormalFactory"
+          class="org.springframework.samples.ioc.schema.instantiate.factory.InstantiateBeanNormalFactory">
+        <property name="scope" value="prototype"/>
+    </bean>
+
+
+    <!-- The bean witch is created via factory bean basic method-->
+    <bean id="plainModelOneInstantiatedByNormalFactory"
+          factory-bean="instantiateBeanNormalFactory"
+          factory-method="instantiatePlainModelOne"/>
+
+    <!-- The bean witch is created via factory bean static method and there is no need to predefine
+         InstantiateBeanStaticFactory, becuase the factory method is static-->
+    <bean id="plainModelOneInstantiatedByStaticFactory"
+          class="org.springframework.samples.ioc.schema.instantiate.factory.InstantiateBeanStaticFactory"
+          factory-method="instantiatePlainModelOne"/>
+</beans>

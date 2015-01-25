@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="plainModelOnePrototype" class="org.springframework.samples.model.PlainModelOne" scope="prototype"/>
+    <bean id="plainModelOneSingleton" class="org.springframework.samples.model.PlainModelOne"/>
+
+
+    <bean id="plainModelTwoPrototype" class="org.springframework.samples.model.PlainModelTwo" scope="prototype"/>
+    <bean id="plainModelTwoSingleton" class="org.springframework.samples.model.PlainModelTwo"/>
+
+
+    <bean id="plainModelThreePrototype" class="org.springframework.samples.model.PlainModelThree" scope="prototype"/>
+    <bean id="plainModelThreeSingleton" class="org.springframework.samples.model.PlainModelThree"/>
+</beans>

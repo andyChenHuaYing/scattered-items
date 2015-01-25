@@ -7,12 +7,15 @@ package org.springframework.samples.utils;
  * @version 1.0-SNAPSHOT
  *          Created date: 2014-12-03 20:16
  */
+@SuppressWarnings("unused")
 public class ClasspathUtils {
 
     /**
      *
      * @param resourceName
-     * @return classpath
+     *        Resource name.
+     * @return
+     * ]      classpath
      */
     public String getClasspathByResourceName(String resourceName) {
         return this.getClass().getClassLoader().getResource(resourceName).getPath();
