@@ -28,6 +28,7 @@
         <javax.el>2.2.4</javax.el>
         <org.hibernate>5.0.2.Final</org.hibernate>
         <org.aspectj>1.7.4</org.aspectj>
+        <c3p0.version>0.9.1.2</c3p0.version>
     </properties>
 
     <name>scattered-items</name>  
@@ -131,6 +132,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>c3p0</groupId>
+                <artifactId>c3p0</artifactId>
+                <version>${c3p0.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.aspectj</groupId>
                 <artifactId>aspectjweaver</artifactId>

@@ -12,7 +12,7 @@ function heightLightRow() {
               this.style.fontWeight = 'bold';
             };
             tr.onmouseout = function () {
-              this.style.fontWeight = 'normal';
+                this.style.fontWeight = 'basic';
             };
         }
     }

@@ -8,7 +8,7 @@
     <bean id="innerBeanModelSingleton" class="org.springframework.samples.model.InnerBeanModel"/>
 
     <bean id="plainModelOnePrototype" class="org.springframework.samples.model.PlainModelOne" scope="prototype"/>
-    <bean id="plainModelOneSingleton" class="org.springframework.samples.model.PlainModelOne"/>
+    <bean id="plainModelOneSingleton" class="org.springframework.samples.model.PlainModelOne" primary="true"/>
 
 
     <bean id="plainModelTwoPrototype" class="org.springframework.samples.model.PlainModelTwo" scope="prototype">
