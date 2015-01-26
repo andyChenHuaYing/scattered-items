@@ -25,14 +25,21 @@
           <file>file://$MODULE_DIR$/src/main/resources/spring-annotation-component-scan.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-lazy-init.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-jdbc.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-circular-dependency.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-factory-instantiation-bean.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-public-model-instantiation.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-public-model-instantiation.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-constructor-injection-bean.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-setter-injection-bean.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-basic-instantiate-bean.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-alias-bean.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-inner-bean-injection.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-idref-bean-injection.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-empty-null-string-value-injection.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-p-namespace-succinct.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-c-namespace-succinct.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-compound-property-bean-injection.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-circular-dependency.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-constructor-instantiate-bean.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-depend-on-bean-injection.xml</file>
         </fileset>
       </configuration>
     </facet>

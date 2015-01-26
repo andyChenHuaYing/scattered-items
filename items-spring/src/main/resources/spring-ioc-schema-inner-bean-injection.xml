@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Inner beans are always anonymous and they are always created with the outer bean. It is not possible to inject
+        inner beans into collaborating beans other than into the enclosing bean. -->
+    <bean id="innerBeanInjectionBean"
+          class="org.springframework.samples.ioc.schema.injection.innerbean.InnerBeanInjectionBean">
+        <property name="plainModelOne">
+            <!-- An inner bean definition does not require a defined id or name; the container ignores these values.
+                It also ignores the scope flag. -->
+            <bean class="org.springframework.samples.model.PlainModelOne"/>
+        </property>
+    </bean>
+</beans>

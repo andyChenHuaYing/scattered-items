@@ -58,8 +58,8 @@
                 <entry key="stringOne" value="strOne"/>
                 <entry key="plainModelOne" value-ref="plainModelOnePrototype"/>
                 <!-- Could be instead of below section configuration: -->
-                <!--<entry key="plainModelTwo"> <ref bean="plainModelTwoPrototype"/> </entry>-->
-                <entry key="plainModelTwo" value-ref="plainModelTwoPrototype"/>
+                <!--<entry key="plainModelTwoSingleton"> <ref bean="plainModelTwoPrototype"/> </entry>-->
+                <entry key="plainModelTwoSingleton" value-ref="plainModelTwoPrototype"/>
                 <entry key="plainModelThree">
                     <bean class="org.springframework.samples.model.PlainModelThree"/>
                 </entry>

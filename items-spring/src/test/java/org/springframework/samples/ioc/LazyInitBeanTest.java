@@ -1,12 +1,12 @@
 package org.springframework.samples.ioc;
 
 import org.junit.Test;
-import org.springframework.samples.ioc.lazy.init.LazyInitBean;
+import org.springframework.samples.ioc.schema.instantiation.lazy.init.LazyInitBean;
 import org.springframework.samples.testbase.TestBase;
 
 public class LazyInitBeanTest extends TestBase{
     public LazyInitBeanTest() {
-        super("spring-lazy-init.xml");
+        super("spring-ioc-schema-lazy-init.xml");
     }
 
     @Test

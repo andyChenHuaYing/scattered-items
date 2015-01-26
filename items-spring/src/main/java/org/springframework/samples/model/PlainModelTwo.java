@@ -18,6 +18,15 @@ public class PlainModelTwo extends AbstractPlainModel{
     private float protoFloat;
     private double protoDouble;
     private String string;
+    private InnerBeanModel innerBeanModel;
+
+    public InnerBeanModel getInnerBeanModel() {
+        return innerBeanModel;
+    }
+
+    public void setInnerBeanModel(InnerBeanModel innerBeanModel) {
+        this.innerBeanModel = innerBeanModel;
+    }
 
     public boolean isProtoBoolean() {
         return protoBoolean;

@@ -4,12 +4,19 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="innerBeanModelPrototype" class="org.springframework.samples.model.InnerBeanModel" scope="prototype"/>
+    <bean id="innerBeanModelSingleton" class="org.springframework.samples.model.InnerBeanModel"/>
+
     <bean id="plainModelOnePrototype" class="org.springframework.samples.model.PlainModelOne" scope="prototype"/>
     <bean id="plainModelOneSingleton" class="org.springframework.samples.model.PlainModelOne"/>
 
 
-    <bean id="plainModelTwoPrototype" class="org.springframework.samples.model.PlainModelTwo" scope="prototype"/>
-    <bean id="plainModelTwoSingleton" class="org.springframework.samples.model.PlainModelTwo"/>
+    <bean id="plainModelTwoPrototype" class="org.springframework.samples.model.PlainModelTwo" scope="prototype">
+        <property name="innerBeanModel" ref="innerBeanModelPrototype"/>
+    </bean>
+    <bean id="plainModelTwoSingleton" class="org.springframework.samples.model.PlainModelTwo">
+        <property name="innerBeanModel" ref="innerBeanModelSingleton"/>
+    </bean>
 
 
     <bean id="plainModelThreePrototype" class="org.springframework.samples.model.PlainModelThree" scope="prototype"/>

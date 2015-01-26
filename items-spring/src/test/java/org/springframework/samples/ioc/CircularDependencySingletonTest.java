@@ -1,13 +1,13 @@
 package org.springframework.samples.ioc;
 
 import org.junit.Test;
-import org.springframework.samples.ioc.schema.injection.circular.CircularDependencyASingleton;
-import org.springframework.samples.ioc.schema.injection.circular.CircularDependencyBSingleton;
+import org.springframework.samples.ioc.schema.injection.issue.circular.CircularDependencyASingleton;
+import org.springframework.samples.ioc.schema.injection.issue.circular.CircularDependencyBSingleton;
 import org.springframework.samples.testbase.TestBase;
 
 public class CircularDependencySingletonTest extends TestBase{
     public CircularDependencySingletonTest() {
-        super("spring-ioc-circular-dependency.xml");
+        super("spring-ioc-schema-circular-dependency.xml");
     }
 
     @Test

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Depends on single bean
+    <bean id="dependsOnSingleBean"
+          class="DependsOnSingleBean"
+          init-method="init"
+          destroy-method="destroy"
+          depends-on="beDependOnBeanOne"/> -->
+
+    <!-- Depends on multiple bean, Be depend beans initialization order are just concerned with "depends-on" property
+        Result:
+        BeDependOnBeanTwo init...
+        BeDependOnBeanOne init...
+        DependsOnMultipleBean init...
+        DependsOnMultipleBean destroy...
+        BeDependOnBeanOne destroy...
+        BeDependOnBeanTwo destroy...
+    -->
+    <bean id="dependsOnMultipleBean"
+          init-method="init"
+          destroy-method="destroy"
+          class="org.springframework.samples.ioc.schema.instantiation.depends.on.DependsOnMultipleBean"
+          depends-on="beDependOnBeanTwo,beDependOnBeanOne"/>
+    <!--depends-on="beDependOnBeanOne,beDependOnBeanTwo"/>-->
+
+    <!-- Be depend bean which should be initialize before depend bean -->
+    <bean id="beDependOnBeanOne"
+          init-method="init"
+          destroy-method="destroy"
+          class="org.springframework.samples.ioc.schema.instantiation.depends.on.BeDependOnBeanOne"/>
+    <bean id="beDependOnBeanTwo"
+          init-method="init"
+          destroy-method="destroy"
+          class="org.springframework.samples.ioc.schema.instantiation.depends.on.BeDependOnBeanTwo"/>
+</beans>
