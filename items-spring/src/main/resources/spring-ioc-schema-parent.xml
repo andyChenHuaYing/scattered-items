@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <import resource="spring-public-model-instantiation.xml"/>
+
+    <bean id="parentAbstractBean" abstract="true">
+        <property name="string" value="str"/>
+        <property name="plainModelOne" ref="plainModelOneSingleton"/>
+    </bean>
+
+    <bean id="withParentAttributeBean"
+          parent="parentAbstractBean"
+          class="org.springframework.samples.ioc.schema.parent.WithParentAttributeBean">
+        <property name="plainModelTwo" ref="plainModelTwoSingleton"/>
+        <property name="plainModelThree" ref="plainModelThreeSingleton"/>
+    </bean>
+</beans>

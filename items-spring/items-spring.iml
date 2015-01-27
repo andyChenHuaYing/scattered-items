@@ -23,7 +23,6 @@
           <file>file://$MODULE_DIR$/src/main/resources/spring-aop.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-resources.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-annotation-component-scan.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-lazy-init.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-jdbc.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-factory-instantiation-bean.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-public-model-instantiation.xml</file>
@@ -40,6 +39,13 @@
           <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-circular-dependency.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-constructor-instantiate-bean.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-depend-on-bean-injection.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-lookup-method.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-replace-method.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-autowired-dependency.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-lazy-init.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-aware.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-parent.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-init-destroy-method.xml</file>
         </fileset>
       </configuration>
     </facet>

@@ -1,0 +1,11 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- Let bean itslef know what's its name in application -->
+    <bean id="beanNameAwareBean" class="org.springframework.samples.ioc.schema.aware.BeanNameAwareBean"/>
+
+    <bean class="org.springframework.samples.ioc.schema.aware.ApplicationContextAwareBean"/>
+</beans>
