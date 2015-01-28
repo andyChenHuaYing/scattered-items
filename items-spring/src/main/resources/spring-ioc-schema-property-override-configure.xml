@@ -1,0 +1,19 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--<context:property-override location="property-override-configurer.properties"/>-->
+    <bean class="org.springframework.beans.factory.config.PropertyOverrideConfigurer">
+        <property name="location" value="property-override-configurer.properties"/>
+    </bean>
+
+    <bean id="propertyOverrideConfigurerModel"
+          class="org.springframework.samples.ioc.schema.container.extension.PropertyOverrideConfigurerModel">
+        <property name="intOne" value="10"/>
+        <property name="intTwo" value="20"/>
+        <property name="strOne" value="strOneOne"/>
+        <property name="strTwo" value="strTwoTwo"/>
+    </bean>
+</beans>

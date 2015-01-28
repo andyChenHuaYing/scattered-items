@@ -46,6 +46,9 @@
           <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-aware.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-parent.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-init-destroy-method.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-custome-container-extension.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-property-placeholder-configure.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-property-override-configure.xml</file>
         </fileset>
       </configuration>
     </facet>
