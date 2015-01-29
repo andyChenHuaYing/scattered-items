@@ -1,7 +1,5 @@
 package org.springframework.samples.model;
 
-import org.springframework.core.annotation.Order;
-
 /**
  * Happy daily, happy life.
  * <p/>
@@ -11,8 +9,7 @@ import org.springframework.core.annotation.Order;
  * Version 1.0-SNAPSHOT
  */
 @SuppressWarnings("unused")
-@Order(3)
-public class PlainModelOne extends AbstractPlainModel {
+public class PlainModelFour extends AbstractPlainModel {
     private boolean protoBoolean;
     private char protoChar;
     private short protoShort;
@@ -84,10 +81,5 @@ public class PlainModelOne extends AbstractPlainModel {
 
     public void setString(String string) {
         this.string = string;
-    }
-
-    @Override
-    public String toString() {
-        return "PlainModelOne{}";
     }
 }

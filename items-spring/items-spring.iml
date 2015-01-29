@@ -46,9 +46,14 @@
           <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-aware.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-parent.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-init-destroy-method.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-custome-container-extension.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-property-placeholder-configure.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-property-override-configure.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-custom-container-extension.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-annotation-autowired.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-annotation-autowired.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-annotation-required.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-annotation-parent.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-public-model-singleton-instantiation.xml</file>
         </fileset>
       </configuration>
     </facet>
