@@ -54,6 +54,9 @@
           <file>file://$MODULE_DIR$/src/main/resources/spring-annotation-required.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-annotation-parent.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-public-model-singleton-instantiation.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-annotation-qualifier-custom-autowire-configurer.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-annotation-qualifier-generic-implicit.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-annotation-qualifier.xml</file>
         </fileset>
       </configuration>
     </facet>

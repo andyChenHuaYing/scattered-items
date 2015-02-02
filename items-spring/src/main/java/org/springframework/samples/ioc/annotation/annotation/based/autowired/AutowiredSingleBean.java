@@ -1,4 +1,4 @@
-package org.springframework.samples.ioc.annotation.autowired;
+package org.springframework.samples.ioc.annotation.annotation.based.autowired;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.samples.model.*;

@@ -1,6 +1,7 @@
 package org.springframework.samples.ioc.annotation.autowired;
 
 import org.junit.Test;
+import org.springframework.samples.ioc.annotation.annotation.based.autowired.AutowiredCollectionMapArrayWithOrdersBean;
 import org.springframework.samples.testbase.TestBase;
 import org.springframework.samples.utils.PrintUtil;
 

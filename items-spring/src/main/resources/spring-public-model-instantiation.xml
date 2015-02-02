@@ -4,21 +4,50 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="innerBeanModelPrototype" class="org.springframework.samples.model.InnerBeanModel" scope="prototype"/>
-    <bean id="innerBeanModelSingleton" class="org.springframework.samples.model.InnerBeanModel"/>
+    <bean id="innerBeanModelPrototype" class="org.springframework.samples.model.InnerBeanModel" scope="prototype">
+        <qualifier value="innerBeanModelPrototype"/>
+    </bean>
+    <bean id="innerBeanModelSingleton" class="org.springframework.samples.model.InnerBeanModel">
+        <qualifier value="innerBeanModelSingleton"/>
+    </bean>
 
-    <bean id="plainModelOnePrototype" class="org.springframework.samples.model.PlainModelOne" scope="prototype"/>
-    <bean id="plainModelOneSingleton" class="org.springframework.samples.model.PlainModelOne" primary="true"/>
+    <bean id="plainModelOnePrototype" class="org.springframework.samples.model.PlainModelOne" scope="prototype">
+        <qualifier value="plainModelOnePrototype"/>
+    </bean>
+    <bean id="plainModelOneSingleton" class="org.springframework.samples.model.PlainModelOne" primary="true">
+        <qualifier value="plainModelOneSingleton"/>
+    </bean>
 
 
     <bean id="plainModelTwoPrototype" class="org.springframework.samples.model.PlainModelTwo" scope="prototype">
         <property name="innerBeanModel" ref="innerBeanModelPrototype"/>
+        <qualifier value="plainModelTwoPrototype"/>
     </bean>
     <bean id="plainModelTwoSingleton" class="org.springframework.samples.model.PlainModelTwo">
         <property name="innerBeanModel" ref="innerBeanModelSingleton"/>
+        <qualifier value="plainModelTwoSingleton"/>
     </bean>
 
 
-    <bean id="plainModelThreePrototype" class="org.springframework.samples.model.PlainModelThree" scope="prototype"/>
-    <bean id="plainModelThreeSingleton" class="org.springframework.samples.model.PlainModelThree"/>
+    <bean id="plainModelThreePrototype" class="org.springframework.samples.model.PlainModelThree" scope="prototype">
+        <qualifier value="plainModelThreePrototype"/>
+    </bean>
+    <bean id="plainModelThreeSingleton" class="org.springframework.samples.model.PlainModelThree">
+        <qualifier value="plainModelThreeSingleton"/>
+    </bean>
+
+    <bean id="plainModelFourPrototype"
+          class="org.springframework.samples.model.PlainModelFour" scope="prototype">
+
+    </bean>
+
+    <!-- something wrong, stash it -->
+    <bean id="plainModelFourSingleton"
+          class="org.springframework.samples.model.PlainModelFour">
+        <qualifier
+                type="org.springframework.samples.ioc.annotation.annotation.based.fine.turning.CustomQualifierWithMultipleQualify">
+            <attribute key="ruleOne" value="plainModelFourSingletonMultipleQualify"/>
+            <attribute key="enumRule" value="FOUR"/>
+        </qualifier>
+    </bean>
 </beans>

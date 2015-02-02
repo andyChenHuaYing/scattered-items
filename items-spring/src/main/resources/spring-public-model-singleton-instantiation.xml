@@ -4,16 +4,35 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="innerBeanModelSingleton" class="org.springframework.samples.model.InnerBeanModel"/>
-
-    <bean id="plainModelOneSingleton" class="org.springframework.samples.model.PlainModelOne" primary="true"/>
-
-    <bean id="plainModelTwoSingleton" class="org.springframework.samples.model.PlainModelTwo">
-        <property name="innerBeanModel" ref="innerBeanModelSingleton"/>
+    <bean id="innerBeanModelOnlySingleton" class="org.springframework.samples.model.InnerBeanModel">
+        <qualifier type="org.springframework.samples.ioc.annotation.annotation.based.fine.turning.CustomQualifier"
+                   value="innerBeanModelSingletonCustomQualifier"/>
     </bean>
 
-    <bean id="plainModelThreeSingleton" class="org.springframework.samples.model.PlainModelThree"/>
+    <bean id="plainModelOnlyOneSingleton" class="org.springframework.samples.model.PlainModelOne">
+        <qualifier value="plainModel"/>
+    </bean>
+
+    <bean id="plainModelOnlyTwoSingleton" class="org.springframework.samples.model.PlainModelTwo">
+        <qualifier value="plainModel"/>
+    </bean>
+
+    <bean id="plainModelOnlyThreeSingleton" class="org.springframework.samples.model.PlainModelThree">
+        <qualifier value="plainModel"/>
+    </bean>
+
+    <bean id="plainModelFour"
+          class="org.springframework.samples.model.PlainModelFour">
+        <qualifier
+                type="org.springframework.samples.ioc.annotation.annotation.based.fine.turning.CustomAutowireConfigurerQualifier"
+                value="customAutowiredConfigurer"/>
+    </bean>
 
     <bean id="autowiredCollectionMapArrayWithoutOrdersBean"
-          class="org.springframework.samples.ioc.annotation.autowired.AutowiredCollectionMapArrayWithOrdersBean"/>
+          class="org.springframework.samples.ioc.annotation.annotation.based.autowired.AutowiredCollectionMapArrayWithOrdersBean"/>
+
+    <bean id="stringGenericPlainModelOne" class="org.springframework.samples.model.StringGenericPlainModelOne"/>
+    <bean id="integerGenericPlainModelOne" class="org.springframework.samples.model.IntegerGenericPlainModelOne"/>
+
+
 </beans>

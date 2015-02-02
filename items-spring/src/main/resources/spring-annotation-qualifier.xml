@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="spring-annotation-parent.xml"/>
+    <import resource="spring-public-model-instantiation.xml"/>
+    <import resource="spring-public-model-singleton-instantiation.xml"/>
+    <bean id="autowiredWithQualifier"
+          class="org.springframework.samples.ioc.annotation.annotation.based.fine.turning.AutowiredWithQualifier"/>
+
+    <bean id="customQualifierBean"
+          class="org.springframework.samples.ioc.annotation.annotation.based.fine.turning.CustomQualifierBean"/>
+
+    <!-- Without @Qualifier value, all AbstractPlainModel type will be injected in Set<AbstractPlainModel> models -->
+    <bean id="customQualifierWithoutValueBean"
+          class="org.springframework.samples.ioc.annotation.annotation.based.fine.turning.CustomQualifierWithoutValueBean"/>
+
+    <bean id="multipleQualifyBean"
+          class="org.springframework.samples.ioc.annotation.annotation.based.fine.turning.CustomQualifierWithMultipleQualifyBean"/>
+</beans>

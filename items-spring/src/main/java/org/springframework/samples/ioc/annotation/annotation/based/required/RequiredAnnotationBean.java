@@ -1,4 +1,4 @@
-package org.springframework.samples.ioc.annotation.required;
+package org.springframework.samples.ioc.annotation.annotation.based.required;
 
 import org.springframework.beans.factory.annotation.Required;
 import org.springframework.samples.model.PlainModelOne;
