@@ -59,6 +59,9 @@
           <file>file://$MODULE_DIR$/src/main/resources/spring-annotation-qualifier.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-annotation-post-construct-pre-destroy.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/annotation/spring-ioc-annotation-jsr-250-resources.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/annotation/spring-ioc-annotation-component-scan.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/annotation/spring-ioc-annotation-autowired.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/annotation/spring-ioc-annotation-component-scan.xml</file>
         </fileset>
       </configuration>
     </facet>

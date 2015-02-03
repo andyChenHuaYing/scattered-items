@@ -5,8 +5,6 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <import resource="spring-ioc-annotation-parent.xml"/>
-    <import resource="classpath:spring_configuration/public/spring-public-model-singleton-instantiation.xml"/>
-
-    <bean id="autowiredSingleBean"
-          class="org.springframework.samples.ioc.annotation.annotation.based.autowired.AutowiredSingleBean"/>
+    <bean id="componentScanAnnotation"
+          class="org.springframework.samples.ioc.annotation.classpath.scanning.ConfigurationComponentScanAnnotation"/>
 </beans>
