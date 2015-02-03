@@ -7,7 +7,7 @@ import org.springframework.samples.utils.PrintUtil;
 public class PropertyPlaceholderConfigurerModelTest extends TestBase {
 
     public PropertyPlaceholderConfigurerModelTest() {
-        super("spring-ioc-schema-property-placeholder-configure.xml");
+        super("spring_configuration/ioc/schema/spring-ioc-schema-property-placeholder-configure.xml");
     }
 
     @Test

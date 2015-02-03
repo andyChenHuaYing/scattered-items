@@ -8,7 +8,7 @@ import org.springframework.samples.utils.PrintUtil;
 public class AutowiredSingleBeanTest extends TestBase {
 
     public AutowiredSingleBeanTest() {
-        super("spring-annotation-autowired.xml");
+        super("spring_configuration/ioc/annotation/spring-ioc-annotation-autowired.xml");
     }
 
     @Test

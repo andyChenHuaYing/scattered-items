@@ -6,7 +6,7 @@ import org.springframework.samples.utils.PrintUtil;
 
 public class WithInnerStaticBeanTest extends TestBase {
     public WithInnerStaticBeanTest() {
-        super("spring-ioc-schema-constructor-instantiate-bean.xml");
+        super("spring_configuration/ioc/schema/spring-ioc-schema-constructor-instantiate-bean.xml");
     }
 
     @Test

@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <import resource="spring-public-model-instantiation.xml"/>
+    <import resource="../../public/spring-public-model-instantiation.xml"/>
 
     <!-- Bean factory with constructor instance method, the InstantiateBeanNormalFactory scope property will not work!
     that's means Spring bean scope just associate with scope="singleton/prototype/request/session/globalSession"-->

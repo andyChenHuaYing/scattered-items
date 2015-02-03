@@ -8,7 +8,7 @@ import org.springframework.samples.utils.PrintUtil;
 public class RequiredAnnotationBeanTest extends TestBase {
 
     public RequiredAnnotationBeanTest() {
-        super("spring-annotation-required.xml");
+        super("spring_configuration/ioc/annotation/spring-ioc-annotation-required.xml");
     }
 
     @Test

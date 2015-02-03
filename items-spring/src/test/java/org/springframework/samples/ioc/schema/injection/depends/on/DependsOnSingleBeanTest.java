@@ -6,7 +6,7 @@ import org.springframework.samples.testbase.TestBase;
 public class DependsOnSingleBeanTest extends TestBase {
 
     public DependsOnSingleBeanTest() {
-        super("spring-ioc-schema-depend-on-bean-injection.xml");
+        super("spring_configuration/ioc/schema/spring-ioc-schema-depend-on-bean-injection.xml");
     }
 
     @Test

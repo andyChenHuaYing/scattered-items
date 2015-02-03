@@ -7,7 +7,7 @@ import org.springframework.samples.utils.PrintUtil;
 public class ConstructorInjectionBeanTest extends TestBase{
 
     public ConstructorInjectionBeanTest() {
-        super("spring-ioc-schema-constructor-injection-bean.xml");
+        super("spring_configuration/ioc/schema/spring-ioc-schema-constructor-injection-bean.xml");
     }
 
     @Test

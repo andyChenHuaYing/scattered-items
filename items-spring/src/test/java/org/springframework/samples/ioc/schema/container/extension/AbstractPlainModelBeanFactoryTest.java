@@ -6,7 +6,7 @@ import org.springframework.samples.utils.PrintUtil;
 
 public class AbstractPlainModelBeanFactoryTest extends TestBase {
     public AbstractPlainModelBeanFactoryTest() {
-        super("spring-ioc-schema-custom-container-extension.xml");
+        super("spring_configuration/ioc/schema/spring-ioc-schema-custom-container-extension.xml");
     }
 
     @Test

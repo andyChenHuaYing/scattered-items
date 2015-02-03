@@ -7,7 +7,7 @@ import org.springframework.samples.utils.PrintUtil;
 public class MethodReplacerRawBeanTest extends TestBase {
 
     public MethodReplacerRawBeanTest() {
-        super("spring-ioc-schema-replace-method.xml");
+        super("spring_configuration/ioc/schema/spring-ioc-schema-replace-method.xml");
     }
 
     @Test

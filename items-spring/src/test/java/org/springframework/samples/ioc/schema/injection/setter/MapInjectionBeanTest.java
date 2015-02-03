@@ -6,7 +6,7 @@ import org.springframework.samples.utils.PrintUtil;
 
 public class MapInjectionBeanTest extends TestBase{
     public MapInjectionBeanTest() {
-        super("spring-ioc-schema-setter-injection-bean.xml");
+        super("spring_configuration/ioc/schema/spring-ioc-schema-setter-injection-bean.xml");
     }
 
     @Test

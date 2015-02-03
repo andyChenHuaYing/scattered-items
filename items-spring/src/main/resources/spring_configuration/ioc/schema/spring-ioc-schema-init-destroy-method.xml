@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <import resource="spring-public-model-instantiation.xml"/>
+    <import resource="../../public/spring-public-model-instantiation.xml"/>
 
     <!-- Specify beans init and destroy method via init-method and destroy-method bean attribute -->
     <bean id="initAndDestroyMethodViaXmlBeanSingleton"

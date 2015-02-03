@@ -5,7 +5,7 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd">
     <!--default-autowire-candidates="*Repository">-->
 
-    <import resource="spring-public-model-instantiation.xml"/>
+    <import resource="classpath:spring_configuration/public/spring-public-model-instantiation.xml"/>
 
     <!-- Autowire is not recommend if unnecessary -->
     <bean id="multipleAutowireBean"

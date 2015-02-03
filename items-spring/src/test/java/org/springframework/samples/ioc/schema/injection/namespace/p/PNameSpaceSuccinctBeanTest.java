@@ -6,7 +6,7 @@ import org.springframework.samples.utils.PrintUtil;
 
 public class PNameSpaceSuccinctBeanTest extends TestBase {
     public PNameSpaceSuccinctBeanTest() {
-        super("spring-ioc-schema-p-namespace-succinct.xml");
+        super("spring_configuration/ioc/schema/spring-ioc-schema-p-namespace-succinct.xml");
     }
 
     @Test

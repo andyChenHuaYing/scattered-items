@@ -4,7 +4,7 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <import resource="spring-public-model-instantiation.xml"/>
+    <import resource="../../public/spring-public-model-instantiation.xml"/>
 
     <bean id="parentAbstractBean" abstract="true">
         <property name="string" value="str"/>

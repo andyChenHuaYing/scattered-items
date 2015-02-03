@@ -6,7 +6,7 @@ import org.springframework.samples.utils.PrintUtil;
 
 public class CNamespaceSuccinctBeanTest extends TestBase {
     public CNamespaceSuccinctBeanTest() {
-        super("spring-ioc-schema-c-namespace-succinct.xml");
+        super("spring_configuration/ioc/schema/spring-ioc-schema-c-namespace-succinct.xml");
     }
 
     @Test

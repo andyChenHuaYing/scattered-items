@@ -6,7 +6,7 @@
 
     <!--<context:property-override location="property-override-configurer.properties"/>-->
     <bean class="org.springframework.beans.factory.config.PropertyOverrideConfigurer">
-        <property name="location" value="property-override-configurer.properties"/>
+        <property name="location" value="classpath:properties/property-override-configurer.properties"/>
     </bean>
 
     <bean id="propertyOverrideConfigurerModel"

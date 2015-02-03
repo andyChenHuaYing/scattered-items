@@ -6,7 +6,7 @@ import org.springframework.samples.utils.PrintUtil;
 
 public class MultipleAutowireBeanTest extends TestBase {
     public MultipleAutowireBeanTest() {
-        super("spring-ioc-schema-autowired-dependency.xml");
+        super("spring_configuration/ioc/schema/spring-ioc-schema-autowired-dependency.xml");
     }
 
     @Test

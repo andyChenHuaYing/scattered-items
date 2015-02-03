@@ -7,7 +7,7 @@ import org.springframework.samples.utils.PrintUtil;
 public class PropertyOverrideConfigurerModelTest extends TestBase {
 
     public PropertyOverrideConfigurerModelTest() {
-        super("spring-ioc-schema-property-override-configure.xml");
+        super("spring_configuration/ioc/schema/spring-ioc-schema-property-override-configure.xml");
     }
 
     @Test

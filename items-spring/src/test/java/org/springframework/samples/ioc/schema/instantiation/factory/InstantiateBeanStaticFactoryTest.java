@@ -6,7 +6,7 @@ import org.springframework.samples.utils.PrintUtil;
 
 public class InstantiateBeanStaticFactoryTest extends TestBase {
     public InstantiateBeanStaticFactoryTest() {
-        super("spring-ioc-schema-factory-instantiation-bean.xml");
+        super("spring_configuration/ioc/schema/spring-ioc-schema-factory-instantiation-bean.xml");
     }
 
     @Test

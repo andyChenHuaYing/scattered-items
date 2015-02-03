@@ -6,7 +6,7 @@ import org.springframework.samples.utils.PrintUtil;
 
 public class CustomQualifierBeanTest extends TestBase {
     public CustomQualifierBeanTest() {
-        super("spring-annotation-qualifier.xml");
+        super("spring_configuration/ioc/annotation/spring-ioc-annotation-qualifier.xml");
     }
 
     @Test

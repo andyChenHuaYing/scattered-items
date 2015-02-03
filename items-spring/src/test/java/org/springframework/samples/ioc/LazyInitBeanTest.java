@@ -6,7 +6,7 @@ import org.springframework.samples.testbase.TestBase;
 
 public class LazyInitBeanTest extends TestBase{
     public LazyInitBeanTest() {
-        super("spring-ioc-schema-lazy-init.xml");
+        super("spring_configuration/ioc/schema/spring-ioc-schema-lazy-init.xml");
     }
 
     @Test

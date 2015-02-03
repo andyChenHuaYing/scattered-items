@@ -7,7 +7,7 @@ import org.springframework.samples.utils.PrintUtil;
 public class WithParentAttributeBeanTest extends TestBase {
 
     public WithParentAttributeBeanTest() {
-        super("spring-ioc-schema-parent.xml");
+        super("spring_configuration/ioc/schema/spring-ioc-schema-parent.xml");
     }
 
     @Test

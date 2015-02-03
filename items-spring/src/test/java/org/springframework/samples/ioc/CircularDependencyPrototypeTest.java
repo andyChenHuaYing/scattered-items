@@ -7,7 +7,7 @@ import org.springframework.samples.testbase.TestBase;
 
 public class CircularDependencyPrototypeTest extends TestBase {
     public CircularDependencyPrototypeTest() {
-        super("spring-ioc-schema-circular-dependency.xml");
+        super("spring_configuration/ioc/schema/spring-ioc-schema-circular-dependency.xml");
     }
 
     @Test

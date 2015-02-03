@@ -6,7 +6,7 @@ import org.springframework.samples.utils.PrintUtil;
 
 public class ApplicationContextAwareBeanTest extends TestBase {
     public ApplicationContextAwareBeanTest() {
-        super("spring-ioc-schema-aware.xml");
+        super("spring_configuration/ioc/schema/spring-ioc-schema-aware.xml");
     }
 
     @Test

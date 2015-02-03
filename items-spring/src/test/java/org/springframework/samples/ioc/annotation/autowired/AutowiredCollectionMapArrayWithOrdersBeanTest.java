@@ -7,7 +7,7 @@ import org.springframework.samples.utils.PrintUtil;
 
 public class AutowiredCollectionMapArrayWithOrdersBeanTest extends TestBase {
     public AutowiredCollectionMapArrayWithOrdersBeanTest() {
-        super("spring-annotation-autowired.xml");
+        super("spring_configuration/ioc/annotation/spring-ioc-annotation-autowired.xml");
     }
 
     @Test

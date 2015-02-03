@@ -3,10 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-    <import resource="spring-annotation-parent.xml"/>
-    <import resource="spring-public-model-singleton-instantiation.xml"/>
-
-    <bean id="autowiredSingleBean"
-          class="org.springframework.samples.ioc.annotation.annotation.based.autowired.AutowiredSingleBean"/>
+    <import resource="spring-ioc-annotation-parent.xml"/>
+    <bean id="postConstructAndPreDestroyBean"
+          class="org.springframework.samples.ioc.annotation.annotation.based.post.construct.pre.destroy.PostConstructAndPreDestroyBean"/>
 </beans>

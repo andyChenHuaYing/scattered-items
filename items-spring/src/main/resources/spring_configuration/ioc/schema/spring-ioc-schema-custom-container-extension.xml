@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <import resource="spring-public-model-instantiation.xml"/>
+    <import resource="../../public/spring-public-model-instantiation.xml"/>
     <bean class="org.springframework.samples.ioc.schema.container.extension.BeanPostProcessorViaXml"/>
 
     <!--Custom BeanPostProcessor via xml -->

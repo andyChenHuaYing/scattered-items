@@ -4,8 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <import resource="spring-annotation-parent.xml"/>
-    <import resource="spring-public-model-instantiation.xml"/>
+    <import resource="spring-ioc-annotation-parent.xml"/>
+    <import resource="../../public/spring-public-model-instantiation.xml"/>
 
     <bean id="requiredAnnotationBean"
           class="org.springframework.samples.ioc.annotation.annotation.based.required.RequiredAnnotationBean">

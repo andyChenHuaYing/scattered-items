@@ -7,7 +7,7 @@ import org.springframework.samples.utils.PrintUtil;
 public class EmptyAndNullStringValueBeanTest extends TestBase {
 
     public EmptyAndNullStringValueBeanTest() {
-        super("spring-ioc-schema-empty-null-string-value-injection.xml");
+        super("spring_configuration/ioc/schema/spring-ioc-schema-empty-null-string-value-injection.xml");
     }
 
     @Test

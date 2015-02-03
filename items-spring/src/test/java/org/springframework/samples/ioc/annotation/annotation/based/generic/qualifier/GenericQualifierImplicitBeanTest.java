@@ -7,7 +7,7 @@ import org.springframework.samples.utils.PrintUtil;
 public class GenericQualifierImplicitBeanTest extends TestBase {
 
     public GenericQualifierImplicitBeanTest() {
-        super("spring-annotation-qualifier-generic-implicit.xml");
+        super("spring_configuration/ioc/annotation/spring-ioc-annotation-qualifier-generic-implicit.xml");
     }
 
     @Test

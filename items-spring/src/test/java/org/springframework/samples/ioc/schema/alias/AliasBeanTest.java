@@ -7,7 +7,7 @@ import org.springframework.samples.utils.PrintUtil;
 public class AliasBeanTest extends TestBase {
 
     public AliasBeanTest() {
-        super("spring-ioc-schema-alias-bean.xml");
+        super("spring_configuration/ioc/schema/spring-ioc-schema-alias-bean.xml");
     }
 
     @Test

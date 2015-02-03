@@ -22,7 +22,7 @@
                    type="org.springframework.samples.ioc.annotation.annotation.based.fine.turning.CustomQualifierWithoutValue"/>
     </bean>
 
-    <bean id="plainModelFour"
+    <bean id="plainModelFourOnlyFourSingleton"
           class="org.springframework.samples.model.PlainModelFour">
         <qualifier
                 type="org.springframework.samples.ioc.annotation.annotation.based.fine.turning.CustomAutowireConfigurerQualifier"

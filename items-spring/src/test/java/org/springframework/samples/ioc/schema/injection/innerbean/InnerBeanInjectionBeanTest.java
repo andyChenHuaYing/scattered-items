@@ -6,7 +6,7 @@ import org.springframework.samples.utils.PrintUtil;
 
 public class InnerBeanInjectionBeanTest extends TestBase {
     public InnerBeanInjectionBeanTest() {
-        super("spring-ioc-schema-inner-bean-injection.xml");
+        super("spring_configuration/ioc/schema/spring-ioc-schema-inner-bean-injection.xml");
     }
 
     @Test

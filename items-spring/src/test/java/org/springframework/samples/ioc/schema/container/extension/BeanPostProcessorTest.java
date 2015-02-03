@@ -8,7 +8,7 @@ import org.springframework.samples.utils.PrintUtil;
 public class BeanPostProcessorTest extends TestBase {
 
     public BeanPostProcessorTest() {
-        super("spring-ioc-schema-custom-container-extension.xml");
+        super("spring_configuration/ioc/schema/spring-ioc-schema-custom-container-extension.xml");
     }
 
     @Test

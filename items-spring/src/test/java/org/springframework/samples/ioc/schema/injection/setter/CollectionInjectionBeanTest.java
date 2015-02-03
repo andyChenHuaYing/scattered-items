@@ -5,7 +5,7 @@ import org.springframework.samples.testbase.TestBase;
 
 public class CollectionInjectionBeanTest extends TestBase{
     public CollectionInjectionBeanTest() {
-        super("spring-ioc-schema-setter-injection-bean.xml");
+        super("spring_configuration/ioc/schema/spring-ioc-schema-setter-injection-bean.xml");
     }
 
     @Test

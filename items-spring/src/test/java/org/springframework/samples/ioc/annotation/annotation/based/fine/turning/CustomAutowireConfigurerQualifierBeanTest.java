@@ -6,7 +6,7 @@ import org.springframework.samples.utils.PrintUtil;
 
 public class CustomAutowireConfigurerQualifierBeanTest extends TestBase {
     public CustomAutowireConfigurerQualifierBeanTest() {
-        super("spring-annotation-qualifier-custom-autowire-configurer.xml");
+        super("spring_configuration/ioc/annotation/spring-ioc-annotation-qualifier-custom-autowire-configurer.xml");
     }
 
     @Test

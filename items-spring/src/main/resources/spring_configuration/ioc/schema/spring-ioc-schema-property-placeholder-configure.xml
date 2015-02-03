@@ -6,7 +6,7 @@
 
     <!--<context:property-placeholder location="property-placeholder-configurer.properties"/>-->
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="property-placeholder-configurer.properties"/>
+        <property name="location" value="classpath:properties/property-placeholder-configurer.properties"/>
 
         <!--<property name="properties">
             <value>propertyPlaceholderConfigurerModel=org.springframework.samples.ioc.schema.container.extension.PropertyPlaceholderConfigurerModel</value>

@@ -7,7 +7,7 @@ import org.springframework.samples.utils.PrintUtil;
 public class PropertiesInjectionBeanTest extends TestBase {
 
     public PropertiesInjectionBeanTest() {
-        super("spring-ioc-schema-setter-injection-bean.xml");
+        super("spring_configuration/ioc/schema/spring-ioc-schema-setter-injection-bean.xml");
     }
 
     @Test

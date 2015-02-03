@@ -8,7 +8,7 @@ import org.springframework.samples.utils.ShowReferencesUtil;
 public class InstantiateBeanFactoryTest extends TestBase{
 
     public InstantiateBeanFactoryTest() {
-        super("spring-ioc-schema-factory-instantiation-bean.xml");
+        super("spring_configuration/ioc/schema/spring-ioc-schema-factory-instantiation-bean.xml");
     }
 
     @Test

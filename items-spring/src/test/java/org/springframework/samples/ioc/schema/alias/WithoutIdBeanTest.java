@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 public class WithoutIdBeanTest extends TestBase {
     public WithoutIdBeanTest() {
-        super("spring-ioc-schema-alias-bean.xml");
+        super("spring_configuration/ioc/schema/spring-ioc-schema-alias-bean.xml");
     }
 
     @Test

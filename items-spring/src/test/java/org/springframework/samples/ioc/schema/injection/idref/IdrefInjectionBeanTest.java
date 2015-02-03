@@ -7,7 +7,7 @@ import org.springframework.samples.utils.PrintUtil;
 public class IdrefInjectionBeanTest extends TestBase {
 
     public IdrefInjectionBeanTest() {
-        super("spring-ioc-schema-idref-bean-injection.xml");
+        super("spring_configuration/ioc/schema/spring-ioc-schema-idref-bean-injection.xml");
     }
 
     @Test

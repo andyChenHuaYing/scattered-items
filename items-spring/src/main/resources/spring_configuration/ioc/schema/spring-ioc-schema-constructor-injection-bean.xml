@@ -5,7 +5,7 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- Instantiate PlainModels -->
-    <import resource="spring-public-model-instantiation.xml"/>
+    <import resource="../../public/spring-public-model-instantiation.xml"/>
 
     <bean id="withoutConstructorPara"
           class="org.springframework.samples.ioc.schema.injection.constructor.ConstructorInjectionBean"/>

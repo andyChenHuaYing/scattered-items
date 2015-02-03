@@ -7,7 +7,7 @@ import org.springframework.samples.utils.PrintUtil;
 public class CompoundPropertyBeanTest extends TestBase {
 
     public CompoundPropertyBeanTest() {
-        super("spring-ioc-schema-compound-property-bean-injection.xml");
+        super("spring_configuration/ioc/schema/spring-ioc-schema-compound-property-bean-injection.xml");
     }
 
     @Test
