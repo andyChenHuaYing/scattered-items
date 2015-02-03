@@ -18,7 +18,8 @@
     </bean>
 
     <bean id="plainModelOnlyThreeSingleton" class="org.springframework.samples.model.PlainModelThree">
-        <qualifier value="plainModel"/>
+        <qualifier value="plainModel"
+                   type="org.springframework.samples.ioc.annotation.annotation.based.fine.turning.CustomQualifierWithoutValue"/>
     </bean>
 
     <bean id="plainModelFour"

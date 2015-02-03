@@ -11,7 +11,7 @@ public class CustomAutowireConfigurerQualifierBeanTest extends TestBase {
 
     @Test
     public void testToString() throws Exception {
-        CustomAutowireConfigurerQualifier bean = getBean(CustomAutowireConfigurerQualifier.class);
+        CustomAutowireConfigurerQualifierBean bean = getBean(CustomAutowireConfigurerQualifierBean.class);
         System.out.println(PrintUtil.formatTestResult(bean));
     }
 }

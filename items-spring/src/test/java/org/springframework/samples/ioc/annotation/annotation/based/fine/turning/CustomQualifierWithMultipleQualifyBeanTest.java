@@ -2,6 +2,7 @@ package org.springframework.samples.ioc.annotation.annotation.based.fine.turning
 
 import org.junit.Test;
 import org.springframework.samples.testbase.TestBase;
+import org.springframework.samples.utils.PrintUtil;
 
 public class CustomQualifierWithMultipleQualifyBeanTest extends TestBase {
 
@@ -11,9 +12,9 @@ public class CustomQualifierWithMultipleQualifyBeanTest extends TestBase {
 
     @Test
     public void testToString() throws Exception {
-/*
-        CustomQualifierWithMultipleQualify multipleQualify = getBean(CustomQualifierWithMultipleQualify.class);
-        System.out.println(PrintUtil.formatTestResult(multipleQualify));
-*/
+
+        CustomQualifierWithMultipleQualifyBean multipleQualifyBean = getBean(CustomQualifierWithMultipleQualifyBean.class);
+        System.out.println(PrintUtil.formatTestResult(multipleQualifyBean));
+
     }
 }

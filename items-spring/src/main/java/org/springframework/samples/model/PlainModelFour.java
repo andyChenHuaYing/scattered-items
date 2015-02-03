@@ -82,4 +82,9 @@ public class PlainModelFour extends AbstractPlainModel {
     public void setString(String string) {
         this.string = string;
     }
+
+    @Override
+    public String toString() {
+        return "PlainModelFour{}";
+    }
 }
