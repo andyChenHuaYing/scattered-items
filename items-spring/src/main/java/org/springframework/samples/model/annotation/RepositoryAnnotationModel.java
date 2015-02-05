@@ -1,5 +1,6 @@
 package org.springframework.samples.model.annotation;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -9,11 +10,11 @@ import org.springframework.stereotype.Repository;
  * @version 1.0-SNAPSHOT
  *          Created date: 2015-02-03 21:23
  */
-@SuppressWarnings("unused")
 @Repository
-public class RepositoryAnnotationModel {
+@Qualifier("repositoryAnnotationModel")
+public class RepositoryAnnotationModel extends AbstractAnnotationModel {
     @Override
     public String toString() {
-        return "ControllerAnnotationModel{}";
+        return "RepositoryAnnotationModel{}";
     }
 }
