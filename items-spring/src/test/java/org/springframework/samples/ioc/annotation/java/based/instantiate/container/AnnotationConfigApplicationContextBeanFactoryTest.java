@@ -4,16 +4,10 @@ import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.samples.model.annotation.ComponentAnnotationModel;
 import org.springframework.samples.model.annotation.ServiceAnnotationModel;
+import org.springframework.samples.testbase.AnnotationConfigApplicationContextBeanFactoryTestBase;
 import org.springframework.samples.utils.PrintUtil;
 
-public class AnnotationConfigApplicationContextBeanFactoryTest {
-
-    private AnnotationConfigApplicationContextBeanFactory beanFactory;
-
-    @org.junit.Before
-    public void before() {
-        beanFactory = new AnnotationConfigApplicationContextBeanFactory();
-    }
+public class AnnotationConfigApplicationContextBeanFactoryTest extends AnnotationConfigApplicationContextBeanFactoryTestBase {
 
     @Test
     public void testSimpleConstructContainer() throws Exception {

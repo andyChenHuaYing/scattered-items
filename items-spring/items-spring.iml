@@ -62,6 +62,9 @@
           <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/annotation/spring-ioc-annotation-component-scan.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/annotation/spring-ioc-annotation-autowired.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/annotation/spring-ioc-annotation-component-scan.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/schema/spring-ioc-schema-property-placeholder-configure.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/schema/spring-ioc-schema-property-placeholder-configure.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/annotation/spring-ioc-annotation-property-placeholder-resource.xml</file>
         </fileset>
       </configuration>
     </facet>
