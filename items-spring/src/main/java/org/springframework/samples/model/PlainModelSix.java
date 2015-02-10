@@ -92,6 +92,10 @@ public class PlainModelSix extends AbstractPlainModel {
         this.string = string;
     }
 
+    public void setAbstractPlainModel(AbstractPlainModel abstractPlainModel) {
+        this.abstractPlainModel = abstractPlainModel;
+    }
+
     @Override
     public String toString() {
         return "PlainModelSix{" +
@@ -107,5 +111,4 @@ public class PlainModelSix extends AbstractPlainModel {
                 ": " + abstractPlainModel.hashCode() +
                 '}';
     }
-
 }

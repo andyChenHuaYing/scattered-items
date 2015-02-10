@@ -4,8 +4,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="customListener"
+          class="org.springframework.samples.ioc.extension.event.CustomListener"/>
 
-    <bean id="foo" class="org.springframework.samples.resources.ResourcesAsDependenciesBean">
-        <property name="template" value="classpath:spring-resource-template.txt"/>
-    </bean>
+    <bean id="customPublisher"
+          class="org.springframework.samples.ioc.extension.event.CustomPublisher"/>
 </beans>

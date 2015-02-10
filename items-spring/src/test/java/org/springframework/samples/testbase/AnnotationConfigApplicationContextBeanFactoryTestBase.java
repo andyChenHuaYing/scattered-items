@@ -1,5 +1,6 @@
 package org.springframework.samples.testbase;
 
+import org.junit.After;
 import org.junit.Before;
 import org.springframework.samples.ioc.annotation.java.based.instantiate.container.AnnotationConfigApplicationContextBeanFactory;
 
@@ -16,5 +17,10 @@ public class AnnotationConfigApplicationContextBeanFactoryTestBase {
     @Before
     public void setUp() throws Exception {
         beanFactory = new AnnotationConfigApplicationContextBeanFactory();
+    }
+
+    @After
+    public void tearUp() throws Exception {
+        beanFactory = null;
     }
 }

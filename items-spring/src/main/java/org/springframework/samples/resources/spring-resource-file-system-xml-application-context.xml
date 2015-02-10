@@ -5,7 +5,6 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean id="foo" class="org.springframework.samples.resources.Foo">
-        <property name="template" value="classpath:myTestResources.txt"/>
-    </bean>
+    <bean id="fileSystemResourcesBean"
+          class="org.springframework.samples.resources.FileSystemResourcesBean"/>
 </beans>

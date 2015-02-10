@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <beans profile="default">
+        <bean class="org.springframework.samples.model.PlainModelOne"/>
+        <bean class="org.springframework.samples.model.PlainModelTwo"/>
+    </beans>
+
+    <beans profile="profileDevConfig">
+        <bean class="org.springframework.samples.model.PlainModelThree"/>
+        <bean class="org.springframework.samples.model.PlainModelFour"/>
+    </beans>
+
+    <beans profile="profileProductConfig">
+        <bean class="org.springframework.samples.model.PlainModelFive"/>
+        <bean class="org.springframework.samples.model.PlainModelSix">
+            <property name="abstractPlainModel">
+                <bean class="org.springframework.samples.model.PlainModelOne"/>
+            </property>
+        </bean>
+    </beans>
+</beans>

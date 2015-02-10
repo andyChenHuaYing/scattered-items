@@ -4,22 +4,16 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
-    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
         <property name="basenames">
             <list>
-                <value>format</value>
-                <value>properties.exceptions</value>
+                <value>properties/format</value>
             </list>
         </property>
     </bean>
 
-    <bean id="example" class="org.springframework.samples.annotations.internationalization.Example">
+    <bean id="resourceUsageBean"
+          class="org.springframework.samples.ioc.extension.resource.ResourceUsageBean">
         <property name="messageSource" ref="messageSource"/>
     </bean>
-
-    <bean id="i18nexample" class="org.springframework.samples.annotations.internationalization.I18NExample">
-        <property name="messageSource" ref="messageSource"/>
-    </bean>
-
 </beans>
