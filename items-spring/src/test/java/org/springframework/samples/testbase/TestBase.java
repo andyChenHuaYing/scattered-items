@@ -2,7 +2,6 @@ package org.springframework.samples.testbase;
 
 import org.junit.After;
 import org.junit.Before;
-import org.springframework.beans.BeansException;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.util.StringUtils;
 
@@ -34,14 +33,10 @@ public class TestBase {
     public void before() {
         if (StringUtils.isEmpty(springXmlPath)) {
             context = new ClassPathXmlApplicationContext("classpath*:*.xml");
-            context.start();
-            return;
-        }
-        try {
+        } else {
             context = new ClassPathXmlApplicationContext(springXmlPath);
-        } catch (BeansException e) {
-            e.printStackTrace();
         }
+        context.start();
     }
 
     /**
@@ -49,11 +44,7 @@ public class TestBase {
      */
     @After
     public void after() {
-        try {
-            context.destroy();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        context.destroy();
     }
 
     /**

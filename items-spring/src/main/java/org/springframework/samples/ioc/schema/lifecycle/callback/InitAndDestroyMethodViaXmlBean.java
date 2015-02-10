@@ -22,16 +22,16 @@ public class InitAndDestroyMethodViaXmlBean {
 
     @SuppressWarnings("unused")
     public InitAndDestroyMethodViaXmlBean(PlainModelOne plainModelOne) {
-        System.out.println("constructor : set plainModelTwo!");
+        //System.out.println("constructor : set plainModelTwo!");
         this.plainModelOne = plainModelOne;
     }
 
     public void init() {
-        System.out.println(this.getClass().getSimpleName() + " init.");
+        //System.out.println(this.getClass().getSimpleName() + " init.");
     }
 
     public void destroy() {
-        System.out.println(this.getClass().getSimpleName() + " destroy");
+        //System.out.println(this.getClass().getSimpleName() + " destroy");
     }
 
     public void setString(String string) {

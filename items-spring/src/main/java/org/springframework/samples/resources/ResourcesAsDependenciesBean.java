@@ -7,22 +7,20 @@ import org.springframework.core.io.Resource;
  *
  * @author andy
  * @version 1.0-SNAPSHOT
- *          Created date: 2014-12-02 20:18
+ *          Created date: 2014-12-02 19:56
  */
-public class Bar {
+public class ResourcesAsDependenciesBean {
     private Resource template;
 
     public void setTemplate(Resource template) {
         this.template = template;
     }
 
-    public void showResourceName() {
-        System.out.println(template.getFilename());
+    public String showResourceName() {
+        return template.getFilename();
     }
 
     public Resource getTemplate() {
         return this.template;
     }
-
-
 }

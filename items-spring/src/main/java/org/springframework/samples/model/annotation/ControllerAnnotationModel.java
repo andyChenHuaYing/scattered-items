@@ -1,5 +1,6 @@
 package org.springframework.samples.model.annotation;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -11,7 +12,8 @@ import org.springframework.stereotype.Controller;
  */
 @SuppressWarnings("unused")
 @Controller
-public class ControllerAnnotationModel {
+@Qualifier("controllerAnnotationModel")
+public class ControllerAnnotationModel extends AbstractAnnotationModel {
     @Override
     public String toString() {
         return "ControllerAnnotationModel{}";
