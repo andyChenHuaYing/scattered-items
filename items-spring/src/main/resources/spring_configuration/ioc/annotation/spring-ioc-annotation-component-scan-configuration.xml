@@ -6,5 +6,5 @@
 
     <import resource="spring-ioc-annotation-parent.xml"/>
     <bean id="componentScanAnnotation"
-          class="org.springframework.samples.ioc.annotation.classpath.scanning.ConfigurationComponentScanAnnotation"/>
+          class="org.springframework.samples.ioc.annotation.classpath.scanning.component.scan.ConfigurationComponentScanAnnotation"/>
 </beans>
