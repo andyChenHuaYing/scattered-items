@@ -1,18 +1,18 @@
-package org.springframework.samples.aop.schemaBase.action;
+package org.springframework.samples.aop.schema.action;
 
 import junit.framework.Assert;
 import org.junit.Test;
 import org.springframework.samples.aop.dto.User;
-import org.springframework.samples.aop.schemaBase.introduction.FilterService;
-import org.springframework.samples.aop.utils.UserFactoryUtil;
+import org.springframework.samples.aop.schema.introduction.FilterService;
+import org.springframework.samples.aop.utils.UserFactory;
 import org.springframework.samples.testbase.TestBase;
 
 public class UserActionTest extends TestBase{
     private UserAction userAction;
-    private User user = UserFactoryUtil.createDefaultUser();
+    private User user = UserFactory.createDefaultUser();
 
     public UserActionTest() {
-        super("spring-aop-schema-base.xml");
+        super("spring_configuration/aop/spring-aop-schema-base.xml");
     }
 
     @Test

@@ -1,7 +1,7 @@
-package org.springframework.samples.aop.schemaBase.service;
+package org.springframework.samples.aop.schema.service;
 
-import org.springframework.samples.aop.schemaBase.dao.UserDao;
 import org.springframework.samples.aop.dto.User;
+import org.springframework.samples.aop.schema.dao.UserDao;
 import org.springframework.samples.exceptions.ProceedFailException;
 
 /**

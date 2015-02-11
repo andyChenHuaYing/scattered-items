@@ -1,4 +1,4 @@
-package org.springframework.samples.aop.schemaBase.dao;
+package org.springframework.samples.aop.schema.dao;
 
 import org.springframework.samples.aop.dto.User;
 
@@ -9,6 +9,7 @@ import org.springframework.samples.aop.dto.User;
  * @version 1.0-SNAPSHOT
  *          Created date: 2014-12-08 22:11
  */
+@SuppressWarnings("unused")
 public interface UserDao {
     void addUser(User user);
 

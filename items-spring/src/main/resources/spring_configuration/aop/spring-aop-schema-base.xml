@@ -5,15 +5,15 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <bean id="userAdvisor" class="org.springframework.samples.aop.schemaBase.advisor.TransactionAdvisor"/>
+    <bean id="userAdvisor" class="org.springframework.samples.aop.schema.aop.TransactionAspect"/>
 
-    <bean id="userDao" class="org.springframework.samples.aop.schemaBase.dao.UserDaoImpl"/>
+    <bean id="userDao" class="org.springframework.samples.aop.schema.dao.UserDaoImpl"/>
 
-    <bean id="userService" class="org.springframework.samples.aop.schemaBase.service.UserServiceImpl">
+    <bean id="userService" class="org.springframework.samples.aop.schema.service.UserServiceImpl">
         <property name="userDao" ref="userDao"/>
     </bean>
 
-    <bean id="userAction" class="org.springframework.samples.aop.schemaBase.action.UserAction">
+    <bean id="userAction" class="org.springframework.samples.aop.schema.action.UserAction">
         <property name="userService" ref="userService"/>
     </bean>
 
@@ -21,20 +21,20 @@
 
         <!-- Pointcut service package's methods -->
         <aop:pointcut id="servicePointcut" expression="execution(*
-        org.springframework.samples.aop.schemaBase.service.*.*(..))"/>
+        org.springframework.samples.aop.schema.service.*.*(..))"/>
 
         <!-- Detail method without parameters-->
         <aop:pointcut id="detailMethodWithoutParameters" expression="
-                                            execution(* org.springframework.samples.aop.schemaBase.service.UserService
+                                            execution(* org.springframework.samples.aop.schema.service.UserService
                                             .addUser(org.springframework.samples.aop.dto.User))"/>
         <!-- Detail method with primary parameters-->
         <aop:pointcut id="detailMethodWithPrimaryParameters" expression="
-                                            execution(* org.springframework.samples.aop.schemaBase.service.UserService
+                                            execution(* org.springframework.samples.aop.schema.service.UserService
                                             .getUser(int)) and args(userId)"/>
 
         <!-- Detail method with primary parameters-->
         <aop:pointcut id="detailMethodWithReferenceParameters" expression="
-                                            execution(* org.springframework.samples.aop.schemaBase.service.UserService
+                                            execution(* org.springframework.samples.aop.schema.service.UserService
                                             .addUser(org.springframework.samples.aop.dto.User))
                                             and args(user)"/>
 
@@ -45,12 +45,12 @@
 
         <!-- All method in specified classes -->
         <aop:pointcut id="allMethodInSpecifiedClasses" expression="
-        execution(* org.springframework.samples.aop.schemaBase.service.UserService.*(..))"/>
+        execution(* org.springframework.samples.aop.schema.service.UserService.*(..))"/>
 
         <!-- all service package's methods -->
-        <aop:pointcut id="p1" expression="execution(* org.springframework.samples.aop.schemaBase.service.*.*(..)))"/>
+        <aop:pointcut id="p1" expression="execution(* org.springframework.samples.aop.schema.service.*.*(..)))"/>
 
-        <!--Declare an advisor -->
+        <!--Declare an aspect -->
         <aop:aspect id="userAspectAOP" ref="userAdvisor">
             <!--AOP advice without parameters
             <aop:before method="before" pointcut-ref="p1"/>
@@ -69,13 +69,13 @@
 
             <!-- AOP Introductions -->
             <aop:declare-parents
-                    types-matching="org.springframework.samples.aop.schemaBase.action.*+"
-                    implement-interface="org.springframework.samples.aop.schemaBase.introduction.FilterService"
-                    default-impl="org.springframework.samples.aop.schemaBase.introduction.FilterServiceImpl"/>
+                    types-matching="org.springframework.samples.aop.schema.action.*+"
+                    implement-interface="org.springframework.samples.aop.schema.introduction.FilterService"
+                    default-impl="org.springframework.samples.aop.schema.introduction.FilterServiceImpl"/>
 
             <!-- validate : As a consequence, any given pointcut will be matched against public methods only! -->
             <aop:before method="before"
-                        pointcut="execution(* org.springframework.samples.aop.schemaBase.action.*.*(..))"/>
+                        pointcut="execution(* org.springframework.samples.aop.schema.action.*.*(..))"/>
         </aop:aspect>
 
     </aop:config>

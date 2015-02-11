@@ -1,7 +1,7 @@
-package org.springframework.samples.aop.schemaBase.dao;
+package org.springframework.samples.aop.schema.dao;
 
 import org.springframework.samples.aop.dto.User;
-import org.springframework.samples.aop.utils.UserFactoryUtil;
+import org.springframework.samples.aop.utils.UserFactory;
 
 /**
  * Happy day, happy life.
@@ -24,7 +24,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User getUser(int userId) {
-        return UserFactoryUtil.createDefaultUser();
+        return UserFactory.createDefaultUser();
     }
 
     @Override

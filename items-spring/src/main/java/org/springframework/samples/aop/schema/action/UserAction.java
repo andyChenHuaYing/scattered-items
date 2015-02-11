@@ -1,7 +1,7 @@
-package org.springframework.samples.aop.schemaBase.action;
+package org.springframework.samples.aop.schema.action;
 
 import org.springframework.samples.aop.dto.User;
-import org.springframework.samples.aop.schemaBase.service.UserService;
+import org.springframework.samples.aop.schema.service.UserService;
 import org.springframework.samples.exceptions.ProceedFailException;
 import org.springframework.util.StringUtils;
 

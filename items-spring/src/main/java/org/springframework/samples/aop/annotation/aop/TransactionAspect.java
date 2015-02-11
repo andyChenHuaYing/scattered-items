@@ -1,7 +1,10 @@
-package org.springframework.samples.aop.annotation.aspect;
+package org.springframework.samples.aop.annotation.aop;
 
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.*;
+import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.core.annotation.Order;
 import org.springframework.samples.exceptions.ProceedFailException;
 import org.springframework.stereotype.Component;
@@ -19,12 +22,12 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 @Order(value = 0)
-public class TransactionAdvisor{
+public class TransactionAspect {
 
 /*-----------------------------------------------------Execution------------------------------------------------------*/
     /**
      * The format of an execution expression is :
-     * execution(modifiers-pattern? ret-type-pattern declaring-type-pattern? name-pattern(param-pattern)
+     * execution( modifiers-pattern? ret-type-pattern declaring-type-pattern? name-pattern(param-pattern)
      * throws-pattern?)
      * All parts except returning type pattern(ret-type-pattern), name-pattern and param-pattern are optional.
      * * for all return type
@@ -40,7 +43,8 @@ public class TransactionAdvisor{
 
     /**
      * It will not match any JoinPoint at all, in Spring AOP, any given pointcut will be matched against public
-     * method only. The meaning of default, private, protected modifiers-pattern is just
+     * method only. The meaning of default, private, protected modifiers-pattern is just backward compatibility
+     * with aspectJ.
      */
     @Pointcut("execution(private * *(..))")
     private void privateModifiersPattern() {}
@@ -140,8 +144,8 @@ public class TransactionAdvisor{
      * Any join point (method execution only in Spring AOP) where the executing method has an
      * CustomDeprecatedAnnotation annotation:
      */
-    @Pointcut("@annotation(org.springframework.samples.aop.annotation.annotation.CustomDeprecatedAnnotation) " +
-            "&& args(user, desc)")
+    @Pointcut(value = "@annotation(org.springframework.samples.aop.annotation.annotation.CustomDeprecatedAnnotation) " +
+            "&& args(user, desc)", argNames = "user, desc")
     private void methodAnnotatedByCustomDeprecatedAnnotation(org.springframework.samples.aop.dto.User user,
                                                              java.lang.String desc){}
 

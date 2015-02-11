@@ -1,4 +1,4 @@
-package org.springframework.samples.aop.schemaBase.introduction;
+package org.springframework.samples.aop.schema.introduction;
 
 /**
  * Happy day, happy life.

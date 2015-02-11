@@ -14,6 +14,12 @@ public class BizServiceImpl implements BizService{
 
     public BizServiceImpl() { }
 
+    /**
+     * The methods which locate in the method's body will not be proxy.
+     *
+     * @return method name
+     * @throws Exception
+     */
     public String proxiedMethod() throws Exception {
         System.out.println(this.getClass().getName() + " : proxied method.");
         this.thisMethod();
@@ -23,7 +29,6 @@ public class BizServiceImpl implements BizService{
 
     public String thisMethod() {
         System.out.println(this.getClass().getName() + " : with this keyword method.");
-
         return "thisMethod";
     }
 

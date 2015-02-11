@@ -3,8 +3,8 @@ package org.springframework.samples.aop.annotation.action;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.samples.aop.annotation.annotation.CustomDeprecatedAnnotation;
 import org.springframework.samples.aop.annotation.service.SuperActionService;
-import org.springframework.samples.aop.dto.User;
 import org.springframework.samples.aop.annotation.service.UserService;
+import org.springframework.samples.aop.dto.User;
 import org.springframework.samples.exceptions.ProceedFailException;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
@@ -29,6 +29,7 @@ public class UserAction implements SuperActionService{
 
     /**
      * Validate As a consequence, any given pointcut will be matched against public method only.
+     * The aop still could apply, the "public" means pointcut execution modifiers-pattern is just public.
      * @param user
      *        User info.
      */
@@ -57,7 +58,7 @@ public class UserAction implements SuperActionService{
     /**
      * Demonstrate other pointcut expression pattern :
      *      within, target, this, args, @within, @target, @args, @annotation and the spacial for Spring AOP--bean.
-     * All of these expression are defined in TransactionAdvisor class.
+     * All of these expression are defined in TransactionAspect class.
      * @param user
      *        User info.
      * @param description

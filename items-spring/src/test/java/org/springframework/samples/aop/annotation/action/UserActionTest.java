@@ -2,16 +2,16 @@ package org.springframework.samples.aop.annotation.action;
 
 import org.junit.Test;
 import org.springframework.samples.aop.dto.User;
-import org.springframework.samples.aop.utils.UserFactoryUtil;
+import org.springframework.samples.aop.utils.UserFactory;
 import org.springframework.samples.testbase.TestBase;
 
 public class UserActionTest extends TestBase{
     private UserAction userAction;
-    private User user = UserFactoryUtil.createDefaultUser();
+    private User user = UserFactory.createDefaultUser();
     private String description = "Happy family";
 
     public UserActionTest() {
-        super("spring-aop-aspectj.xml");
+        super("spring_configuration/aop/spring-aop-aspectj.xml");
     }
 
     @Test

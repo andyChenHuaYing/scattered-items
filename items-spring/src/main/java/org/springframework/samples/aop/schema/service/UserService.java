@@ -1,4 +1,4 @@
-package org.springframework.samples.aop.schemaBase.service;
+package org.springframework.samples.aop.schema.service;
 
 import org.springframework.samples.aop.dto.User;
 import org.springframework.samples.exceptions.ProceedFailException;

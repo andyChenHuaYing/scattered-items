@@ -1,4 +1,4 @@
-package org.springframework.samples.aop.annotation.aspect;
+package org.springframework.samples.aop.annotation.aop;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -18,15 +18,16 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 @Order(99)
-public class UsageTracking {
+public class UsageTrackingAspect {
     @DeclareParents(value = "org.springframework.samples.aop.annotation.service.*+",
             defaultImpl = UsageTrackedImpl.class)
+    @SuppressWarnings("unused")
     public UsageTracked usageTracked;
     /**
-     * Demonstrate introductions' usage
+     * Demonstrate introduction usage
      */
-    @Before("execution(* org.springframework.samples.aop.annotation.action.UserAction." +
-            "demonstrateOtherPointcutPatternExpression()) && this(usageTracked)")
+    @Before(value = "execution(* org.springframework.samples.aop.annotation.action.UserAction." +
+            "demonstrateOtherPointcutPatternExpression()) && this(usageTracked)", argNames = "usageTracked")
     public void declaredParentBefore(UsageTracked usageTracked) {
         System.out.println("usage count : " + usageTracked.incrementUseCount() + ", and order : 99");
     }

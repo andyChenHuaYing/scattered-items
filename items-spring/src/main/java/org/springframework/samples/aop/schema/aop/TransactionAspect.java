@@ -1,4 +1,4 @@
-package org.springframework.samples.aop.schemaBase.advisor;
+package org.springframework.samples.aop.schema.aop;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -17,7 +17,7 @@ import java.util.Date;
  *          Created date: 2014-12-08 22:05
  */
 @SuppressWarnings("unused")
-public class TransactionAdvisor {
+public class TransactionAspect {
 
     private void before() {
         System.out.println("Before : transaction start...");

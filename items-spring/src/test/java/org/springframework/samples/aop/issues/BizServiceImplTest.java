@@ -5,7 +5,7 @@ import org.springframework.samples.testbase.TestBase;
 
 public class BizServiceImplTest extends TestBase{
     public BizServiceImplTest() {
-        super("spring-aop.xml");
+        super("spring_configuration/aop/spring-aop.xml");
     }
 
     @Test

@@ -1,4 +1,4 @@
-package org.springframework.samples.aop.annotation.aspect;
+package org.springframework.samples.aop.annotation.aop;
 
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;

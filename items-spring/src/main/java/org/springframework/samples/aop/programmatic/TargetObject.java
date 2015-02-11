@@ -7,5 +7,9 @@ package org.springframework.samples.aop.programmatic;
  * @version 1.0-SNAPSHOT
  *          Created date: 2014-12-21 19:55
  */
-public class TargetObject {
+public class TargetObject implements ITargetObject {
+
+    public void targetPlainMethod() {
+        System.out.println("target plain method...");
+    }
 }
