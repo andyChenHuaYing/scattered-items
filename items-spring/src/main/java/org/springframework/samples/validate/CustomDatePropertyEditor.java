@@ -1,4 +1,4 @@
-package org.springframework.samples.data.transfer;
+package org.springframework.samples.validate;
 
 import java.beans.PropertyEditorSupport;
 import java.text.ParseException;
@@ -11,6 +11,7 @@ import java.text.SimpleDateFormat;
  * @version 1.0-SNAPSHOT
  *          Created date: 2015-01-24 13:45
  */
+@SuppressWarnings("unused")
 public class CustomDatePropertyEditor extends PropertyEditorSupport {
 
     private String formatter;

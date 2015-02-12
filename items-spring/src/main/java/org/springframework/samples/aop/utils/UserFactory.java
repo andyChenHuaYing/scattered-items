@@ -13,4 +13,8 @@ public class UserFactory {
     public static User createDefaultUser() {
         return new User("andy", "star");
     }
+
+    public static org.springframework.samples.model.User createUserModel() {
+        return new org.springframework.samples.model.User("andy", 25);
+    }
 }

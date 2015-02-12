@@ -12,7 +12,7 @@
         <property name="customEditors">
             <map>
                 <entry key="java.util.Date">
-                    <bean class="org.springframework.samples.data.transfer.CustomDatePropertyEditor">
+                    <bean class="CustomDatePropertyEditor">
                         <property name="formatter" value="yyyy-mm-dd"/>
                     </bean>
                 </entry>

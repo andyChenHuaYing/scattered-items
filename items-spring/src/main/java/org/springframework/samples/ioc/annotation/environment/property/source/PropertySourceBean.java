@@ -16,7 +16,7 @@ import org.springframework.samples.model.annotation.CustomDataSourceModel;
  */
 @Configuration
 //@PropertySource("classpath:/com/${my.placeholder:default/path}/app.properties")
-@PropertySource("classpath:mysql-jdbc.properties")
+@PropertySource("classpath:properties/mysql-jdbc.properties")
 public class PropertySourceBean {
 
     @Autowired
