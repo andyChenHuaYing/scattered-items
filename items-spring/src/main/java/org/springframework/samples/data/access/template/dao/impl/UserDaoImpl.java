@@ -15,16 +15,15 @@ import org.springframework.stereotype.Repository;
 public class UserDaoImpl implements UserDao {
     @Override
     public void addUser(User user) {
-        throw new RuntimeException();
     }
 
     @Override
     public User getUser(String name) {
-        throw new RuntimeException();
+        return null;
     }
 
     @Override
     public int getUserCount() {
-        throw new RuntimeException();
+        return -1;
     }
 }

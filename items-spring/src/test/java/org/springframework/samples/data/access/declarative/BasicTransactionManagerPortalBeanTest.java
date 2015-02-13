@@ -7,7 +7,7 @@ import org.springframework.samples.testbase.TestBase;
 
 public class BasicTransactionManagerPortalBeanTest extends TestBase {
     public BasicTransactionManagerPortalBeanTest() {
-        super("spring_configuration/data.access.declarative/spring-ioc-annotation-component-scan.xml");
+        super("spring_configuration/data/declarative/spring-ioc-annotation-component-scan.xml");
     }
 
     @Test
