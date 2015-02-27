@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="methodReplacer"
+          class="org.springframework.samples.ioc.schema.injection.method.MethodReplacerImpl"/>
+    <bean id="methodReplacerRawBean"
+          class="org.springframework.samples.ioc.schema.injection.method.MethodReplacerRawBean">
+        <replaced-method name="replacedMethod" replacer="methodReplacer">
+            <arg-type>java.lang.String</arg-type>
+        </replaced-method>
+    </bean>
+
+</beans>

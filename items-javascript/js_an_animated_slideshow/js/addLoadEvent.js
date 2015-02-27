@@ -18,4 +18,4 @@ function addEvent(fun){
 	}
 }
 
-addEvent(positionMessage);
+addEvent(prepareSlideShow);

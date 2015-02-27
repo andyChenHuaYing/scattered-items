@@ -47,7 +47,7 @@ public class TimeProxy implements BizInterface{
 
         long startTime = System.currentTimeMillis();
         try {
-            method.invoke(proxiedClass, null);
+            method.invoke(proxiedClass);
         } catch (IllegalAccessException e) {
             //e.printStackTrace();
             System.out.println("Illegal....");
@@ -67,6 +67,6 @@ public class TimeProxy implements BizInterface{
      *        Method Object.
      */
     private Method constructMethodByName(String methodName) throws NoSuchMethodException {
-        return proxiedClass.getClass().getDeclaredMethod(methodName, null);
+        return proxiedClass.getClass().getDeclaredMethod(methodName);
     }
 }

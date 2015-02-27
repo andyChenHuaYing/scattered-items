@@ -2,6 +2,8 @@
   <dictionary name="andy">
     <words>
       <w>autoaware</w>
+      <w>onload</w>
+      <w>onreadystatechange</w>
       <w>recommender</w>
     </words>
   </dictionary>

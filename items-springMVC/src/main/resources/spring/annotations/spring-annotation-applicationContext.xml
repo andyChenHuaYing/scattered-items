@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd ">
+
+    <!-- SpringMVC annotation HandlerMapping -->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
+
+    <!-- SpringMVC annotation HandlerAdapter -->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+        <property name="webBindingInitializer" ref="webBindingInitializer"/>
+    </bean>
+
+    <bean id="webBindingInitializer"
+          class="org.springframework.web.bind.support.ConfigurableWebBindingInitializer">
+        <property name="conversionService" ref="conversionService"/>
+        <property name="validator" ref="validate"/>
+    </bean>
+
+    <bean id="conversionService"
+          class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+                <bean class="org.andy.springmvc.schema.conversion.ArrayToCollection"/>
+            </set>
+        </property>
+    </bean>
+
+    <bean id="validate"
+          class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+        <property name="providerClass" value="org.hibernate.validator.HibernateValidator"/>
+        <property name="validationMessageSource" ref="messageSource"/>
+    </bean>
+
+    <bean id="messageSource"
+          class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <!-- Do not work, stash it
+        <property name="basename" value="classpath:messages/messages"/>-->
+        <property name="fileEncodings" value="utf-8"/>
+        <property name="cacheSeconds" value="120"/>
+    </bean>
+
+    <bean class="org.andy.springmvc.annotation.controller.IndexController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.ClassRequestMappingController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.UrlMappingRuleController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.MethodTypeMappingController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.ParametersMappingController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.RequestHeaderMappingController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.MethodParamTypeController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.RequestParamAnnotationController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.PathVariableAnnotationController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.CookieAnnotationController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.RequestHeaderAnnotationController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.ShowFormController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.ModelAttributeAnnotationController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.SessionAttributeController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.ValueAnnotationController"/>
+
+    <bean class="org.andy.springmvc.annotation.controller.ValidateController"/>
+</beans>
+
+

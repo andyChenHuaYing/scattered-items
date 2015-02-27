@@ -15,7 +15,7 @@ node.innerHTML = htmlValue;
  * DOM methods
  */
 var parent = document.getElementById('id');
-var ndoe = document.createElement(nodeName);
+var node = document.createElement(nodeName);
 parent.appendChild(node);
 
 var txt = document.createTextNode("hello world");
@@ -45,7 +45,7 @@ em.appendChild(txt3);
 parentElement.insertBefore(newElement, targetElement);
 
 /**
- * insertAfter, haven't exiting method, custom create
+ * insertAfter,without exiting method, custom create
  */
 function insertAfter (newElement, targetElement) {
 	var parentNode = targetElement.parentNode;
@@ -60,11 +60,11 @@ function insertAfter (newElement, targetElement) {
  * Ajax
  * 1. create request -- XMLHTTPObject
  * 2. request.open("methodType", url, isAsynchronously);
- * 3. request.onreadystatechange = function(){ //key request.readystate == 4}
+ * 3. request.onreadystatechange = function(){ //key request.readyState == 4}
  * 4. request.send(parameter);
  *
- * request.readyState hava five possible values:
- * 0 : unintialized
+ * request.readyState have five possible values:
+ * 0 : uninitialized
  * 1 : loading
  * 2 : loaded
  * 3 : interactive
@@ -95,7 +95,7 @@ function getNewContent() {
                 document.getElementById("new").appendChild(para);
             }
         };
-        request.send(null); //aaa
+        request.send(null);
     }
 }
 

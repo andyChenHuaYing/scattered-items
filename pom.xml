@@ -16,6 +16,7 @@
         <module>items-springMVC</module>
         <module>items-design-pattern</module>
         <module>items-java-reflection</module>
+        <module>items-spring-ldap</module>
     </modules>
 
     <properties>
@@ -28,9 +29,13 @@
         <javax.el>2.2.4</javax.el>
         <org.hibernate>5.0.2.Final</org.hibernate>
         <org.aspectj>1.7.4</org.aspectj>
+        <c3p0.version>0.9.1.2</c3p0.version>
+        <mysql.version>5.1.34</mysql.version>
+        <slf4j.version>1.7.10</slf4j.version>
+        <spring.ldap.version>2.0.2.RELEASE</spring.ldap.version>
     </properties>
 
-    <name>scattered-items</name>  
+    <name>scattered-items</name>
 
     <description>Normal study items collection</description>
 
@@ -129,8 +134,62 @@
         </plugins>
     </build>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+
+    </dependencies>
+
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.springframework.ldap</groupId>
+                <artifactId>spring-ldap-core</artifactId>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>spring-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>spring-beans</artifactId>
+                    </exclusion>
+                </exclusions>
+                <version>${spring.ldap.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>c3p0</groupId>
+                <artifactId>c3p0</artifactId>
+                <version>${c3p0.version}</version>
+            </dependency>
+
+            <!-- Test start -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <!-- Test end -->
+
             <dependency>
                 <groupId>org.aspectj</groupId>
                 <artifactId>aspectjweaver</artifactId>
@@ -175,9 +234,40 @@
                 <version>${org.springframework}</version>
                 <!--<scope>runtime</scope>-->
             </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${org.springframework}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${org.springframework}</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-webmvc</artifactId>
+                <version>${org.springframework}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${org.springframework}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
                 <version>${org.springframework}</version>
             </dependency>
 
@@ -185,6 +275,7 @@
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
+                <scope>compile</scope>
                 <version>${servlet-api}</version>
             </dependency>
 

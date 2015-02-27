@@ -6,12 +6,12 @@ import org.springframework.samples.utils.ShowReferencesUtil;
 
 public class BeanAndConfigurationAnnotationBeanPortalTest extends TestBase{
     public BeanAndConfigurationAnnotationBeanPortalTest() {
-        super("spring-annotationcomponentscan.xml");
+        super("spring-annotation-component-scan.xml");
     }
 
     @Test
     public void testBeanAndConfigurationAnnotation() throws Exception {
-        SimpleBeanOne simpleBeanOne = getBean("simpleBeanOne");
+        SimpleBeanOne simpleBeanOne = (SimpleBeanOne) getBean("simpleBeanOne");
         SimpleBeanOne simpleBeanOne1 = getBean(SimpleBeanOne.class);
         ShowReferencesUtil.showReferences(simpleBeanOne, simpleBeanOne1);
     }

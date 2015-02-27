@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Global lazy init setting -->
+    <!-- <beans... default-lazy-init="true">-->
+
+    <!-- default lazy-init:false -->
+    <bean id="noLazyBean"
+          class="org.springframework.samples.ioc.schema.instantiation.lazy.init.NoLazyBean">
+        <property name="lazyInitBean" ref="lazyBean"/>
+    </bean>
+
+    <bean id="noLazyBeanPrototype"
+          class="org.springframework.samples.ioc.schema.instantiation.lazy.init.NoLazyBean"
+          scope="prototype"/>
+
+    <!--lazy init bean: it will be init when someone need it no matter what scope it is -->
+    <bean id="lazyBean"
+          class="org.springframework.samples.ioc.schema.instantiation.lazy.init.LazyInitBean"
+          scope="prototype"
+          lazy-init="true"/>
+</beans>

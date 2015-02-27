@@ -1,0 +1,11 @@
+/**
+ * Graceful degradation: ensure that your web pages still work without JavaScript
+ */
+
+/**
+ * Unobtrusive JavaScript: separating structure from behavior.
+ */
+
+/**
+ * Backwards compatibility: ensure that older browsers don't choke on your scripts.
+ */

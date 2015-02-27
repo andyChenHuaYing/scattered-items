@@ -5,8 +5,9 @@ function switchPicture (whichPicture) {
 	document.getElementById('description').firstChild.nodeValue = whichPicture.getAttribute('title');
 }
 
-function countBodyChildren () {
-	alert(document.getElementsByTagName('body')[0].childNodes.length);		
-}	
+/*
+ function countBodyChildren () {
+ alert(document.getElementsByTagName('body')[0].childNodes.length);
+ }
 
-window.onload = countBodyChildren;
+ window.onload = countBodyChildren;*/

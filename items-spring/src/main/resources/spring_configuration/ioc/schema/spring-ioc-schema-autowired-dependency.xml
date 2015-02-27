@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--default-autowire-candidates="*Repository">-->
+
+    <import resource="classpath:spring_configuration/public/spring-public-model-instantiation.xml"/>
+
+    <!-- Autowire is not recommend if unnecessary -->
+    <bean id="multipleAutowireBean"
+          class="org.springframework.samples.ioc.schema.injection.autowire.MultipleAutowireBean"
+          autowire="byType"/>
+
+
+    <bean id="singleAutowireBean"
+          class="org.springframework.samples.ioc.schema.injection.autowire.SingleAutowireBean"
+          autowire="byName"/>
+
+    <bean id="constructorAutowireBean"
+          class="org.springframework.samples.ioc.schema.injection.autowire.ConstructorAutowireBean"
+          autowire="constructor"/>
+</beans>

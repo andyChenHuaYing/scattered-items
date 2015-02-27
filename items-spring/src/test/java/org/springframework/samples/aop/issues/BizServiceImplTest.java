@@ -5,12 +5,12 @@ import org.springframework.samples.testbase.TestBase;
 
 public class BizServiceImplTest extends TestBase{
     public BizServiceImplTest() {
-        super("spring-aop.xml");
+        super("spring_configuration/aop/spring-aop.xml");
     }
 
     @Test
     public void testProxiedMethod() throws Exception {
-        BizService bizService = getBean("bizServiceImpl");
+        BizService bizService = (BizService) getBean("bizServiceImpl");
         bizService.proxiedMethod();
         bizService.withoutThisMethod();
     }

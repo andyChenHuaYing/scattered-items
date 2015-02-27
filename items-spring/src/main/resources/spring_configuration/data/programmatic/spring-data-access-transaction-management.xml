@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="classpath:spring_configuration/data/parent/spring-data-access-transaction-resource.xml"/>
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="lazyConnectionDataSource"/>
+    </bean>
+
+
+</beans>
+
+
+
+

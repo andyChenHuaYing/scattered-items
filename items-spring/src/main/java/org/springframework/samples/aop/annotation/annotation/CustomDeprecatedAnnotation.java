@@ -13,7 +13,7 @@ import java.lang.annotation.Target;
  *          Created date: 2014-12-17 22:11
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.METHOD, ElementType.FIELD})
+@Target({ElementType.METHOD, ElementType.FIELD, ElementType.PARAMETER})
 public @interface CustomDeprecatedAnnotation {
     String value() default "custom deprecated annotation";
 }

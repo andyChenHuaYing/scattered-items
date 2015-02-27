@@ -1,0 +1,15 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="../../public/spring-public-model-instantiation.xml"/>
+
+    <bean id="cNamespaceSuccinctBean"
+          class="org.springframework.samples.ioc.schema.injection.namespace.c.CNamespaceSuccinctBean"
+          c:_0="string"
+          c:_1-ref="plainModelOnePrototype"
+          c:_2-ref="plainModelTwoPrototype"
+          c:_3-ref="plainModelThreePrototype"/>
+</beans>

@@ -45,6 +45,6 @@ function moveElementImprove (elementId, final_x, final_y, interval) {
     }
     elem.style.top = topPosition + 'px';
     elem.style.left = leftPosition + 'px';
-    var repeat = "moveElement('"+elementId+"', "+final_x+", "+final_y+", "+interval+")";
+    var repeat = "moveElementImprove('"+elementId+"', "+final_x+", "+final_y+", "+interval+")";
     elem.movement = setTimeout(repeat, interval);
 }

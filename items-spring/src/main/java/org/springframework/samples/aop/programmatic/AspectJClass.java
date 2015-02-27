@@ -1,5 +1,6 @@
 package org.springframework.samples.aop.programmatic;
 
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 
 /**
@@ -11,4 +12,9 @@ import org.aspectj.lang.annotation.Aspect;
  */
 @Aspect
 public class AspectJClass {
+
+    @After(value = "execution(* *(..))")
+    public void after() {
+        System.out.println("after...");
+    }
 }

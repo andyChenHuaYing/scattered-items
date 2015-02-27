@@ -48,4 +48,26 @@ public class ShowReferencesUtil {
     private static String refactorToString(Object obj) {
         return obj.getClass().getSimpleName() + " " + obj.hashCode();
     }
+
+    /**
+     * Show class full name.
+     * @param  object
+     *          Target class instance.
+     * @return
+     *          class full name.
+     */
+    public static String showClassFullName(Object object) {
+        return object.getClass().getName();
+    }
+
+    /**
+     * Show class simple name.
+     * @param  object
+     *          Target class instance.
+     * @return
+     *          class simple name.
+     */
+    public static String showClassSimpleName(Object object) {
+        return object.getClass().getSimpleName();
+    }
 }

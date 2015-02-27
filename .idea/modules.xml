@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/items-java-source/items-java-source.iml" filepath="$PROJECT_DIR$/items-java-source/items-java-source.iml" />
       <module fileurl="file://$PROJECT_DIR$/items-javascript/items-javascript.iml" filepath="$PROJECT_DIR$/items-javascript/items-javascript.iml" />
       <module fileurl="file://$PROJECT_DIR$/items-spring/items-spring.iml" filepath="$PROJECT_DIR$/items-spring/items-spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/items-spring-ldap/items-spring-ldap.iml" filepath="$PROJECT_DIR$/items-spring-ldap/items-spring-ldap.iml" />
       <module fileurl="file://$PROJECT_DIR$/items-springMVC/items-springMVC.iml" filepath="$PROJECT_DIR$/items-springMVC/items-springMVC.iml" />
       <module fileurl="file://$PROJECT_DIR$/items-thinking-in-java/items-thinking-in-java.iml" filepath="$PROJECT_DIR$/items-thinking-in-java/items-thinking-in-java.iml" />
       <module fileurl="file://$PROJECT_DIR$/scattered-items.iml" filepath="$PROJECT_DIR$/scattered-items.iml" />

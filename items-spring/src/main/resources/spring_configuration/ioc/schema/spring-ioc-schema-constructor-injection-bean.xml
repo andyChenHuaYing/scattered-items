@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Instantiate PlainModels -->
+    <import resource="../../public/spring-public-model-instantiation.xml"/>
+
+    <bean id="withoutConstructorPara"
+          class="org.springframework.samples.ioc.schema.injection.constructor.ConstructorInjectionBean"/>
+
+    <bean id="injectByConstructorParamsIndexOne"
+          class="org.springframework.samples.ioc.schema.injection.constructor.ConstructorInjectionBean">
+        <constructor-arg index="0" value="0"/>
+    </bean>
+
+    <bean id="injectByConstructorParamsIndexTwo"
+          class="org.springframework.samples.ioc.schema.injection.constructor.ConstructorInjectionBean">
+        <constructor-arg index="0" value="0"/>
+        <constructor-arg index="1" value="strOne"/>
+        <constructor-arg index="2" value="strTwo"/>
+        <constructor-arg index="3" ref="plainModelOnePrototype"/>
+    </bean>
+
+    <bean id="injectByConstructorParamsName"
+          class="org.springframework.samples.ioc.schema.injection.constructor.ConstructorInjectionBean">
+        <constructor-arg name="varIntOne" value="1"/>
+        <constructor-arg name="varStringOne" value="strOne"/>
+        <constructor-arg name="varStringTwo" value="strTwo"/>
+        <constructor-arg name="varPlainModelOne" ref="plainModelOnePrototype"/>
+    </bean>
+
+    <!-- If there are something ambiguities, The applicaiton will throw BeanCreationExcpetion:Could not resolve matching
+         constructor (hint: specify index/type/name arguments for simple parameters to avoid type ambiguities):
+          (hint: specify index/type/name arguments for simple parameters to avoid type ambiguities)
+          -->
+    <bean id="injectByConstructorParamsType"
+          class="org.springframework.samples.ioc.schema.injection.constructor.ConstructorInjectionBean">
+        <constructor-arg name="varIntOne" value="2"/>
+        <constructor-arg name="varStringOne" value="strOne"/>
+        <constructor-arg name="varStringTwo" value="strTwo"/>
+        <!--<constructor-arg type="java.lang.String" value="strTwo"/>-->
+        <constructor-arg type="org.springframework.samples.model.PlainModelOne" ref="plainModelOnePrototype"/>
+    </bean>
+</beans>

@@ -1,7 +1,7 @@
 package org.springframework.samples.aop.annotation.dao;
 
 import org.springframework.samples.aop.dto.User;
-import org.springframework.samples.aop.utils.UserFactoryUtil;
+import org.springframework.samples.aop.utils.UserFactory;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -21,6 +21,6 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User proceedUser(User user, String description) {
-        return UserFactoryUtil.createDefaultUser();
+        return UserFactory.createDefaultUser();
     }
 }

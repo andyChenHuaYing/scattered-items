@@ -1,0 +1,33 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="../../public/spring-public-model-instantiation.xml"/>
+
+    <!-- Specify beans init and destroy method via init-method and destroy-method bean attribute -->
+    <bean id="initAndDestroyMethodViaXmlBeanSingleton"
+          class="org.springframework.samples.ioc.schema.lifecycle.callback.InitAndDestroyMethodViaXmlBean"
+          p:plainModelTwo-ref="plainModelTwoPrototype"
+          init-method="init"
+          destroy-method="destroy">
+        <constructor-arg index="0" ref="plainModelOneSingleton"/>
+        <property name="string" value="str"/>
+    </bean>
+
+    <!-- Seemly with previous, just scope="prototype", but the destroy-method attribute will not work -->
+    <bean id="initAndDestroyMethodViaXmlBeanPrototype"
+          class="org.springframework.samples.ioc.schema.lifecycle.callback.InitAndDestroyMethodViaXmlBean"
+          scope="prototype"
+          p:plainModelTwo-ref="plainModelTwoPrototype"
+          init-method="init"
+          destroy-method="destroy">
+        <constructor-arg index="0" ref="plainModelOnePrototype"/>
+        <property name="string" value="str"/>
+    </bean>
+
+    <!-- Implements InitializingBean and DisposableBean -->
+    <bean id="initAndDestroyViaSpringBean"
+          class="org.springframework.samples.ioc.schema.lifecycle.callback.InitAndDestroyViaSpringBean"/>
+</beans>
