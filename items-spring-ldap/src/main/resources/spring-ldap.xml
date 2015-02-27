@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:ldap="http://www.springframework.org/schema/ldap"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/ldap
+        http://www.springframework.org/schema/ldap/spring-ldap.xsd">
+
+    <context:component-scan base-package="org.andy.spring.ldap"/>
+
+    <ldap:context-source
+            url="ldap://10.45.35.69:389"
+            base="dc=ztesoft,dc=com"
+            username="cn=Manager,dc=ztesoft,dc=com"
+            password="ztesoft"/>
+    <ldap:ldap-template id="ldapTemplate"/>
+</beans>
