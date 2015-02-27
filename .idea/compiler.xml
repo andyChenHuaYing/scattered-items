@@ -27,7 +27,9 @@
         <module name="items-java-reflection" />
         <module name="items-java-source" />
         <module name="items-javaoriginalcode" />
+        <module name="items-ldap" />
         <module name="items-spring" />
+        <module name="items-spring-ldap" />
         <module name="items-springMVC" />
         <module name="items-thinking-in-java" />
         <module name="items-thkinjava" />

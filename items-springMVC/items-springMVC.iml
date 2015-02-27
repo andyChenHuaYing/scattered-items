@@ -22,8 +22,8 @@
           <file>file://$MODULE_DIR$/src/main/resources/spring/spring-index-applicationContext.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring/spring-parent-applicationContext.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring/schema/spring-schema-applicationContext.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring/schema/spring-schema-handerInterceptor-applicationContext.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring/annotations/spring-annotation-applicationContext.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring/schema/spring-schema-handlerInterceptor-applicationContext.xml</file>
         </fileset>
       </configuration>
     </facet>
@@ -54,5 +54,9 @@
     <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.1.3" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:4.1.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-web:4.1.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.10" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-log4j12:1.7.10" level="project" />
+    <orderEntry type="library" name="Maven: log4j:log4j:1.2.17" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.1" level="project" />
   </component>
 </module>
