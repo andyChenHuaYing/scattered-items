@@ -32,7 +32,7 @@ public class QueryWithContextMapper {
     /**
      * User ContextMapper.
      */
-    private class UserContextMapper implements ContextMapper<User> {
+    protected static class UserContextMapper implements ContextMapper<User> {
         @Override
         public User mapFromContext(Object ctx) throws NamingException {
             DirContextAdapter context = (DirContextAdapter) ctx;

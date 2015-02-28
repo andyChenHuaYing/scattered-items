@@ -62,6 +62,7 @@ public class QueryingItem {
 
     /**
      * Get user name by real name.
+     * The xxx.attributes("","","") means which attributes will be returned, default is all.
      */
     public List<String> getUserNameByRealName(String realName) {
         LdapQuery query = LdapQueryBuilder.query().base("uid=admin, ou=People").attributes("cn", "sn", "userPassword")
