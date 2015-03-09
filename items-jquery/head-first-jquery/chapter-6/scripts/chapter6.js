@@ -1,6 +1,21 @@
-var deck;
 $(document).ready(function () {
-    deck = [
+
+    /*  New Additions for end
+
+     Added more output for winning/loosing to the 'hand' object
+     Added a restart button click to re-deal
+     */
+
+
+    var used_cards = [];
+
+    function card(name, suit, value) {
+        this.name = name;
+        this.suit = suit;
+        this.value = value;
+    }
+
+    var deck = [
         new card('Ace', 'Hearts', 11),
         new card('Two', 'Hearts', 2),
         new card('Three', 'Hearts', 3),
@@ -55,40 +70,110 @@ $(document).ready(function () {
         new card('King', 'Spades', 10)
     ];
 
-});
-function card(name, suit, value) {
-    this.name = name;
-    this.suit = suit;
-    this.value = value;
-}
+    var hand = {
+        cards: [],
+        current_total: 0,
 
-var used_card = [];
-function deal() {
-    for (var i = 0; i < 2; i++) {
-        hit();
+        sumCardTotal: function () {
+            this.current_total = 0;
+            for (var i = 0; i < this.cards.length; i++) {
+                var c = this.cards[i];
+                this.current_total += c.value;
+            }
+            $("#hdrTotal").html("Total: " + this.current_total);
+
+            if (this.current_total > 21) {
+                $("#btnStick").trigger("click");
+                $("#imgResult").attr('src', 'images/x2.png');
+                $("#hdrResult").html("BUST!")
+                    .attr('class', 'lose');
+            } else if (this.current_total == 21) {
+                $("#btnStick").trigger("click");
+                $("#imgResult").attr('src', 'images/check.png');
+                $("#hdrResult").html("BlackJack!")
+                    .attr('class', 'win');
+            } else if (this.current_total <= 21 && this.cards.length == 5) {
+                $("#btnStick").trigger("click");
+                $("#imgResult").attr('src', 'images/check.png');
+                $("#hdrResult").html("BlackJack - 5 card trick!")
+                    .attr('class', 'win');
+            } else {
+            }
+        }
+    };
+
+    function getRandom(num) {
+        return Math.floor(Math.random() * num);
     }
-}
 
-function getRandom(num) {
-    return Math.floor(Math.random() * num);
-}
+    function deal() {
+        for (var i = 0; i < 2; i++) {
+            hit();
+        }
+    }
 
-function hit() {
-    var good_card = false;
-    do {
-        good_card = true;
-        var index = getRandom(52);
-        var c = deck[index];
-        used_card[used_card.length] = index;
-        //hand.cards[hand.cards.length] = c;
-        var $d = $('<div>');
-        $d.addClass('current_hand').appendTo('#my_hand');
-        $('<img>').appendTo($d).attr('src', 'images/cards/' + c.suit + '/' + c.name + '.jpg')
-            .fadeOut('slow').fadeIn('slow');
-    } while (!good_card);
-}
+    function hit() {
+        var good_card = false;
+        do {
+            var index = getRandom(52);
+            if (!$.inArray(index, used_cards) > -1) {
+                good_card = true;
+                var c = deck[index];
+                used_cards[used_cards.length] = index;
+                hand.cards[hand.cards.length] = c;
 
-$('#btnDeal').click(function () {
-    deal();
-    $(this).toggle();
+                var $d = $("<div>");
+                $d.addClass("current_hand")
+                    .appendTo("#my_hand");
+
+                $("<img>").attr('alt', c.name + ' of ' + c.suit)
+                    .attr('title', c.name + ' of ' + c.suit)
+                    .attr('src', 'images/cards/' + c.suit + '/' + c.name + '.jpg')
+                    .appendTo($d)
+                    .fadeOut('slow')
+                    .fadeIn('slow');
+
+            }
+        } while (!good_card);
+        hand.sumCardTotal();
+    }
+
+    $("#btnDeal").click(function () {
+        deal();
+        $(this).toggle();
+        $("#btnHit").toggle();
+        $("#btnStick").toggle();
+    });
+
+    $("#btnHit").click(function () {
+        hit();
+    });
+
+    function end() {
+        $("#btnHit").toggle();
+        $("#btnStick").toggle();
+        $("#btnRestart").toggle();
+    }
+
+    $("#btnStick").click(function () {
+        $("#hdrResult").html('Stick!')
+            .attr('class', 'win');
+        $("#result").toggle();
+        end();
+    });
+
+    $("#btnRestart").click(function () {
+        $("#result").toggle();
+        $(this).toggle();
+        $("#my_hand").empty();
+        $("#hdrResult").html('');
+        $("#imgResult").attr('src', 'images/check.png');
+
+        used_cards.length = 0;
+        hand.cards.length = 0;
+        hand.current_total = 0;
+
+        $("#btnDeal").toggle()
+            .trigger('click');
+    });
 });
