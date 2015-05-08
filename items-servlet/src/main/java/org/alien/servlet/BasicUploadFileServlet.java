@@ -1,5 +1,8 @@
 package org.alien.servlet;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,6 +20,8 @@ import java.io.InputStream;
  * Version 1.0-SNAPSHOT<br>
  */
 public class BasicUploadFileServlet extends HttpServlet {
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         doPost(req, resp);
@@ -24,6 +29,9 @@ public class BasicUploadFileServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String username = req.getParameter("username");
+        String password = req.getParameter("password");
+        logger.info("username:{}, password:{}", username, password);
         InputStream inputStream = req.getInputStream();
         FileOutputStream fileOutputStream = new FileOutputStream("E:" + File.separator + "tempFile");
         int n;

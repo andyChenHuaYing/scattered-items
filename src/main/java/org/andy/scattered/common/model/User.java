@@ -20,15 +20,17 @@ public class User {
 
     private String[] objectClass;
 
-    public String[] getObjectClass() {
-        return objectClass;
+    private String description;
+
+    public User(String userName, String company) {
+        this.userName = userName;
+        this.company = company;
     }
 
-    public void setObjectClass(String[] objectClass) {
-        this.objectClass = objectClass;
-    }
-
-    public User() {
+    public User(String userName, String realName, String password) {
+        this.userName = userName;
+        this.realName = realName;
+        this.password = password;
     }
 
     public User(String userName, String realName, String password, String company) {
@@ -38,10 +40,31 @@ public class User {
         this.company = company;
     }
 
-    public User(String userName, String realName, String password) {
+    public User(String userName, String realName, String password, String company, String description) {
         this.userName = userName;
         this.realName = realName;
         this.password = password;
+        this.company = company;
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String[] getObjectClass() {
+        return objectClass;
+    }
+
+    public void setObjectClass(String[] objectClass) {
+        this.objectClass = objectClass;
+    }
+
+    public User() {
     }
 
     public String getUserName() {

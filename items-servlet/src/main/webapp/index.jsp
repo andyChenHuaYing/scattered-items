@@ -10,6 +10,8 @@
     <form action="basicUploadFile.do" method="post" enctype="multipart/form-data">
         <p>
             <input id="uploadFile" type="file"/>${result}<br/>
+            UserName: <input id="username" name="username" type="text"/><br/>
+            Password: <input id="password" name="password" type="password"/>
         </p>
         <p>
             <input type="reset" value="reset"/>

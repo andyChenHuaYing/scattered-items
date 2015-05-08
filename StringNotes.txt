@@ -256,26 +256,3 @@ Summary
         Pattern.UNIX LINES (?d)         In this mode, only the ‘\n’ line terminator
                                         is recognized in the behavior of ‘.’, ‘^’, and
                                         ‘$’.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

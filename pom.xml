@@ -17,6 +17,8 @@
         <module>items-design-pattern</module>
         <module>items-java-reflection</module>
         <module>items-spring-ldap</module>
+        <module>items-servlet</module>
+        <module>items-mybatis</module>
     </modules>
 
     <properties>
@@ -25,6 +27,7 @@
         <sources.plugin.verion>2.1.1</sources.plugin.verion>
         <org.springframework>4.1.1.RELEASE</org.springframework>
         <servlet-api>3.1.0</servlet-api>
+        <jsp-api>2.0</jsp-api>
         <javax.inject>1</javax.inject>
         <javax.el>2.2.4</javax.el>
         <org.hibernate>5.0.2.Final</org.hibernate>
@@ -33,6 +36,8 @@
         <mysql.version>5.1.34</mysql.version>
         <slf4j.version>1.7.10</slf4j.version>
         <spring.ldap.version>2.0.2.RELEASE</spring.ldap.version>
+        <commons.pool>1.6</commons.pool>
+        <mybatis.version>3.2.8</mybatis.version>
     </properties>
 
     <name>scattered-items</name>
@@ -154,6 +159,12 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>commons-pool</groupId>
+                <artifactId>commons-pool</artifactId>
+                <version>${commons.pool}</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.springframework.ldap</groupId>
                 <artifactId>spring-ldap-core</artifactId>
@@ -279,6 +290,17 @@
                 <version>${servlet-api}</version>
             </dependency>
 
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jsp-api</artifactId>
+                <version>${jsp-api}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

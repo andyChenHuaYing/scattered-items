@@ -1,7 +1,5 @@
 package org.springframework.samples.annotations;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 /**
  * Happy day, happy life.
  *

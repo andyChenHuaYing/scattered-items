@@ -7,6 +7,10 @@
     <entry_points version="2.0" />
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="ejb" url="file://$PROJECT_DIR$/items-servlet-simple/ejbs" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/items-servlet-simple/ear" />
+    <file type="web" url="file://$PROJECT_DIR$/items-servlet" />
+    <file type="web" url="file://$PROJECT_DIR$/items-servlet-simple/servlets/servlet" />
     <file type="web" url="file://$PROJECT_DIR$/items-springMVC" />
   </component>
   <component name="IdProvider" IDEtalkID="10A5A6BCF1073288CAD050D23CA9B67D" />
@@ -18,6 +22,12 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/items-servlet-simple/ear/pom.xml" />
+        <option value="$PROJECT_DIR$/items-servlet-simple/ejbs/pom.xml" />
+        <option value="$PROJECT_DIR$/items-servlet-simple/pom.xml" />
+        <option value="$PROJECT_DIR$/items-servlet-simple/primary-source/pom.xml" />
+        <option value="$PROJECT_DIR$/items-servlet-simple/projects/pom.xml" />
+        <option value="$PROJECT_DIR$/items-servlet-simple/servlets/pom.xml" />
         <option value="$PROJECT_DIR$/items-spring-ldap/pom.xml" />
       </set>
     </option>
@@ -33,7 +43,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/out" />
+    <output url="file://$PROJECT_DIR$/target" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">

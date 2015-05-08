@@ -2,6 +2,7 @@ package org.andy.spring.ldap.utilities;
 
 import org.andy.spring.ldap.testbase.TestBase;
 import org.andy.spring.ldap.utils.InstanceFactory;
+import org.junit.Assert;
 import org.junit.Test;
 
 import javax.naming.directory.Attributes;
@@ -14,7 +15,7 @@ public class MultiValuedAttributesTest extends TestBase {
     public void testGetAllAttributes() throws Exception {
         instanceBasicUsageLdapTemplate();
         Attributes attributes = multiValuedAttributes.getAllAttributes(new String[]{"objectclass"});
-
+        Assert.assertNotNull(attributes);
     }
 
     /**

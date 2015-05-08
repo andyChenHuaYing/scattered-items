@@ -7,6 +7,9 @@
       <module fileurl="file://$PROJECT_DIR$/items-java-reflection/items-java-reflection.iml" filepath="$PROJECT_DIR$/items-java-reflection/items-java-reflection.iml" />
       <module fileurl="file://$PROJECT_DIR$/items-java-source/items-java-source.iml" filepath="$PROJECT_DIR$/items-java-source/items-java-source.iml" />
       <module fileurl="file://$PROJECT_DIR$/items-javascript/items-javascript.iml" filepath="$PROJECT_DIR$/items-javascript/items-javascript.iml" />
+      <module fileurl="file://$PROJECT_DIR$/items-jquery/items-jquery.iml" filepath="$PROJECT_DIR$/items-jquery/items-jquery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/items-mybatis/items-mybatis.iml" filepath="$PROJECT_DIR$/items-mybatis/items-mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/items-servlet/items-servlet.iml" filepath="$PROJECT_DIR$/items-servlet/items-servlet.iml" />
       <module fileurl="file://$PROJECT_DIR$/items-spring/items-spring.iml" filepath="$PROJECT_DIR$/items-spring/items-spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/items-spring-ldap/items-spring-ldap.iml" filepath="$PROJECT_DIR$/items-spring-ldap/items-spring-ldap.iml" />
       <module fileurl="file://$PROJECT_DIR$/items-springMVC/items-springMVC.iml" filepath="$PROJECT_DIR$/items-springMVC/items-springMVC.iml" />
