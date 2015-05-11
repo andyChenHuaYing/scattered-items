@@ -48,10 +48,10 @@
 
     <mappers>
         <!--<mapper resource="config/mappers/Department.xml"/>-->
-        <mapper resource="config/mappers/Employee.xml"/>
+        <!--<mapper resource="config/mappers/Employee.xml"/>-->
         <!--<mapper resource="org/alien/mybatis/samples/config/Department.xml"/>-->
         <!--<mapper class="org.alien.mybatis.samples.dao.DepartmentMapper"/>-->
         <!-- Register all interfaces in a package as mappers -->
-        <!--<package name="org.alien.mybatis.samples.mapper"/>-->
+        <package name="org.alien.mybatis.samples.mapper"/>
     </mappers>
 </configuration>
