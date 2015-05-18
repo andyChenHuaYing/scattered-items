@@ -3,7 +3,7 @@ package org.alien.mybatis.samples.service.impl;
 import org.alien.mybatis.samples.mapper.DepartmentMapper;
 import org.alien.mybatis.samples.model.Department;
 import org.alien.mybatis.samples.service.DepartmentService;
-import org.alien.mybatis.samples.util.MybatisConfigUtil;
+import org.alien.mybatis.samples.util.MybatisUtil;
 import org.apache.ibatis.session.SqlSession;
 
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.List;
 public class DepartmentServiceImpl implements DepartmentService {
     @Override
     public List<Department> selectDepartment() {
-        SqlSession sqlSession = MybatisConfigUtil.getSqlSessionFactory().openSession();
+        SqlSession sqlSession = MybatisUtil.getSqlSessionFactory().openSession();
         List<Department> list = null;
         try {
             DepartmentMapper DepartmentMapper = sqlSession.getMapper(DepartmentMapper.class);

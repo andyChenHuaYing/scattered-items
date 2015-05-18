@@ -13,6 +13,14 @@ public class Author {
     private String bio;
     private String favouriteSection;
 
+    public Author() {
+    }
+
+    public Author(int id, String username) {
+        this.id = id;
+        this.username = username;
+    }
+
     public int getId() {
         return id;
     }

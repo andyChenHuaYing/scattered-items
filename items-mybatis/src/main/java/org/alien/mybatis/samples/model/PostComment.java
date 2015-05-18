@@ -7,7 +7,6 @@ package org.alien.mybatis.samples.model;
 @SuppressWarnings("unused")
 public class PostComment {
     private int id;
-    private Post post;
     private String name;
     private String commentText;
 
@@ -17,14 +16,6 @@ public class PostComment {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public Post getPost() {
-        return post;
-    }
-
-    public void setPost(Post post) {
-        this.post = post;
     }
 
     public String getName() {
@@ -47,7 +38,6 @@ public class PostComment {
     public String toString() {
         return "PostComment{" +
                 "id=" + id +
-                ", post=" + post +
                 ", name='" + name + '\'' +
                 ", commentText='" + commentText + '\'' +
                 '}';

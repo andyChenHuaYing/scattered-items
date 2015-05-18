@@ -14,6 +14,13 @@ public class Blog {
     private Author author;
     private List<Post> posts;
 
+    public Blog() {
+    }
+
+    public Blog(int id) {
+        this.id = id;
+    }
+
     public int getId() {
         return id;
     }
@@ -48,11 +55,16 @@ public class Blog {
 
     @Override
     public String toString() {
-        return "Blog{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", author=" + author +
-                ", posts=" + Arrays.toString(posts.toArray(new Post[posts.size()])) +
-                '}';
+        StringBuilder sb = new StringBuilder("Blog{");
+        sb.append("id=").append(id);
+        sb.append(", title='").append(title).append('\'');
+        if (author != null) {
+            sb.append(", author=").append(author);
+        }
+        if (posts != null) {
+            sb.append(", posts=").append(Arrays.toString(posts.toArray(new Post[posts.size()])));
+        }
+        sb.append('}');
+        return sb.toString();
     }
 }

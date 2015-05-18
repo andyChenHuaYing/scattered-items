@@ -1,6 +1,7 @@
 package org.alien.mybatis.samples.util;
 
 import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
@@ -12,7 +13,7 @@ import java.io.InputStream;
  * Created by andychen on 2015/5/7.<br>
  * Version 1.0-SNAPSHOT<br>
  */
-public class MybatisConfigUtil {
+public class MybatisUtil {
     private static SqlSessionFactory sqlSessionFactory;
 
     /**
@@ -32,4 +33,15 @@ public class MybatisConfigUtil {
         }
         return sqlSessionFactory;
     }
+
+    /**
+     * Open a SqlSession via SqlSessionFactory.
+     * By the way, you should close the SqlSession in your code.
+     *
+     * @return SqlSession sqlSession instance.
+     */
+    public static SqlSession getSqlSession() {
+        return MybatisUtil.getSqlSessionFactory().openSession();
+    }
+
 }

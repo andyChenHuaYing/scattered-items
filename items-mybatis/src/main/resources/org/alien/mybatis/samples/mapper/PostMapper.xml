@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.alien.mybatis.samples.mapper.PostMapper">
+
+    <resultMap id="post" type="post">
+        <id property="id" column="post_id" javaType="int"/>
+        <result property="section" column="section"/>
+        <result property="draft" column="draft"/>
+        <result property="body" column="body"/>
+        <result property="subject" column="subject"/>
+        <result property="createdOn" column="createdTime" javaType="java.sql.Date"/>
+        <collection property="comments" resultMap="org.alien.mybatis.samples.mapper.PostCommentMapper.postComment"/>
+    </resultMap>
+
+    <select id="getPostById" parameterType="int" resultMap="post">
+        SELECT
+            t1.id           post_id,
+            t1.created_on   createdTime,
+            t1.section,
+            t1.subject,
+            t1.draft,
+            t1.body,
+            t2.id           post_comment_id,
+            t2.name         post_comment_name,
+            t2.comment_text post_comment_text
+        FROM post t1 LEFT JOIN post_comment t2 ON t1.id = t2.post_id
+        WHERE t1.id = #{id}
+    </select>
+</mapper>

@@ -1,5 +1,6 @@
 package org.alien.mybatis.samples.model;
 
+import java.sql.Date;
 import java.util.Arrays;
 import java.util.List;
 
@@ -10,10 +11,45 @@ import java.util.List;
 @SuppressWarnings("unused")
 public class Post {
     private int id;
+    private String section;
+    private String draft;
+    private String body;
+    private Date createdOn;
     private String subject;
-    private Author author;
     private List<PostComment> comments;
     private List<Tag> tags;
+
+    public String getSection() {
+        return section;
+    }
+
+    public void setSection(String section) {
+        this.section = section;
+    }
+
+    public String getDraft() {
+        return draft;
+    }
+
+    public void setDraft(String draft) {
+        this.draft = draft;
+    }
+
+    public String getBody() {
+        return body;
+    }
+
+    public void setBody(String body) {
+        this.body = body;
+    }
+
+    public Date getCreatedOn() {
+        return createdOn;
+    }
+
+    public void setCreatedOn(Date createdOn) {
+        this.createdOn = createdOn;
+    }
 
     public int getId() {
         return id;
@@ -29,14 +65,6 @@ public class Post {
 
     public void setSubject(String subject) {
         this.subject = subject;
-    }
-
-    public Author getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(Author author) {
-        this.author = author;
     }
 
     public List<PostComment> getComments() {
@@ -60,7 +88,6 @@ public class Post {
         return "Post{" +
                 "id=" + id +
                 ", subject='" + subject + '\'' +
-                ", author=" + author +
                 ", comments=" + Arrays.toString(comments.toArray(new PostComment[comments.size()])) +
                 ", tags=" + Arrays.toString(tags.toArray(new Tag[tags.size()])) +
                 '}';
