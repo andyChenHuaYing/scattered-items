@@ -33,7 +33,11 @@
             used as an alias.@Alias("author")-->
         <package name="org.alien.mybatis.samples.model"/>
     </typeAliases>
-
+    <plugins>
+        <plugin interceptor="org.alien.mybatis.samples.interceptor.PageInterceptor">
+            <property name="dialect" value="mysql"/>
+        </plugin>
+    </plugins>
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>

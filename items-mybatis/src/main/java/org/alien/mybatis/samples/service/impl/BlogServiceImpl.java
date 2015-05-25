@@ -14,6 +14,34 @@ import java.util.List;
  */
 public class BlogServiceImpl implements BlogService {
     @Override
+    public Blog getBlogWithPosts() {
+        SqlSession sqlSession = null;
+        try {
+            sqlSession = MybatisUtil.getSqlSession();
+            BlogMapper blogMapper = sqlSession.getMapper(BlogMapper.class);
+            return blogMapper.getBlogWithPosts();
+        } finally {
+            if (sqlSession != null) {
+                sqlSession.close();
+            }
+        }
+    }
+
+    @Override
+    public Blog getBlogWithPostsNested() {
+        SqlSession sqlSession = null;
+        try {
+            sqlSession = MybatisUtil.getSqlSession();
+            BlogMapper blogMapper = sqlSession.getMapper(BlogMapper.class);
+            return blogMapper.getBlogWithPostsNested();
+        } finally {
+            if (sqlSession != null) {
+                sqlSession.close();
+            }
+        }
+    }
+
+    @Override
     public Blog getBlogOneToOne() {
         SqlSession sqlSession = null;
         try {

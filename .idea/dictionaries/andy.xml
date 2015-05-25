@@ -4,7 +4,9 @@
       <w>autoaware</w>
       <w>onload</w>
       <w>onreadystatechange</w>
+      <w>phasers</w>
       <w>recommender</w>
+      <w>rownum</w>
     </words>
   </dictionary>
 </component>

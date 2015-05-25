@@ -13,6 +13,17 @@
         <result property="favouriteSection" column="favouriteSection"/>
     </resultMap>
 
+    <select id="selectAuthorByPage" resultType="author" parameterType="hashMap">
+        SELECT
+            t.id,
+            t.username,
+            t.password,
+            t.email,
+            t.bio,
+            t.favourite_section favouriteSection
+        FROM author t
+    </select>
+
     <insert id="addAuthor" parameterType="author">
         INSERT INTO author(id, username) VALUES (#{id}, #{username})
         <selectKey keyProperty="id" resultType="int">

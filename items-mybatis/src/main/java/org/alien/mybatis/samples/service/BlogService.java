@@ -10,6 +10,10 @@ import java.util.List;
  */
 public interface BlogService {
 
+    Blog getBlogWithPosts();
+
+    Blog getBlogWithPostsNested();
+
     /**
      * Only fill id, Author properties of Blog.
      *

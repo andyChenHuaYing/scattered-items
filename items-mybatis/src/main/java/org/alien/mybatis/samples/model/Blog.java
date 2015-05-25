@@ -17,6 +17,11 @@ public class Blog {
     public Blog() {
     }
 
+    public Blog(int id, String title) {
+        this.id = id;
+        this.title = title;
+    }
+
     public Blog(int id) {
         this.id = id;
     }

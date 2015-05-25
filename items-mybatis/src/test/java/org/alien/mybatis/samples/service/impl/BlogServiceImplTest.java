@@ -33,4 +33,16 @@ public class BlogServiceImplTest {
         List<Blog> blogList = blogService.getAllBlog();
         Assert.assertNotNull(blogList);
     }
+
+    @Test
+    public void testGetBlogWithPosts() throws Exception {
+        Blog blog = blogService.getBlogWithPosts();
+        Assert.assertNotNull(blog);
+    }
+
+    @Test
+    public void testGetBlogWithPostsNested() throws Exception {
+        Blog blog = blogService.getBlogWithPostsNested();
+        Assert.assertNotNull(blog);
+    }
 }

@@ -16,6 +16,15 @@ public class Author {
     public Author() {
     }
 
+    public Author(int id, String username, String password, String email, String bio, String favouriteSection) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.bio = bio;
+        this.favouriteSection = favouriteSection;
+    }
+
     public Author(int id, String username) {
         this.id = id;
         this.username = username;

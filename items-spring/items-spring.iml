@@ -7,64 +7,66 @@
           <file>file://$MODULE_DIR$/src/main/resources/spring-p-namespace.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-annotationJavaBase.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-importResource.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-resourcesShortcuts.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-i18n.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-event.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-parent.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-annotationEvent.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-aop-schema-base.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-BeanAndConfiguration.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-aop-aspectj.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-i18nDefault.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-autowired.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-ioc.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-annotation.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-method-injection.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-aop.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-resources.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring-annotation-component-scan.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-jdbc.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-factory-instantiation-bean.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-public-model-instantiation.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-public-model-instantiation.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-constructor-injection-bean.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-setter-injection-bean.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-alias-bean.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-inner-bean-injection.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-idref-bean-injection.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-empty-null-string-value-injection.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-p-namespace-succinct.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-c-namespace-succinct.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-compound-property-bean-injection.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-circular-dependency.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-constructor-instantiate-bean.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-depend-on-bean-injection.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-lookup-method.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-replace-method.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-autowired-dependency.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-lazy-init.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-aware.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-parent.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-init-destroy-method.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-property-placeholder-configure.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-property-override-configure.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-ioc-schema-custom-container-extension.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-annotation-autowired.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-annotation-autowired.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-annotation-required.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-annotation-parent.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-public-model-singleton-instantiation.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-annotation-qualifier-custom-autowire-configurer.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-annotation-qualifier-generic-implicit.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-annotation-qualifier.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring-annotation-post-construct-pre-destroy.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/annotation/spring-ioc-annotation-jsr-250-resources.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/annotation/spring-ioc-annotation-component-scan.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/annotation/spring-ioc-annotation-autowired.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/annotation/spring-ioc-annotation-component-scan.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/schema/spring-ioc-schema-property-placeholder-configure.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/schema/spring-ioc-schema-property-placeholder-configure.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/annotation/spring-ioc-annotation-property-placeholder-resource.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/aop/spring-aop-aspectj.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/aop/spring-aop-schema-base.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/aop/spring-aop.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/data/declarative/spring-data-access-transaction-management.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/data/programmatic/spring-data-access-transaction-management.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/data/parent/spring-data-access-transaction-resource.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/annotation/spring-ioc-annotation-component-scan-configuration.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/data/declarative/spring-ioc-annotation-component-scan.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/annotation/spring-ioc-annotation-jsr-250-post-construct-pre-destroy.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/annotation/spring-ioc-annotation-jsr-250-resource.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/annotation/spring-ioc-annotation-parent.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/annotation/spring-ioc-annotation-profile.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/annotation/spring-ioc-annotation-qualifier-custom-autowire-configurer.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/annotation/spring-ioc-annotation-qualifier-generic-implicit.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/annotation/spring-ioc-annotation-qualifier.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/annotation/spring-ioc-annotation-required.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/extension/spring-ioc-extension-event.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/extension/spring-ioc-extension-resource.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/schema/spring-ioc-schema-alias-bean.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/schema/spring-ioc-schema-autowired-dependency.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/schema/spring-ioc-schema-aware.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/schema/spring-ioc-schema-c-namespace-succinct.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/schema/spring-ioc-schema-circular-dependency.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/schema/spring-ioc-schema-compound-property-bean-injection.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/schema/spring-ioc-schema-constructor-injection-bean.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/schema/spring-ioc-schema-constructor-instantiate-bean.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/schema/spring-ioc-schema-custom-container-extension.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/schema/spring-ioc-schema-depend-on-bean-injection.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/schema/spring-ioc-schema-empty-null-string-value-injection.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/schema/spring-ioc-schema-factory-instantiation-bean.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/schema/spring-ioc-schema-idref-bean-injection.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/schema/spring-ioc-schema-init-destroy-method.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/schema/spring-ioc-schema-inner-bean-injection.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/schema/spring-ioc-schema-lazy-init.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/schema/spring-ioc-schema-lookup-method.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/schema/spring-ioc-schema-p-namespace-succinct.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/schema/spring-ioc-schema-parent.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/schema/spring-ioc-schema-property-override-configure.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/schema/spring-ioc-schema-replace-method.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/ioc/schema/spring-ioc-schema-setter-injection-bean.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/public/spring-public-model-instantiation.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring_configuration/public/spring-public-model-singleton-instantiation.xml</file>
         </fileset>
       </configuration>
     </facet>
