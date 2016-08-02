@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/items-arithmetic/items-arithmetic.iml" filepath="$PROJECT_DIR$/items-arithmetic/items-arithmetic.iml" />
       <module fileurl="file://$PROJECT_DIR$/items-design-pattern/items-design-pattern.iml" filepath="$PROJECT_DIR$/items-design-pattern/items-design-pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/items-email/items-email.iml" filepath="$PROJECT_DIR$/items-email/items-email.iml" />
       <module fileurl="file://$PROJECT_DIR$/items-java-reflection/items-java-reflection.iml" filepath="$PROJECT_DIR$/items-java-reflection/items-java-reflection.iml" />
       <module fileurl="file://$PROJECT_DIR$/items-java-source/items-java-source.iml" filepath="$PROJECT_DIR$/items-java-source/items-java-source.iml" />
       <module fileurl="file://$PROJECT_DIR$/items-javascript/items-javascript.iml" filepath="$PROJECT_DIR$/items-javascript/items-javascript.iml" />

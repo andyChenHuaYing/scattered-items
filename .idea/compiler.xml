@@ -24,11 +24,28 @@
         <processorPath useClasspath="true" />
         <module name="ear" />
         <module name="ejbs" />
+        <module name="items-arithmetic" />
+        <module name="items-design-pattern" />
+        <module name="items-email" />
+        <module name="items-java-mial" />
+        <module name="items-java-reflection" />
+        <module name="items-java-source" />
         <module name="items-javaoriginalcode" />
         <module name="items-ldap" />
+        <module name="items-mybatis" />
+        <module name="items-servlet" />
+        <module name="items-spring" />
         <module name="items-spring-ldap" />
+        <module name="items-springMVC" />
+        <module name="items-thinking-in-java" />
         <module name="items-thkinjava" />
         <module name="primary-source" />
+      </profile>
+      <profile default="false" name="Annotation profile for items-java-mail" enabled="true">
+        <sourceOutputDir name="..\items-java-mial\target\generated-sources\annotations" />
+        <sourceTestOutputDir name="..\items-java-mial\target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7" />
