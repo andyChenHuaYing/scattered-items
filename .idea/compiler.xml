@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <option name="DEFAULT_COMPILER" value="Javac" />
+    <option name="DEFAULT_COMPILER" value="Eclipse" />
     <resourceExtensions />
     <wildcardResourcePatterns>
       <entry name="!?*.java" />
@@ -40,12 +40,6 @@
         <module name="items-thinking-in-java" />
         <module name="items-thkinjava" />
         <module name="primary-source" />
-      </profile>
-      <profile default="false" name="Annotation profile for items-java-mail" enabled="true">
-        <sourceOutputDir name="..\items-java-mial\target\generated-sources\annotations" />
-        <sourceTestOutputDir name="..\items-java-mial\target\generated-test-sources\test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7" />

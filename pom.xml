@@ -19,7 +19,6 @@
         <module>items-spring-ldap</module>
         <module>items-servlet</module>
         <module>items-mybatis</module>
-        <module>items-java-mial</module>
         <module>items-email</module>
     </modules>
 

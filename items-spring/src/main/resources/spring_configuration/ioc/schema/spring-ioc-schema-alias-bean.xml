@@ -8,6 +8,10 @@
           class="org.springframework.samples.ioc.schema.alias.AliasByNamePropertyBean"
           name="aliasByNamePropertyBeanNameOne,aliasByNamePropertyBeanNameTwo,aliasByNamePropertyBeanNameThree"/>
 
+     <bean class="org.springframework.context.support.ClassPathXmlApplicationContext">
+         <property name="displayName" value="aaa"/>
+     </bean>
+    
     <bean id="aliasByNamePropertyBeanTwo"
           class="org.springframework.samples.ioc.schema.alias.AliasByNamePropertyBean"
           name="aliasByNamePropertyBeanNameFour;aliasByNamePropertyBeanNameFive;aliasByNamePropertyBeanNameSix"/>
