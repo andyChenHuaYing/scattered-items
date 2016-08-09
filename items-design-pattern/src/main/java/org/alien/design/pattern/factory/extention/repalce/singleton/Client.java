@@ -14,14 +14,14 @@ public class Client {
 
     public static void main(String[] args) throws InstantiationException {
         for (int i = 0; i < 10; i++) {
-            Product concreteProductA = SingletonFatory.getProduct(ConcreteProductA.class);
+            Product concreteProductA = SingletonFactory.getProduct(ConcreteProductA.class);
             System.out.println(concreteProductA.toString()+ " | " + concreteProductA.hashCode());
         }
 
         System.out.println("---------- break line ----------");
 
         for (int i = 0; i < 10; i++) {
-            Product concreteProductB = SingletonFatory.getProduct(ConcreteProductB.class);
+            Product concreteProductB = SingletonFactory.getProduct(ConcreteProductB.class);
             System.out.println(concreteProductB.toString() + " | " + concreteProductB.hashCode());
         }
     }

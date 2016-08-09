@@ -11,12 +11,12 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author : oscar
  * @version :1.0, 2016/8/2
  */
-public class SingletonFatory {
+public class SingletonFactory {
     private static final Map<String, Product> PRODUCT_MAP = new ConcurrentHashMap<>();
 
     public static Product getProduct(Class clazz) throws InstantiationException {
         if (!PRODUCT_MAP.containsKey(clazz.getName())) {
-            synchronized (SingletonFatory.class) {
+            synchronized (SingletonFactory.class) {
                 try {
                     Product product = (Product) clazz.newInstance();
                     PRODUCT_MAP.put(clazz.getName(), product);
