@@ -19,6 +19,7 @@
         <module>items-spring-ldap</module>
         <module>items-servlet</module>
         <module>items-mybatis</module>
+        <module>items-email</module>
     </modules>
 
     <properties>
@@ -159,6 +160,14 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+            <dependency>
+                <groupId>com.sun.mail</groupId>
+                <artifactId>javax.mail</artifactId>
+                <version>1.5.5</version>
+            </dependency>
+
+
             <dependency>
                 <groupId>commons-pool</groupId>
                 <artifactId>commons-pool</artifactId>
