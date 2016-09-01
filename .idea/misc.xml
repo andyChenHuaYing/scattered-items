@@ -19,7 +19,6 @@
     </option>
     <option name="ignoredFiles">
       <set>
-        <option value="$PROJECT_DIR$/items-jmx/pom.xml" />
         <option value="$PROJECT_DIR$/items-servlet-simple/ear/pom.xml" />
         <option value="$PROJECT_DIR$/items-servlet-simple/ejbs/pom.xml" />
         <option value="$PROJECT_DIR$/items-servlet-simple/pom.xml" />
@@ -40,7 +39,7 @@
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/target" />
   </component>
 </project>
