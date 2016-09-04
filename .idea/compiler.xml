@@ -42,6 +42,6 @@
         <module name="primary-source" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8" />
+    <bytecodeTargetLevel target="1.7" />
   </component>
 </project>

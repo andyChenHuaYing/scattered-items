@@ -11,7 +11,7 @@
     <bean id="watchingResponseTime"
           class="org.andy.springmvc.schema.interceptors.WatchingResponseTimeHandlerInterceptor"/>
     <!-- HandlerMapping -->
-    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping">
+    <bean class="org.springframework.web.servlet.nextHandler.BeanNameUrlHandlerMapping">
         <property name="interceptors">
 
             <!-- Success HandlerInterceptor execution

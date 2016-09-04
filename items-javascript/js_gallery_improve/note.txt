@@ -9,7 +9,7 @@
  */
 
 /**
- * Adding the event handler
+ * Adding the event nextHandler
  */
 var element = document.getElementById('id');
 element.onclick = function () { /*Body... */}
