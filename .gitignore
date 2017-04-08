@@ -3,7 +3,7 @@
 *.jar
 
 #Intellij jetbrain tool files
-*.iml
+
 *.idea/*
 target
 rebel.xml
