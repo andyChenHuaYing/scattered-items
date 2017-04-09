@@ -23,7 +23,8 @@ public class AppConfig {
     @Value("${jdbc.password}")
     private String password;
 
-    public AppConfig() { }
+    public AppConfig() {
+    }
 
     @Bean
     public DataSource dataSource() {

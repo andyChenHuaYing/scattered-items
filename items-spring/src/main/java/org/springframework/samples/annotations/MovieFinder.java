@@ -13,7 +13,7 @@ public class MovieFinder {
         return this.getClass().getName();
     }
 
-    public void movieName(String name){
+    public void movieName(String name) {
         System.out.println(this.getClass().getName() + " :: movie name : " + name);
     }
 }

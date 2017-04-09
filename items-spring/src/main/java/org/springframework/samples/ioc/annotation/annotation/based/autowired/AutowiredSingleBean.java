@@ -27,14 +27,14 @@ public class AutowiredSingleBean {
     private PlainModelThree plainModelThree;
 
     @Autowired
-    public void setPlainModelThree(PlainModelThree plainModelThree) {
-        this.plainModelThree = plainModelThree;
-    }
-
-    @Autowired
 
     public AutowiredSingleBean(PlainModelTwo plainModelTwo) {
         this.plainModelTwo = plainModelTwo;
+    }
+
+    @Autowired
+    public void setPlainModelThree(PlainModelThree plainModelThree) {
+        this.plainModelThree = plainModelThree;
     }
 
     @Override

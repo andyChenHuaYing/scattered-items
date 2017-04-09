@@ -18,17 +18,13 @@ public class MovieRecommender {
 
     @Autowired
     @Qualifier("movieCatalogOne")
-    private  MovieCatalog movieCatalog;
+    private MovieCatalog movieCatalog;
     @Autowired
     private MovieCatalog[] movieCatalogs;
     @Autowired
     private Set<MovieCatalog> movieCatalogSet;
     @Autowired
     private Map<String, MovieCatalog> movieCatalogMap;
-
-
-
-
 
 
     @Autowired

@@ -112,7 +112,7 @@ public class MSMessage extends MimeMessage {
             return false;
 
 	/*
-	 * XXX - disabled X-Mailer check because many sample messages
+     * XXX - disabled X-Mailer check because many sample messages
 	 * I saw didn't have an X-Mailer header at all.
 	 */
         if (false) {

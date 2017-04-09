@@ -7,7 +7,7 @@ import org.springframework.samples.utils.OrderUtils;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CommandManagerTest extends TestBase{
+public class CommandManagerTest extends TestBase {
     public CommandManagerTest() {
         super("spring-method-injection.xml");
     }

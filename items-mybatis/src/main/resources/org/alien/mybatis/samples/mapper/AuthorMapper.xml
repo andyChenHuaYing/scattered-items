@@ -15,12 +15,12 @@
 
     <select id="selectAuthorByPage" resultType="author" parameterType="hashMap">
         SELECT
-            t.id,
-            t.username,
-            t.password,
-            t.email,
-            t.bio,
-            t.favourite_section favouriteSection
+        t.id,
+        t.username,
+        t.password,
+        t.email,
+        t.bio,
+        t.favourite_section favouriteSection
         FROM author t
     </select>
 
@@ -43,12 +43,12 @@
 
     <select id="getAllAuthors" resultType="author">
         SELECT
-            t.id,
-            t.username,
-            t.password,
-            t.email,
-            t.bio,
-            t.favourite_section favouriteSection
+        t.id,
+        t.username,
+        t.password,
+        t.email,
+        t.bio,
+        t.favourite_section favouriteSection
         FROM author t
     </select>
 

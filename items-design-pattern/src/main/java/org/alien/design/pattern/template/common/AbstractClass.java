@@ -12,7 +12,7 @@ public abstract class AbstractClass {
 
     public abstract void doAndyThing();
 
-    public final void templateMethod(){
+    public final void templateMethod() {
         this.doSomethingDetail();
         this.doAndyThing();
     }

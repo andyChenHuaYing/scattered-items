@@ -23,10 +23,9 @@ public class ModelAttributeAnnotationController {
     /**
      * Bind form data on UserModel, The mapping relationship between form and UserModel depends on form's name attribute
      * and provide user reference to view.
-     * @param userModel
-     *        Data Model.
-     * @return
-     *        View.
+     *
+     * @param userModel Data Model.
+     * @return View.
      */
     @RequestMapping("/methodParamModelAttribute")
     public String methodParamModelAttribute(@ModelAttribute("user") UserModel userModel) {
@@ -35,8 +34,8 @@ public class ModelAttributeAnnotationController {
 
     /**
      * Prepare model for next view which is produced by biz method.
-     * @return
-     *        modelList List<UserModel>.
+     *
+     * @return modelList List<UserModel>.
      */
     @ModelAttribute("modelList")
     public List<UserModel> prepareUserModelList() {

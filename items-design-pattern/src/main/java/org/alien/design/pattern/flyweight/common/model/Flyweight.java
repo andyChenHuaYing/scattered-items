@@ -7,9 +7,8 @@ package org.alien.design.pattern.flyweight.common.model;
 @SuppressWarnings("unused")
 public abstract class Flyweight {
 
-    private String intrinsic;
-
     protected final String extrinsic;
+    private String intrinsic;
 
     public Flyweight(String extrinsic) {
         this.extrinsic = extrinsic;

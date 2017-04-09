@@ -28,10 +28,10 @@ public class ResourcesAsDependenciesBeanTest {
         Resource resource = context.getBean(ResourcesAsDependenciesBean.class).getTemplate();
         if (resource.exists()) {
             System.out.println("Resource file path : " + resource.getDescription());
-            System.out.println("Resource file name : " +  resource.getFilename());
+            System.out.println("Resource file name : " + resource.getFilename());
             System.out.println("Resource status : " + resource.isOpen());
         }
-        ClassPathResource classPathResource = (ClassPathResource)resource;
+        ClassPathResource classPathResource = (ClassPathResource) resource;
         classPathResource.getDescription();
     }
 }

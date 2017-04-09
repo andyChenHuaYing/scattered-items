@@ -3,7 +3,7 @@ package org.springframework.samples.ioc;
 import org.junit.Test;
 import org.springframework.samples.testbase.TestBase;
 
-public class FooTest extends TestBase{
+public class FooTest extends TestBase {
     public FooTest() {
         super("spring-ioc.xml");
     }

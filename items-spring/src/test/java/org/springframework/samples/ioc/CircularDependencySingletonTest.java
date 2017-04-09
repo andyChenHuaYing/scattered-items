@@ -5,7 +5,7 @@ import org.springframework.samples.ioc.schema.injection.issue.circular.CircularD
 import org.springframework.samples.ioc.schema.injection.issue.circular.CircularDependencyBSingleton;
 import org.springframework.samples.testbase.TestBase;
 
-public class CircularDependencySingletonTest extends TestBase{
+public class CircularDependencySingletonTest extends TestBase {
     public CircularDependencySingletonTest() {
         super("spring_configuration/ioc/schema/spring-ioc-schema-circular-dependency.xml");
     }

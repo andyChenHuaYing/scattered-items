@@ -22,7 +22,8 @@ public class TestMessageResourceBase {
     private MessageSource messageSource;
     private String xmlPath;
 
-    public TestMessageResourceBase() { }
+    public TestMessageResourceBase() {
+    }
 
     public TestMessageResourceBase(String xmlPath) {
         this.xmlPath = xmlPath;
@@ -52,6 +53,6 @@ public class TestMessageResourceBase {
     }
 
     public ApplicationContext getContext() {
-        return (ApplicationContext)messageSource;
+        return (ApplicationContext) messageSource;
     }
 }

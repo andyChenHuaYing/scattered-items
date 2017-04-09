@@ -18,7 +18,7 @@ public class PassWordUtils {
     }
 
     @UseCase(id = 48, description = "Encrypt password.")
-    public String encryptPassword(String password){
+    public String encryptPassword(String password) {
         return new StringBuilder(password).reverse().toString();
     }
 

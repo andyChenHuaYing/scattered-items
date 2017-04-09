@@ -5,7 +5,7 @@ import org.springframework.samples.aop.dto.User;
 import org.springframework.samples.aop.utils.UserFactory;
 import org.springframework.samples.testbase.TestBase;
 
-public class UserActionTest extends TestBase{
+public class UserActionTest extends TestBase {
     private UserAction userAction;
     private User user = UserFactory.createDefaultUser();
     private String description = "Happy family";

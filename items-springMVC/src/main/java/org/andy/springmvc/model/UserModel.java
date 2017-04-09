@@ -15,7 +15,8 @@ public class UserModel {
     private String password;
     private SchoolModel schoolModel;
 
-    public UserModel() {}
+    public UserModel() {
+    }
 
     public UserModel(String userName, String password, SchoolModel schoolModel) {
 

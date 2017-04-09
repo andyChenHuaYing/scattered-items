@@ -8,6 +8,13 @@ package org.andy.items.thkinjava.string;
  *          Created date: 2014-10-20 19:25
  */
 public class WhitherStringBuilder {
+    public static void main(String[] args) {
+        String[] ia = new String[10];
+        WhitherStringBuilder ws = new WhitherStringBuilder();
+        System.out.println(ws.implicit(ia));
+        System.out.println(ws.explicit(ia));
+    }
+
     public String implicit(String[] fields) {
         String str = "";
         for (String field : fields) {
@@ -22,12 +29,5 @@ public class WhitherStringBuilder {
             stringBuilder.append(field);
         }
         return stringBuilder.toString();
-    }
-
-    public static void main(String[] args) {
-        String[] ia = new String[10];
-        WhitherStringBuilder ws = new WhitherStringBuilder();
-        System.out.println(ws.implicit(ia));
-        System.out.println(ws.explicit(ia));
     }
 }

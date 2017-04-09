@@ -14,11 +14,11 @@ import java.util.ArrayList;
  * @version :1.0, 2016/8/9
  */
 public class Director {
-    private ArrayList<String> sequence = new ArrayList<>();
     BMWCarBuilder bmwCarBuilder = new BMWCarBuilder();
     BenZCarBuilder benZCarBuilder = new BenZCarBuilder();
+    private ArrayList<String> sequence = new ArrayList<>();
 
-    public BenZCarModel getBenZCarModel(){
+    public BenZCarModel getBenZCarModel() {
         this.sequence.clear();
         this.sequence.add("alarm");
         this.sequence.add("engineBoom");
@@ -28,7 +28,7 @@ public class Director {
         return (BenZCarModel) benZCarBuilder.getCarModel();
     }
 
-    public BMWCarModel getBMWCarModel(){
+    public BMWCarModel getBMWCarModel() {
         this.sequence.clear();
         this.sequence.add("engineBoom");
         this.sequence.add("start");

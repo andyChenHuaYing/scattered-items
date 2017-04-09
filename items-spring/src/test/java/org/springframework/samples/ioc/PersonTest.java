@@ -3,7 +3,7 @@ package org.springframework.samples.ioc;
 import org.junit.Test;
 import org.springframework.samples.testbase.TestBase;
 
-public class PersonTest extends TestBase{
+public class PersonTest extends TestBase {
     public PersonTest() {
         super("spring-p-namespace.xml");
     }

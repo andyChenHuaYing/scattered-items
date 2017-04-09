@@ -23,8 +23,9 @@ public class Shapes {
         }
     }
 }
+
 abstract class Shape {
-    void draw(){
+    void draw() {
         Print.ln(this + ".draw();");
     }
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:c="http://www.springframework.org/schema/c"
+       xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
@@ -22,7 +22,6 @@
           c:baz-ref="baz">
         <!--<constructor-arg ref="bar"/>-->
         <!--<constructor-arg ref="baz"/>-->
-
 
 
         <property name="accounts">
@@ -57,7 +56,8 @@
     <bean id="accountDaoDepends" class="org.springframework.samples.ioc.AccountDao"/>
 
     <!-- depends on multiple -->
-    <bean id="dependsBean" class="org.springframework.samples.ioc.DependsOnSomeBean" depends-on="beDependsOnBean, accountDaoDepends">
+    <bean id="dependsBean" class="org.springframework.samples.ioc.DependsOnSomeBean"
+          depends-on="beDependsOnBean, accountDaoDepends">
         <property name="beDependsOnBean" ref="beDependsOnBean"/>
     </bean>
 

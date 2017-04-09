@@ -10,11 +10,11 @@ package org.springframework.samples.annotations.beanAndconfiguration;
 public class FooWithInnerBar {
     private Bar bar;
 
-    public Bar getBar() {
-        return bar;
-    }
-
     public FooWithInnerBar(Bar bar) {
         this.bar = bar;
+    }
+
+    public Bar getBar() {
+        return bar;
     }
 }

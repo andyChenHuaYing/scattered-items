@@ -16,6 +16,15 @@ public class IterableFibonacci implements Iterable<Integer> {
         this.fibonacci = fibonacci;
     }
 
+    public static void main(String[] args) {
+        IterableFibonacci iterableFibonacci = new IterableFibonacci(10, new Fibonacci());
+        for (Integer integer : iterableFibonacci) {
+            System.out.println(integer);
+
+        }
+
+    }
+
     @Override
     public Iterator<Integer> iterator() {
         return new Iterator<Integer>() {
@@ -30,14 +39,5 @@ public class IterableFibonacci implements Iterable<Integer> {
                 return fibonacci.next();
             }
         };
-    }
-
-    public static void main(String[] args) {
-        IterableFibonacci iterableFibonacci = new IterableFibonacci(10, new Fibonacci());
-        for (Integer integer : iterableFibonacci) {
-            System.out.println(integer);
-
-        }
-
     }
 }

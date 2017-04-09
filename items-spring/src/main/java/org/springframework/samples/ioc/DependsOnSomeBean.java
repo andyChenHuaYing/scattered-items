@@ -13,6 +13,10 @@ import org.springframework.samples.utils.ToString;
 public class DependsOnSomeBean {
     private BeDependsOnBean beDependsOnBean;
 
+    public DependsOnSomeBean() {
+        System.out.println("order : " + OrderUtils.order++ + " : " + this.getClass().getName() + " is instantiated");
+    }
+
     public void setBeDependsOnBean(BeDependsOnBean beDependsOnBean) {
         this.beDependsOnBean = beDependsOnBean;
     }
@@ -20,9 +24,5 @@ public class DependsOnSomeBean {
     @Override
     public String toString() {
         return ToString.toString(this.getClass());
-    }
-
-    public DependsOnSomeBean() {
-        System.out.println("order : " + OrderUtils.order++ + " : " + this.getClass().getName() + " is instantiated");
     }
 }

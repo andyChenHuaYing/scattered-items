@@ -1,7 +1,5 @@
 package org.oscar.mail.support;
 
-import sun.nio.cs.ext.GBK;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -33,6 +31,7 @@ public abstract class Generator {
 
     /**
      * 汉字字符串生成器,从所有汉字中随机取 number 个字符
+     *
      * @param number 汉字个数
      * @return 邮件标题
      */

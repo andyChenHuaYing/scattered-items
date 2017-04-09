@@ -13,14 +13,6 @@ public class RandomList<T> {
     private List<T> storage = new ArrayList<>();
     private Random random = new Random(47);
 
-    public void add(T t) {
-        storage.add(t);
-    }
-
-    public T select() {
-        return storage.get(random.nextInt(storage.size()));
-    }
-
     public static void main(String[] args) {
         RandomList<String> randomList = new RandomList<>();
         String str = "a b c d e f g";
@@ -31,5 +23,13 @@ public class RandomList<T> {
         for (int i = 0; i < 10; i++) {
             System.out.println(randomList.select());
         }
+    }
+
+    public void add(T t) {
+        storage.add(t);
+    }
+
+    public T select() {
+        return storage.get(random.nextInt(storage.size()));
     }
 }

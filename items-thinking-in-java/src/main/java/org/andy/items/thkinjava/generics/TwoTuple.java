@@ -5,7 +5,7 @@ package org.andy.items.thkinjava.generics;
  * Version 1.0-SNAPSHOT<br>
  */
 @SuppressWarnings("unused")
-public class TwoTuple<A,B> {
+public class TwoTuple<A, B> {
     public final A first;
     public final B second;
 

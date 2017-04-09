@@ -3,7 +3,7 @@ package org.springframework.samples.annotations;
 import org.junit.Test;
 import org.springframework.samples.testbase.TestBase;
 
-public class QualifierAnnotationTest extends TestBase{
+public class QualifierAnnotationTest extends TestBase {
     public QualifierAnnotationTest() {
         super("spring-annotation.xml");
     }

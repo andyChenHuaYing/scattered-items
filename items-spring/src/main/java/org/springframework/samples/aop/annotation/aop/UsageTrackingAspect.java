@@ -23,6 +23,7 @@ public class UsageTrackingAspect {
             defaultImpl = UsageTrackedImpl.class)
     @SuppressWarnings("unused")
     public UsageTracked usageTracked;
+
     /**
      * Demonstrate introduction usage
      */

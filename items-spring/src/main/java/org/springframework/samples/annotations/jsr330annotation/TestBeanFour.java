@@ -10,5 +10,5 @@ import javax.inject.Named;
  *          Created date: 2014-11-21 20:01
  */
 @Named("beanFour")
-public class TestBeanFour implements BeanInterface{
+public class TestBeanFour implements BeanInterface {
 }

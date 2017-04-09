@@ -8,7 +8,7 @@ import org.alien.design.pattern.decorator.demo.component.InputStreamComponent;
  * @author : oscar
  * @version :1.0, 2016/8/22
  */
-public abstract class InputStreamDecorator extends InputStreamComponent{
+public abstract class InputStreamDecorator extends InputStreamComponent {
     protected InputStreamComponent inputStreamComponent;
 
     public InputStreamDecorator(InputStreamComponent inputStreamComponent) {

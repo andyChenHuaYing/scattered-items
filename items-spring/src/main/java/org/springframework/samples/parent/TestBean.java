@@ -12,7 +12,6 @@ public class TestBean {
     private int age;
 
 
-
     public void setName(String name) {
         this.name = name;
     }

@@ -17,6 +17,7 @@ public class UserAction {
 
     /**
      * Add user.
+     *
      * @param user Detail user.
      */
     public void addUser(User user) throws ProceedFailException {
@@ -39,7 +40,7 @@ public class UserAction {
         if (StringUtils.isEmpty(user.getUserName())) {
             System.out.println("user name is null...");
             return false;
-        }else if (StringUtils.isEmpty(user.getPassword())) {
+        } else if (StringUtils.isEmpty(user.getPassword())) {
             System.out.println("password is null...");
             return false;
         }

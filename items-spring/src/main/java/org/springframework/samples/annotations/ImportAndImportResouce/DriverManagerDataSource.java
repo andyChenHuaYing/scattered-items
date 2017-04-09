@@ -14,14 +14,14 @@ public class DriverManagerDataSource implements DataSource {
     private String password;
 
 
-    public DriverManagerDataSource() { }
+    public DriverManagerDataSource() {
+    }
 
     public DriverManagerDataSource(String url, String username, String password) {
         this.url = url;
         this.username = username;
         this.password = password;
     }
-
 
 
     @Override

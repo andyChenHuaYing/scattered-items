@@ -9,14 +9,15 @@ package org.alien.design.pattern.singleton.demo;
 @SuppressWarnings("unused")
 public class LazyInitThreadSafeByInnerClass {
 
-    private LazyInitThreadSafeByInnerClass(){}
-
-    private static class LazyInitThreadSafeByInnerClassBuilder{
-        private static final LazyInitThreadSafeByInnerClass LAZY_INIT = new LazyInitThreadSafeByInnerClass();
+    private LazyInitThreadSafeByInnerClass() {
     }
 
-    public static LazyInitThreadSafeByInnerClass getInstance(){
+    public static LazyInitThreadSafeByInnerClass getInstance() {
         return LazyInitThreadSafeByInnerClassBuilder.LAZY_INIT;
+    }
+
+    private static class LazyInitThreadSafeByInnerClassBuilder {
+        private static final LazyInitThreadSafeByInnerClass LAZY_INIT = new LazyInitThreadSafeByInnerClass();
     }
 
 }

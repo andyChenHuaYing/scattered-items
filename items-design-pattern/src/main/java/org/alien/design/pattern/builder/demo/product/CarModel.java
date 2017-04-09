@@ -12,11 +12,14 @@ public abstract class CarModel {
     private ArrayList<String> sequence = new ArrayList<>();
 
     public abstract void start();
+
     public abstract void stop();
+
     public abstract void engineBoom();
+
     public abstract void alarm();
 
-    public void run(){
+    public void run() {
         for (String command : sequence) {
             if ("start".equals(command)) {
                 this.start();

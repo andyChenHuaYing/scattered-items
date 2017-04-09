@@ -11,7 +11,7 @@ public class InitNowThreadSafe {
 
     private static final InitNowThreadSafe INIT_NOW_THREAD_SAFE = new InitNowThreadSafe();
 
-    public InitNowThreadSafe getInstance(){
+    public InitNowThreadSafe getInstance() {
         return INIT_NOW_THREAD_SAFE;
     }
 

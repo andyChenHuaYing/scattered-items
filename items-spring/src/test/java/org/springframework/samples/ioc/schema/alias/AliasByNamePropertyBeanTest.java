@@ -12,7 +12,6 @@ import java.util.Set;
 public class AliasByNamePropertyBeanTest extends TestBase {
 
 
-
     public AliasByNamePropertyBeanTest() {
         super("spring_configuration/ioc/schema/spring-ioc-schema-alias-bean.xml");
     }

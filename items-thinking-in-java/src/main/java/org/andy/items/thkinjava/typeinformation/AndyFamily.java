@@ -32,20 +32,20 @@ public class AndyFamily {
 }
 
 class Andy {
-    static{
+    static {
         Print.ln("Andy : Father");
     }
 }
 
 class Star {
-    static{
+    static {
         Print.ln("Star : Mather");
     }
 }
 
 @SuppressWarnings("unused")
 class Year {
-    static{
+    static {
         Print.ln("Year : child");
     }
 }

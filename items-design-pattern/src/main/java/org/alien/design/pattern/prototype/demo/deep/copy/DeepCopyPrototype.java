@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * @author : oscar
  * @version :1.0, 2016/8/22
  */
-public class DeepCopyPrototype implements Cloneable{
+public class DeepCopyPrototype implements Cloneable {
 
     private ArrayList<String> list = new ArrayList<>();
 

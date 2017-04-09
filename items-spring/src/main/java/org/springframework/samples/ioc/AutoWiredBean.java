@@ -10,12 +10,12 @@ package org.springframework.samples.ioc;
 public class AutoWiredBean {
     private AutowiredBeanParameter autowiredBeanParameter;
 
-    public void showAutowiredBeanParameter(){
-        System.out.println(autowiredBeanParameter.toString());
-    }
-
     public AutoWiredBean() {
         System.out.println(this.getClass().getName() + " is instantiated...");
+    }
+
+    public void showAutowiredBeanParameter() {
+        System.out.println(autowiredBeanParameter.toString());
     }
 
     public void setAutowiredBeanParameter(AutowiredBeanParameter autowiredBeanParameter) {

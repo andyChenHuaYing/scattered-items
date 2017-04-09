@@ -12,15 +12,15 @@ import org.springframework.core.io.Resource;
 public class ResourcesAsDependenciesBean {
     private Resource template;
 
-    public void setTemplate(Resource template) {
-        this.template = template;
-    }
-
     public String showResourceName() {
         return template.getFilename();
     }
 
     public Resource getTemplate() {
         return this.template;
+    }
+
+    public void setTemplate(Resource template) {
+        this.template = template;
     }
 }

@@ -5,16 +5,16 @@
 /**
  * Multiple execute window.onload;
  */
-function addEvent(fun){
-	var oldFunction = window.onload;
-	if (!oldFunction) {
-		window.onload = fun;
-	} else {
-		window.onload = function () {
-			oldFunction();
-			fun();
-		}
-	}
+function addEvent(fun) {
+    var oldFunction = window.onload;
+    if (!oldFunction) {
+        window.onload = fun;
+    } else {
+        window.onload = function () {
+            oldFunction();
+            fun();
+        }
+    }
 }
 
 addEvent(getNewContent());

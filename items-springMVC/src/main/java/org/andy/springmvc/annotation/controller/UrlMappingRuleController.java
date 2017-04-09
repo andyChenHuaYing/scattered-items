@@ -28,7 +28,7 @@ public class UrlMappingRuleController {
                                    @PathVariable(value = "paramOne") String paramOne,
                                    @PathVariable(value = "paramTwo") String paramTwo) throws IOException {
         response.getWriter().write("template url mapping rule, url : " + UrlUtil.getURL(request) + "parameters : " +
-                                    paramOne + ", " + paramTwo);
+                paramOne + ", " + paramTwo);
     }
 
     //    @RequestMapping(value = "/ant?")

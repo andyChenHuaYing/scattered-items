@@ -13,7 +13,7 @@ import java.util.List;
  *          Created date: 2014-11-26 19:47
  */
 public class TableCreator {
-    public static void createTable(Class<?> ... classes) {
+    public static void createTable(Class<?>... classes) {
         for (Class cl : classes) {
             DBTable dbTable = (DBTable) cl.getAnnotation(DBTable.class);
             if (dbTable == null) {
@@ -44,7 +44,7 @@ public class TableCreator {
                 }
 
                 if (annotations[0] instanceof SQLString) {
-                    SQLString sqlString = (SQLString)annotations[0];
+                    SQLString sqlString = (SQLString) annotations[0];
                     if (sqlString.name().length() < 1) {
                         columnName = field.getName().toUpperCase();
                     } else {
@@ -55,7 +55,7 @@ public class TableCreator {
                             getConstraints(sqlString.constraints()));
                 }
                 StringBuilder createCommand = new StringBuilder("CREATE TABLE " + tableName + "(");
-                for(String columnDef : columnDefs) {
+                for (String columnDef : columnDefs) {
                     createCommand.append("\n ").append(columnDef).append(",");
                 }
                 // Remove trailing comma
@@ -79,7 +79,7 @@ public class TableCreator {
             constraints += "PRIMARY KEY";
         }
         if (con.unique()) {
-            constraints +="UNIQUE";
+            constraints += "UNIQUE";
         }
         return constraints;
     }

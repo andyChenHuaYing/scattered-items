@@ -8,10 +8,10 @@ package org.springframework.samples.utils;
  *          Created date: 2015-01-24 11:05
  */
 public class PrintUtil {
-    
+
     private static final String LINEBREAK = "\r\n";
 
-    public static String formatTestResult(Object ... objects) {
+    public static String formatTestResult(Object... objects) {
 
 
         StringBuilder stringBuilder = new StringBuilder();

@@ -18,7 +18,7 @@ public class ArrayListDisplay {
         ArrayList<Coffee> coffees = new ArrayList<Coffee>();
         for (Coffee c : new CoffeeGenerator(10)) {
             coffees.add(c);
-            counter ++;
+            counter++;
         }
         System.out.println(coffees);
         return counter;

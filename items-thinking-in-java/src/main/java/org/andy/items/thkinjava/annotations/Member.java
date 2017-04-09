@@ -10,16 +10,15 @@ package org.andy.items.thkinjava.annotations;
 @SuppressWarnings("unused")
 @DBTable(name = "MEMBER")
 public class Member {
+    private static int count;
     @SQLString(30)
     private String firstName;
     @SQLString(50)
     private String lastName;
     @SQLInteger
     private Integer age;
-    @SQLString(value = 30,constraints = @Constraints(primaryKey = true))
+    @SQLString(value = 30, constraints = @Constraints(primaryKey = true))
     private String handle;
-    private static int count;
-
 
     public String getFirstName() {
         return firstName;

@@ -7,6 +7,17 @@ import org.andy.items.thkinjava.entity.EntityOne;
  * Version 1.0-SNAPSHOT<br>
  */
 public class GenericMethods {
+    public static void main(String[] args) {
+        GenericMethods genericMethods = new GenericMethods();
+        genericMethods.f("");
+        genericMethods.f(1.0);
+        genericMethods.f(1.0D);
+        genericMethods.f(1.0F);
+        genericMethods.f('c');
+        genericMethods.f(genericMethods);
+        genericMethods.f("", 1.0, 1.0F);
+    }
+
     public <T> void f(T x) {
         System.out.println(x.getClass().getName());
     }
@@ -19,16 +30,5 @@ public class GenericMethods {
         System.out.println(x.getClass().getSimpleName() + " : " +
                 b.getClass().getSimpleName() + " : " + a.getClass().getSimpleName());
         return b;
-    }
-
-    public static void main(String[] args) {
-        GenericMethods genericMethods = new GenericMethods();
-        genericMethods.f("");
-        genericMethods.f(1.0);
-        genericMethods.f(1.0D);
-        genericMethods.f(1.0F);
-        genericMethods.f('c');
-        genericMethods.f(genericMethods);
-        genericMethods.f("", 1.0, 1.0F);
     }
 }

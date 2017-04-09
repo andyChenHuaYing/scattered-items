@@ -8,7 +8,10 @@ package org.alien.design.pattern.facade.demo.subsystem;
  */
 public interface ILetterProcess {
     void setAddress(String address);
+
     void setContent(String content);
+
     void putIntoEnvelope();
+
     void sendLetter();
 }

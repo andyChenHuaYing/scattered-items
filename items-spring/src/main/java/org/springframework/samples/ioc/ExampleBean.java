@@ -26,14 +26,14 @@ public class ExampleBean {
         this.ultimateAnswer = ultimateAnswer;
     }
 
-    public void conclusion(){
+    public void conclusion() {
         System.out.println(ToString.toString(this.getClass()));
-        System.out.println("Year : " + year + ", answer : " + ultimateAnswer );
+        System.out.println("Year : " + year + ", answer : " + ultimateAnswer);
     }
 
-    public void emailAndGmail(){
+    public void emailAndGmail() {
         System.out.println("email : " + email);
-        System.out.println("gmail : "+ gmail);
+        System.out.println("gmail : " + gmail);
     }
 
     public void setEmail(String email) {

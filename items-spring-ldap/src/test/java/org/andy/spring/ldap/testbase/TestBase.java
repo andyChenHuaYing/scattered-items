@@ -17,8 +17,8 @@ import org.springframework.util.StringUtils;
  */
 @SuppressWarnings("unused")
 public class TestBase {
-    private String springXmlPath;
     protected ClassPathXmlApplicationContext context;
+    private String springXmlPath;
 
     public TestBase() {
     }

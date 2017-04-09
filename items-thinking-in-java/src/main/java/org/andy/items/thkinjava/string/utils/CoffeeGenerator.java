@@ -12,35 +12,17 @@ import java.util.Random;
  * @version 1.0-SNAPSHOT
  *          Created date: 2014-10-27 18:09
  */
-public class CoffeeGenerator implements Generator ,Iterable<Coffee>{
+public class CoffeeGenerator implements Generator, Iterable<Coffee> {
+    private static Random random = new Random(47);
     private Class[] types = {Americano.class, Breve.class, Cappuccino.class, Latte.class, Mocha.class};
     private int size;
-    private static Random random = new Random(47);
 
     @SuppressWarnings("unused")
-    public CoffeeGenerator(){}
-    public CoffeeGenerator(int sz){
-        this.size = sz;
+    public CoffeeGenerator() {
     }
 
-    private class CoffeeIterator implements Iterator<Coffee>{
-        int counter = 1;
-
-        @Override
-        public void remove() {
-            throw new RuntimeException();
-        }
-
-        @Override
-        public Coffee next() {
-            counter ++;
-            return CoffeeGenerator.this.next();
-        }
-
-        @Override
-        public boolean hasNext() {
-            return counter <= size;
-        }
+    public CoffeeGenerator(int sz) {
+        this.size = sz;
     }
 
     @Override
@@ -54,6 +36,26 @@ public class CoffeeGenerator implements Generator ,Iterable<Coffee>{
             return (Coffee) types[random.nextInt(types.length)].newInstance();
         } catch (Exception e) {
             throw new RuntimeException();
+        }
+    }
+
+    private class CoffeeIterator implements Iterator<Coffee> {
+        int counter = 1;
+
+        @Override
+        public void remove() {
+            throw new RuntimeException();
+        }
+
+        @Override
+        public Coffee next() {
+            counter++;
+            return CoffeeGenerator.this.next();
+        }
+
+        @Override
+        public boolean hasNext() {
+            return counter <= size;
         }
     }
 }

@@ -16,8 +16,8 @@ public class PrintJoinPointUtil {
 
     /**
      * Print target object's information.
-     * @param joinPoint:
-     *                 Target object's execution method.
+     *
+     * @param joinPoint: Target object's execution method.
      */
     public static void showJoinPointInfo(JoinPoint joinPoint) {
         System.out.println("===================================================================");

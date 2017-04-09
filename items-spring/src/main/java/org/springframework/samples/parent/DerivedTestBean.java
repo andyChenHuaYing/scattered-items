@@ -23,5 +23,6 @@ public class DerivedTestBean {
         this.age = age;
     }
 
-    public void initialize() { }
+    public void initialize() {
+    }
 }

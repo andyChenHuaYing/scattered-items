@@ -10,7 +10,7 @@ public abstract class Product {
 
     public abstract void doSomethingDetail();
 
-    public void doSomethingCommon(){
+    public void doSomethingCommon() {
         System.out.println("Product.doSomethingCommon");
     }
 }

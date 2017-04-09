@@ -10,7 +10,8 @@ package org.springframework.samples.annotations.javabased;
 public class StringStore implements Store {
     private String instanceType;
 
-    public StringStore() { }
+    public StringStore() {
+    }
 
     public StringStore(String instanceType) {
         this.instanceType = instanceType;

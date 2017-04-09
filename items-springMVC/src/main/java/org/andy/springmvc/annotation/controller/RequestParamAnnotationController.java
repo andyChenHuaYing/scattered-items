@@ -32,14 +32,14 @@ public class RequestParamAnnotationController {
 
     @RequestMapping("/requestParamWithRequiredProFalse")
     public String requestParamWithRequiredProFalse(@RequestParam(value = "param", required = false)
-                                              String param, Model model) {
+                                                           String param, Model model) {
         model.addAttribute("msg", param);
         return "annotation/message";
     }
 
     @RequestMapping("/requestParamWithRequiredProDefault")
     public String requestParamWithRequiredProDefault(@RequestParam(value = "param")
-                                                   String param, Model model) {
+                                                             String param, Model model) {
         model.addAttribute("msg", param);
         return "annotation/message";
     }
@@ -62,7 +62,7 @@ public class RequestParamAnnotationController {
     //localhost:8080/requestParam/multipleValueInjectStringParam?param=alien&param=star
     //Result : alien,star
     public String multipleValueInjectStringParam(@RequestParam(value = "param", required = false)
-                                                   String param, Model model) {
+                                                         String param, Model model) {
         model.addAttribute("msg", param);
         return "annotation/message";
     }
@@ -71,7 +71,7 @@ public class RequestParamAnnotationController {
     //http://localhost:8080/requestParam/multipleValueInjectListParam?param=alien&param=star
     //Result : [Ljava.lang.String;@77103969
     public String multipleValueInjectStringArrayParam(@RequestParam(value = "param", required = false)
-                                                 String[] param, Model model) {
+                                                              String[] param, Model model) {
         model.addAttribute("msg", param);
         return "annotation/message";
     }
@@ -80,7 +80,7 @@ public class RequestParamAnnotationController {
     //http://localhost:8080/requestParam/multipleValueInjectListParam?param=alien&param=star
     //Result : [alien, star]
     public String multipleValueInjectListParam(@RequestParam(value = "param", required = false)
-                                                   List<String> param, Model model) {
+                                                       List<String> param, Model model) {
         model.addAttribute("msg", param);
         return "annotation/message";
     }

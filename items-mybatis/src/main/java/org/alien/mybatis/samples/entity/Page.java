@@ -49,18 +49,18 @@ public class Page {
         int totalPageTemp = this.totalNumber / this.pageNumber;
         int plus = (this.totalNumber % this.pageNumber) == 0 ? 0 : 1;
         totalPageTemp = totalPageTemp + plus;
-        if(totalPageTemp <= 0) {
+        if (totalPageTemp <= 0) {
             totalPageTemp = 1;
         }
         this.totalPage = totalPageTemp;
 
         // 设置当前页数
         // 总页数小于当前页数，应将当前页数设置为总页数
-        if(this.totalPage < this.currentPage) {
+        if (this.totalPage < this.currentPage) {
             this.currentPage = this.totalPage;
         }
         // 当前页数小于1设置为1
-        if(this.currentPage < 1) {
+        if (this.currentPage < 1) {
             this.currentPage = 1;
         }
 

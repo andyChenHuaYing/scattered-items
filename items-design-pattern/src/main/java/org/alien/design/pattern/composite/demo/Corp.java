@@ -26,11 +26,11 @@ public abstract class Corp {
                 '}';
     }
 
-    protected void setParent(Corp corp) {
-        this.parent = corp;
-    }
-
     public Corp getParent() {
         return this.parent;
+    }
+
+    protected void setParent(Corp corp) {
+        this.parent = corp;
     }
 }

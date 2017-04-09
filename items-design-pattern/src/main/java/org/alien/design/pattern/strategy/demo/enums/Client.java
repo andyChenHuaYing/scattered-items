@@ -1,7 +1,5 @@
 package org.alien.design.pattern.strategy.demo.enums;
 
-import org.alien.design.pattern.strategy.demo.enums.Calculator;
-
 /**
  * Description :
  *

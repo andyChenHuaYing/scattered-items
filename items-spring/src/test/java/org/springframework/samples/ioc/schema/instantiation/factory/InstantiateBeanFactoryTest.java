@@ -5,7 +5,7 @@ import org.springframework.samples.model.PlainModelOne;
 import org.springframework.samples.testbase.TestBase;
 import org.springframework.samples.utils.ShowReferencesUtil;
 
-public class InstantiateBeanFactoryTest extends TestBase{
+public class InstantiateBeanFactoryTest extends TestBase {
 
     public InstantiateBeanFactoryTest() {
         super("spring_configuration/ioc/schema/spring-ioc-schema-factory-instantiation-bean.xml");

@@ -3,7 +3,7 @@ package org.springframework.samples.parent;
 import org.junit.Test;
 import org.springframework.samples.testbase.TestBase;
 
-public class DerivedTestBeanTest extends TestBase{
+public class DerivedTestBeanTest extends TestBase {
     public DerivedTestBeanTest() {
         super("spring-parent.xml");
     }

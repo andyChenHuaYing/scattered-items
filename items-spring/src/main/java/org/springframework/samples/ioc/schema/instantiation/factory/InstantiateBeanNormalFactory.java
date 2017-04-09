@@ -11,12 +11,12 @@ import org.springframework.samples.model.PlainModelOne;
  */
 public class InstantiateBeanNormalFactory {
     private static int count = 0;
+    private static PlainModelOne plainModelOne;
     /**
      * I want to control PlainModelOne instance's singleton by this property.But it's failed.Reason is written on
      * instantiatePlainModelOne method's specification.
      */
     private String scope = "singleton";
-    private static PlainModelOne plainModelOne;
 
     public void setScope(String scope) {
         if (!scope.equals("singleton") && !scope.equals("prototype")) {
@@ -31,8 +31,8 @@ public class InstantiateBeanNormalFactory {
      * once, exclude other instance which are instantiated in other ApplicationContext. So it is not the real singleton.
      * But, before invoke this method to instantiate PlainModelOne, Spring will check if PlainScope's instance exists in
      * ApplicationContext when the bean's scope="singleton", execute it if not.else return the exist instance.
-     * @return
-     *        Instance of PlainModelOne.
+     *
+     * @return Instance of PlainModelOne.
      */
     public PlainModelOne instantiatePlainModelOne() {
         System.out.println(++count);//count == 1;

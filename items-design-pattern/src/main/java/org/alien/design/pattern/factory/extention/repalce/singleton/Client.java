@@ -15,7 +15,7 @@ public class Client {
     public static void main(String[] args) throws InstantiationException {
         for (int i = 0; i < 10; i++) {
             Product concreteProductA = SingletonFactory.getProduct(ConcreteProductA.class);
-            System.out.println(concreteProductA.toString()+ " | " + concreteProductA.hashCode());
+            System.out.println(concreteProductA.toString() + " | " + concreteProductA.hashCode());
         }
 
         System.out.println("---------- break line ----------");

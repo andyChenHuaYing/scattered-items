@@ -6,7 +6,7 @@ package org.alien.design.pattern.strategy.demo.normal.strategy;
  * @author : oscar
  * @version :1.0, 2016/8/22
  */
-public class DelStrategy extends CalculateStrategy{
+public class DelStrategy extends CalculateStrategy {
 
     @Override
     public int exe(int a, int b) {

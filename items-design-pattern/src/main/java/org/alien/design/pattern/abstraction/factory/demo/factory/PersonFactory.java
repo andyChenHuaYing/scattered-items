@@ -11,5 +11,6 @@ import org.alien.design.pattern.abstraction.factory.demo.product.MalePerson;
  */
 public abstract class PersonFactory {
     public abstract FemalePerson createFemalePerson();
+
     public abstract MalePerson createMalePerson();
 }

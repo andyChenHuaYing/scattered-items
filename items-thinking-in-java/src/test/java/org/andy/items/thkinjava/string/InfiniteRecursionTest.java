@@ -8,7 +8,7 @@ public class InfiniteRecursionTest {
     private InfiniteRecursion infiniteRecursion = new InfiniteRecursion();
 
     @Before
-    public void setUp(){
+    public void setUp() {
         System.out.println("Test start...");
     }
 

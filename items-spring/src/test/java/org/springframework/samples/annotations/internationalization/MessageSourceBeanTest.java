@@ -5,7 +5,7 @@ import org.springframework.context.MessageSource;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.samples.testbase.TestMessageResourceBase;
 
-public class MessageSourceBeanTest extends TestMessageResourceBase{
+public class MessageSourceBeanTest extends TestMessageResourceBase {
 
     public MessageSourceBeanTest() {
         super("spring-i18n.xml");

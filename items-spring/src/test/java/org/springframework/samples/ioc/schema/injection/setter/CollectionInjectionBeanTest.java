@@ -3,7 +3,7 @@ package org.springframework.samples.ioc.schema.injection.setter;
 import org.junit.Test;
 import org.springframework.samples.testbase.TestBase;
 
-public class CollectionInjectionBeanTest extends TestBase{
+public class CollectionInjectionBeanTest extends TestBase {
     public CollectionInjectionBeanTest() {
         super("spring_configuration/ioc/schema/spring-ioc-schema-setter-injection-bean.xml");
     }

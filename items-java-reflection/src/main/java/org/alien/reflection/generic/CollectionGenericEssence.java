@@ -15,12 +15,19 @@ import java.util.ArrayList;
 @SuppressWarnings("unchecked")
 public class CollectionGenericEssence {
 
+    public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        ArrayList<String> arrayList = new ArrayList<String>();
+        Class clazz = arrayList.getClass();
+        Method method = clazz.getMethod("add", Object.class);
+        method.invoke(arrayList, 20);
+        System.out.println(arrayList.size());
+    }
+
     /**
      * Use java reflect to bypass the Collection Generic.
-     * @param arrayList
-     *        ArrayList of String.
-     * @param value
-     *        An object which will be added in ArrayList of String.
+     *
+     * @param arrayList ArrayList of String.
+     * @param value     An object which will be added in ArrayList of String.
      */
     public ArrayList<String> addElementsByMethodReflect(ArrayList<String> arrayList, Object value) {
         /*
@@ -40,14 +47,6 @@ public class CollectionGenericEssence {
             e.printStackTrace();
         }
         return arrayList;
-    }
-
-    public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        ArrayList<String> arrayList = new ArrayList<String>();
-        Class clazz = arrayList.getClass();
-        Method method = clazz.getMethod("add", Object.class);
-        method.invoke(arrayList, 20);
-        System.out.println(arrayList.size());
     }
 
     @Override

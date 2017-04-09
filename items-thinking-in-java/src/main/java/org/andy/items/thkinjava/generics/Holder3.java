@@ -8,10 +8,16 @@ import org.andy.items.thkinjava.entity.EntityOne;
  */
 @SuppressWarnings("unused")
 public class Holder3<T> {
-    private T a ;
+    private T a;
 
     public Holder3(T a) {
         this.a = a;
+    }
+
+    public static void main(String[] args) {
+        Holder3<EntityOne> holder3 = new Holder3<>(new EntityOne());
+        EntityOne entityOne = holder3.getA();
+        System.out.println(entityOne);
     }
 
     public T getA() {
@@ -20,11 +26,5 @@ public class Holder3<T> {
 
     public void setA(T a) {
         this.a = a;
-    }
-
-    public static void main(String[] args) {
-        Holder3<EntityOne> holder3 = new Holder3<>(new EntityOne());
-        EntityOne entityOne = holder3.getA();
-        System.out.println(entityOne);
     }
 }

@@ -15,13 +15,13 @@ import org.springframework.context.annotation.Scope;
 public class MyConfiguration {
 
 
-    @Bean(name = {"myFoo", "myFirstFoo", "foo2"},initMethod = "init", destroyMethod = "destroy")
+    @Bean(name = {"myFoo", "myFirstFoo", "foo2"}, initMethod = "init", destroyMethod = "destroy")
     @Scope("prototype")
     public Foo foo() {
         return new Foo();
     }
 
-    @Bean(name = {"myBar", "myFirstBar", "bar2"},initMethod = "barInit", destroyMethod = "barDestroy")
+    @Bean(name = {"myBar", "myFirstBar", "bar2"}, initMethod = "barInit", destroyMethod = "barDestroy")
     public Bar bar() {
         return new Bar();
     }

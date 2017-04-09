@@ -7,7 +7,7 @@ import org.springframework.util.StringUtils;
 
 /**
  * Happy day, happy life.
- *
+ * <p>
  * Instance ClassPathXmlApplicationContext by springXmlPath.
  * Support base get Beans methods.
  *
@@ -16,8 +16,8 @@ import org.springframework.util.StringUtils;
  *          Created date: 2014-11-14 18:45
  */
 public class TestBase {
-    private String springXmlPath;
     protected ClassPathXmlApplicationContext context;
+    private String springXmlPath;
 
     public TestBase() {
     }

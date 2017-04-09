@@ -21,7 +21,7 @@ public class MultipleAutoaware {
 
     @Autowired
     public MultipleAutoaware(MovieCatalog[] movieCatalogsConstructor, Set<MovieCatalog> movieCatalogSetConstructor,
-                            Map<String, MovieCatalog> movieCatalogMapConstructor) {
+                             Map<String, MovieCatalog> movieCatalogMapConstructor) {
         this.movieCatalogsConstructor = movieCatalogsConstructor;
         this.movieCatalogSetConstructor = movieCatalogSetConstructor;
         this.movieCatalogMapConstructor = movieCatalogMapConstructor;

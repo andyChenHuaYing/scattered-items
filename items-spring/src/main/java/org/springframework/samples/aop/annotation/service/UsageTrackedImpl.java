@@ -8,7 +8,7 @@ package org.springframework.samples.aop.annotation.service;
  *          Created date: 2014-12-19 22:01
  */
 public class UsageTrackedImpl implements UsageTracked {
-    private static int count =0;
+    private static int count = 0;
 
     @Override
     public int incrementUseCount() {

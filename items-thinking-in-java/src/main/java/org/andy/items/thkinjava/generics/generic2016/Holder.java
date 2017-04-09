@@ -10,19 +10,19 @@ public class Holder<T> {
 
     private T t;
 
+    public static void main(String[] args) {
+        EntityOne entityOne = new EntityOne();
+        Holder<EntityOne> holder = new Holder<>();
+        holder.setT(entityOne);
+        System.out.println(holder);
+    }
+
     public T getT() {
         return t;
     }
 
     public void setT(T t) {
         this.t = t;
-    }
-
-    public static void main(String[] args) {
-        EntityOne entityOne = new EntityOne();
-        Holder<EntityOne> holder = new Holder<>();
-        holder.setT(entityOne);
-        System.out.println(holder);
     }
 
     @Override

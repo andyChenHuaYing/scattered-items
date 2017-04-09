@@ -18,7 +18,7 @@ public class ReFlags {
                 "java has regex\nJava has regex\n" +
                         "JAVA has pretty good regular expressions\n" +
                         "Regular expressions are in Java");
-        while(m.find())
+        while (m.find())
             System.out.println(m.group());
     }
 }

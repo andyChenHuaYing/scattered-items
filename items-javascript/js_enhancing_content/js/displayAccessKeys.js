@@ -1,7 +1,7 @@
 /**
  * Created by andychen on 2015/1/8.
  */
-function displayAccessKeys (){
+function displayAccessKeys() {
     if (!document.getElementById) {
         return false;
     }

@@ -17,8 +17,8 @@ import org.springframework.util.StringUtils;
  */
 @SuppressWarnings("unused")
 public class AnnotationTestBase {
-    private String springXmlPath = "classpath:spring_configuration/ioc/annotation/spring-ioc-annotation-component-scan.xml";
     protected ClassPathXmlApplicationContext context;
+    private String springXmlPath = "classpath:spring_configuration/ioc/annotation/spring-ioc-annotation-component-scan.xml";
 
     public AnnotationTestBase() {
     }

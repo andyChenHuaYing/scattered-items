@@ -1,18 +1,18 @@
 /**
  * Created by andychen on 2015/1/9.
  */
-function moveElementImprove (elementId, final_x, final_y, interval) {
+function moveElementImprove(elementId, final_x, final_y, interval) {
     var elem = document.getElementById(elementId);
 
-    if(elem.movement) {
+    if (elem.movement) {
         clearTimeout(elem.movement);
     }
 
-    if(!elem.style.left) {
+    if (!elem.style.left) {
         elem.style.left = '0px';
     }
 
-    if(!elem.style.top) {
+    if (!elem.style.top) {
         elem.style.top = '0px';
     }
 
@@ -45,6 +45,6 @@ function moveElementImprove (elementId, final_x, final_y, interval) {
     }
     elem.style.top = topPosition + 'px';
     elem.style.left = leftPosition + 'px';
-    var repeat = "moveElementImprove('"+elementId+"', "+final_x+", "+final_y+", "+interval+")";
+    var repeat = "moveElementImprove('" + elementId + "', " + final_x + ", " + final_y + ", " + interval + ")";
     elem.movement = setTimeout(repeat, interval);
 }

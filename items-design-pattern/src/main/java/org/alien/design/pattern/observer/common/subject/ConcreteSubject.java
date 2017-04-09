@@ -1,9 +1,5 @@
 package org.alien.design.pattern.observer.common.subject;
 
-import org.alien.design.pattern.observer.common.observer.Observer;
-
-import java.util.Vector;
-
 /**
  * Description :
  *

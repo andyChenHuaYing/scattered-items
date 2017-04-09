@@ -8,7 +8,9 @@ package org.springframework.samples.annotations.javabased;
  *          Created date: 2014-11-21 19:12
  */
 public class TestBeanAnnotation {
-    public TestBeanAnnotation() { }
+    public TestBeanAnnotation() {
+    }
 
-    public TestBeanAnnotation(String instanceType) { }
+    public TestBeanAnnotation(String instanceType) {
+    }
 }

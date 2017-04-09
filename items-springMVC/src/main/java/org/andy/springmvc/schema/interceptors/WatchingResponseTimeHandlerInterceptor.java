@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
  * @version 1.0-SNAPSHOT
  *          Created date: 2015-01-20 21:07
  */
-public class WatchingResponseTimeHandlerInterceptor extends HandlerInterceptorAdapter{
+public class WatchingResponseTimeHandlerInterceptor extends HandlerInterceptorAdapter {
     private NamedThreadLocal<Long> threadLocal = new NamedThreadLocal<>("Response Time");
 
     @Override

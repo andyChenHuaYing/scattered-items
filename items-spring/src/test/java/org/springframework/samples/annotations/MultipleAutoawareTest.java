@@ -3,7 +3,7 @@ package org.springframework.samples.annotations;
 import org.junit.Test;
 import org.springframework.samples.testbase.TestBase;
 
-public class MultipleAutoawareTest extends TestBase{
+public class MultipleAutoawareTest extends TestBase {
     public MultipleAutoawareTest() {
         super("spring-annotation.xml");
     }

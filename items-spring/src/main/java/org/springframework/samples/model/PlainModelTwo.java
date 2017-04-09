@@ -12,7 +12,7 @@ import org.springframework.core.annotation.Order;
  */
 @SuppressWarnings("unused")
 @Order(2)
-public class PlainModelTwo extends AbstractPlainModel{
+public class PlainModelTwo extends AbstractPlainModel {
     private boolean protoBoolean;
     private char protoChar;
     private short protoShort;

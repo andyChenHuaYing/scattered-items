@@ -1,4 +1,3 @@
-
 package org.alien.design.pattern.adpter.common.clazz.adapter.adaptee;
 
 /**
@@ -9,7 +8,7 @@ package org.alien.design.pattern.adpter.common.clazz.adapter.adaptee;
  */
 public class Adaptee {
 
-    public void doSomethingCommon(){
+    public void doSomethingCommon() {
         System.out.println(this.getClass().getSimpleName() + " do something common...");
     }
 }

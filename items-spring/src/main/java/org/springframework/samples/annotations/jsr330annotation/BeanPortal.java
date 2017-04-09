@@ -26,7 +26,7 @@ public class BeanPortal {
     private BeanInterface testBeanFour;
 
     @Inject
-    public void setTestBeanFour(@Named("beanFour")BeanInterface testBeanFour) {
+    public void setTestBeanFour(@Named("beanFour") BeanInterface testBeanFour) {
         this.testBeanFour = testBeanFour;
     }
 

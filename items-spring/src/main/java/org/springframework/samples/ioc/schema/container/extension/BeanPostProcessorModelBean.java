@@ -16,14 +16,14 @@ public class BeanPostProcessorModelBean {
     public PlainModelOne plainModelOne;
     public PlainModelTwo plainModelTwo;
 
-    public void setPlainModelTwo(PlainModelTwo plainModelTwo) {
-        ExecutionOrderUtil.put(this.getClass().getSimpleName() + " inject plainModelOne via set method.");
-        this.plainModelTwo = plainModelTwo;
-    }
-
     public BeanPostProcessorModelBean(PlainModelOne plainModelOne) {
         ExecutionOrderUtil.put(this.getClass().getSimpleName() + " inject plainModelTwo via constructor.");
         this.plainModelOne = plainModelOne;
+    }
+
+    public void setPlainModelTwo(PlainModelTwo plainModelTwo) {
+        ExecutionOrderUtil.put(this.getClass().getSimpleName() + " inject plainModelOne via set method.");
+        this.plainModelTwo = plainModelTwo;
     }
 
     public void init() {

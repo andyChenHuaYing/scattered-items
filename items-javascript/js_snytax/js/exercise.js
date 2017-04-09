@@ -52,9 +52,9 @@ console.info("NaN === NaN : " + (NaN === NaN));
 console.info("=========================================\r\n");
 
 /*
-    要点：
-        1. 基本类型没有属性、方法
-        2. 调用基本类型会产生临时包装对象、调用完成之后包装对象就被消耗、此时再想获取基本类型的伪属性就会返回undefined。
+ 要点：
+ 1. 基本类型没有属性、方法
+ 2. 调用基本类型会产生临时包装对象、调用完成之后包装对象就被消耗、此时再想获取基本类型的伪属性就会返回undefined。
  */
 var str4 = 'alien';
 console.info("str4.length : " + str4.length);
@@ -69,14 +69,17 @@ console.info("typeof null: " + typeof null);
 console.info("typeof undefined: " + typeof undefined);
 console.info("typeof [1, 2]: " + typeof [1, 2]);
 console.info("typeof Math: " + typeof Math);
-function fun (){}
+function fun() {
+}
 console.info("typeof fun: " + typeof fun);
 console.info("typeof NaN: " + typeof NaN);
 console.info("=========================================\r\n");
 
 console.info("[1, 2] instanceof Array : " + [1, 2] instanceof Array);
-function Person(){}
-function Student(){}
+function Person() {
+}
+function Student() {
+}
 Student.prototype = new Person();
 Student.prototype.constructor = Student;
 var alien = new Person();
@@ -86,7 +89,8 @@ console.info("student instanceof Person : " + student instanceof Person);
 console.info("=========================================\r\n");
 
 Object.prototype.toString.apply([]); //"[object Array]"
-Object.prototype.toString.apply(function(){}); //"[object Function]"
+Object.prototype.toString.apply(function () {
+}); //"[object Function]"
 Object.prototype.toString.apply(Math); //"[object Math]"
 Object.prototype.toString.apply(new Person()); //"[object Object]"
 Object.prototype.toString.apply(null); //"[object Null]"

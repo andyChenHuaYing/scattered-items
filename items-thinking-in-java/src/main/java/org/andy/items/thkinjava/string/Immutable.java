@@ -8,7 +8,7 @@ package org.andy.items.thkinjava.string;
  *          Created date: 2014-10-20 18:48
  */
 public class Immutable {
-    public static String upcase(String str){
+    public static String upcase(String str) {
         return str.toUpperCase();
     }
 

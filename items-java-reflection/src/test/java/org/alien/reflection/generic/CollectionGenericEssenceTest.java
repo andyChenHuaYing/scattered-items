@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 public class CollectionGenericEssenceTest {
     private CollectionGenericEssence collectionGenericEssence;
+
     @Before
     public void setUp() throws Exception {
         collectionGenericEssence = new CollectionGenericEssence();

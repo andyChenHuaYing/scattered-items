@@ -7,7 +7,7 @@ import org.springframework.samples.aop.schema.introduction.FilterService;
 import org.springframework.samples.aop.utils.UserFactory;
 import org.springframework.samples.testbase.TestBase;
 
-public class UserActionTest extends TestBase{
+public class UserActionTest extends TestBase {
     private UserAction userAction;
     private User user = UserFactory.createDefaultUser();
 
@@ -44,6 +44,7 @@ public class UserActionTest extends TestBase{
 
     /**
      * Instantiated UserAction;
+     *
      * @return Instantiation of UserAction.
      */
     private UserAction getUserAction() {

@@ -14,7 +14,7 @@ public class Ex7Test {
         String input3 = "andy is the best java programmer.";
         String input4 = "andy is the best java programmer!";
         Assert.assertEquals(false, ex7.regularTest(input));
-        Assert.assertEquals(true,ex7.regularTest(input2));
+        Assert.assertEquals(true, ex7.regularTest(input2));
         Assert.assertEquals(false, ex7.regularTest(input3));
         Assert.assertEquals(false, ex7.regularTest(input4));
     }

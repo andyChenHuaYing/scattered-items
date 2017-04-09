@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 public class StoreFactory {
 
     @Bean(autowire = Autowire.BY_TYPE)
-    public Store stringStore(){
+    public Store stringStore() {
         return new StringStore("public");
     }
 
@@ -23,8 +23,6 @@ public class StoreFactory {
     Store protectedStringStore() {
         return new StringStore("protected");
     }
-
-
 
 
     @Bean

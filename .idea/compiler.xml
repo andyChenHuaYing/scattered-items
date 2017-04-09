@@ -37,18 +37,18 @@
         <module name="primary-source" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.7">
-      <module name="items-arithmetic" target="1.5" />
-      <module name="items-design-pattern" target="1.5" />
-      <module name="items-email" target="1.5" />
-      <module name="items-java-reflection" target="1.5" />
-      <module name="items-java-source" target="1.5" />
-      <module name="items-mybatis" target="1.5" />
-      <module name="items-servlet" target="1.5" />
-      <module name="items-spring" target="1.5" />
-      <module name="items-springMVC" target="1.5" />
-      <module name="items-thinking-in-java" target="1.5" />
-      <module name="scattered-items" target="1.5" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="items-arithmetic" target="1.8" />
+      <module name="items-design-pattern" target="1.8" />
+      <module name="items-email" target="1.8" />
+      <module name="items-java-reflection" target="1.8" />
+      <module name="items-java-source" target="1.8" />
+      <module name="items-mybatis" target="1.8" />
+      <module name="items-servlet" target="1.8" />
+      <module name="items-spring" target="1.8" />
+      <module name="items-springMVC" target="1.8" />
+      <module name="items-thinking-in-java" target="1.8" />
+      <module name="scattered-items" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

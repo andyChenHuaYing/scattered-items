@@ -97,7 +97,7 @@
         update blog
         <set>
             <if test="title != null and title != ''">
-                 title = #{title}
+                title = #{title}
             </if>
             <if test="id != null and id != ''">
                 , id = #{id}
@@ -110,29 +110,29 @@
     <!--<select id="getBlogWithPosts" resultMap="oneToMany">-->
     <select id="getBlogWithPosts" resultMap="oneToManyResultMap">
         SELECT
-            t1.id blog_id,
-            t1.title,
-            t2.id post_id,
-            t2.section
+        t1.id blog_id,
+        t1.title,
+        t2.id post_id,
+        t2.section
         FROM blog t1 LEFT OUTER JOIN post t2 ON t1.id = t2.blog_id
         WHERE t1.id = 1
     </select>
 
     <select id="getBlogWithPostsNested" resultMap="oneToManyNested">
         SELECT
-            t1.id           blog_id,
-            t1.title,
-            t2.id           post_id,
-            t2.section,
-            t3.id           post_comment_id,
-            t3.name         post_comment_name,
-            t3.comment_text post_comment_text,
-            t5.id           tag_id,
-            t5.name         tag_name
+        t1.id blog_id,
+        t1.title,
+        t2.id post_id,
+        t2.section,
+        t3.id post_comment_id,
+        t3.name post_comment_name,
+        t3.comment_text post_comment_text,
+        t5.id tag_id,
+        t5.name tag_name
         FROM blog t1 LEFT OUTER JOIN post t2 ON t1.id = t2.blog_id
-            LEFT OUTER JOIN post_comment t3 ON t2.id = t3.post_id
-            LEFT OUTER JOIN post_tag t4 ON t2.id = t4.post_id
-            LEFT OUTER JOIN tag t5 ON t4.tag_id = t5.id
+        LEFT OUTER JOIN post_comment t3 ON t2.id = t3.post_id
+        LEFT OUTER JOIN post_tag t4 ON t2.id = t4.post_id
+        LEFT OUTER JOIN tag t5 ON t4.tag_id = t5.id
         WHERE t1.id = 1
     </select>
 </mapper>

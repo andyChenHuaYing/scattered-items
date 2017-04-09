@@ -30,7 +30,7 @@ public class JavaMailImplTest {
     @Test
     public void testSendSimpleMail() throws Exception {
         String title = Generator.generate(10);
-        String content = "<h1>"+Generator.generate(20)+"</h1>";
+        String content = "<h1>" + Generator.generate(20) + "</h1>";
 
         String result = javaMail.sendSimpleMail(addressList, title, content);
         System.out.println(result);
@@ -79,7 +79,7 @@ public class JavaMailImplTest {
         File file = new File("D:\\temp");
         File[] fileArr = file.listFiles();
         String result = this.javaMail.sendEmailWithAttachment(addressList, Generator.generate(10),
-                Generator.generate(100),Arrays.asList(fileArr) );
+                Generator.generate(100), Arrays.asList(fileArr));
         System.out.println(result);
     }
 
@@ -177,6 +177,7 @@ public class JavaMailImplTest {
 
     /**
      * 发送邮件
+     *
      * @param multipart 邮件内容
      * @return 发送结果
      */

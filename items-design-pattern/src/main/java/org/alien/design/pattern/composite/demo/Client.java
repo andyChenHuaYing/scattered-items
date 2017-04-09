@@ -50,8 +50,8 @@ public class Client {
         for (Corp corp : corps) {
             if (corp instanceof Leaf) {
                 info += corp.getInfo() + "\n";
-            }else {
-                info +=  corp.getInfo() +  "\n"  + getTreeInfo((Branch) corp);
+            } else {
+                info += corp.getInfo() + "\n" + getTreeInfo((Branch) corp);
             }
         }
         return info;

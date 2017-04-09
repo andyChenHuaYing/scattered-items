@@ -10,7 +10,7 @@ import org.alien.design.pattern.factory.common.product.Product;
  */
 public abstract class SimpleFactory {
 
-    public static  <T extends Product> T createProduct(Class<T> clazz) throws IllegalAccessException, InstantiationException {
+    public static <T extends Product> T createProduct(Class<T> clazz) throws IllegalAccessException, InstantiationException {
         return clazz.newInstance();
     }
 }

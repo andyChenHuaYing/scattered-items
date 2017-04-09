@@ -11,5 +11,5 @@ import javax.inject.Named;
  */
 //@Component("beanTwo")
 @Named("bean2")
-public class TestBeanTwo implements BeanInterface{
+public class TestBeanTwo implements BeanInterface {
 }

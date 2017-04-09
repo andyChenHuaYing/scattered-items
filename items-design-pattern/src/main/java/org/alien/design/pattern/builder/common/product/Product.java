@@ -8,7 +8,7 @@ package org.alien.design.pattern.builder.common.product;
  */
 public class Product {
 
-    public void doSomething(){
+    public void doSomething() {
         System.out.println("Product.doSomething");
     }
 

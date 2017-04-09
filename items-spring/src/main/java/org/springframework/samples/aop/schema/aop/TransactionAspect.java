@@ -55,7 +55,6 @@ public class TransactionAspect {
     }
 
 
-
     public Object aroundWithPrimaryParameter(ProceedingJoinPoint proceedingJoinPoint, int userId) throws Throwable {
         System.out.println(userId);
         return proceedingJoinPoint.proceed();

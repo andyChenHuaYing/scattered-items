@@ -11,9 +11,10 @@ public class LazyInitThreadUnsafe {
 
     private static LazyInitThreadUnsafe lazyInitThreadUnsafe;
 
-    private LazyInitThreadUnsafe(){}
+    private LazyInitThreadUnsafe() {
+    }
 
-    public LazyInitThreadUnsafe getInstance(){
+    public LazyInitThreadUnsafe getInstance() {
         if (lazyInitThreadUnsafe == null) {
             lazyInitThreadUnsafe = new LazyInitThreadUnsafe();
         }

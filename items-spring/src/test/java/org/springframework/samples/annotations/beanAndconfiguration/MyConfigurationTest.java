@@ -8,6 +8,7 @@ import org.springframework.samples.utils.ShowReferencesUtil;
 
 public class MyConfigurationTest {
     AnnotationConfigApplicationContext context;
+
     @Before
     public void before() {
         context = new AnnotationConfigApplicationContext();

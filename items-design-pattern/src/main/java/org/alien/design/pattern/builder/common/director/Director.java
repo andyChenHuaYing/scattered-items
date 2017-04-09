@@ -13,7 +13,7 @@ public class Director {
 
     private ConcreteBuilder concreteBuilder = new ConcreteBuilder();
 
-    public Product getProduct(){
+    public Product getProduct() {
         concreteBuilder.setPart();
         System.out.println("Director.getProduct");
         return concreteBuilder.buildProduct();

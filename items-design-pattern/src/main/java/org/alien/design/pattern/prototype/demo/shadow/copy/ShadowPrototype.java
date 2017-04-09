@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * @author : oscar
  * @version :1.0, 2016/8/22
  */
-public class ShadowPrototype implements Cloneable{
+public class ShadowPrototype implements Cloneable {
 
     private ArrayList<String> list = new ArrayList<>();
 

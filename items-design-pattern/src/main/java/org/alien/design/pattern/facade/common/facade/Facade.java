@@ -16,15 +16,15 @@ public class Facade {
     private ClassC classC = new ClassC();
 
 
-    public void classADoSomethingCommon(){
+    public void classADoSomethingCommon() {
         classA.doSomethingCommon();
     }
 
-    public void classBDoSomethingCommon(){
+    public void classBDoSomethingCommon() {
         classB.doSomethingCommon();
     }
 
-    public void classCDoSomethingCommon(){
+    public void classCDoSomethingCommon() {
         classC.doSomethingCommon();
     }
 }

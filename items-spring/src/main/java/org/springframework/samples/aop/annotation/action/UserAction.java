@@ -17,7 +17,7 @@ import org.springframework.util.StringUtils;
  *          Created date: 2014-12-10 20:08
  */
 @Component
-public class UserAction implements SuperActionService{
+public class UserAction implements SuperActionService {
 
     @Autowired
     private UserService userService;
@@ -30,8 +30,8 @@ public class UserAction implements SuperActionService{
     /**
      * Validate As a consequence, any given pointcut will be matched against public method only.
      * The aop still could apply, the "public" means pointcut execution modifiers-pattern is just public.
-     * @param user
-     *        User info.
+     *
+     * @param user User info.
      */
     protected void checkUserInfo(User user) {
         if (StringUtils.isEmpty(user.getUserName())) {
@@ -46,23 +46,21 @@ public class UserAction implements SuperActionService{
 
     /**
      * Demonstrate execution expression of pointcut
-     * @param user
-     *        User info.
-     * @param description
-     *        User's noted information.
+     *
+     * @param user        User info.
+     * @param description User's noted information.
      */
     public void demonstrateExecutionPattern(User user, String description) {
-        System.out.println(user +  ", description : " + description);
+        System.out.println(user + ", description : " + description);
     }
 
     /**
      * Demonstrate other pointcut expression pattern :
-     *      within, target, this, args, @within, @target, @args, @annotation and the spacial for Spring AOP--bean.
+     * within, target, this, args, @within, @target, @args, @annotation and the spacial for Spring AOP--bean.
      * All of these expression are defined in TransactionAspect class.
-     * @param user
-     *        User info.
-     * @param description
-     *        User's noted information.
+     *
+     * @param user        User info.
+     * @param description User's noted information.
      * @return User info, just be used in obtain JoinPoint's return value.
      */
     @CustomDeprecatedAnnotation
@@ -74,14 +72,13 @@ public class UserAction implements SuperActionService{
 
     /**
      * Demonstrate the usage of after throwing advice and transfer the Exception to aspect as an parameter.
-     * @param user
-     *        User info.
-     * @param des
-     *        User's noted information.
+     *
+     * @param user User info.
+     * @param des  User's noted information.
      * @return User info, just be used in obtain JoinPoint's return value.
      */
     public User demonstrateAfterThrowingAdviceUsage(User user, String des) {
-        System.out.println(user +  ", description : " + des);
+        System.out.println(user + ", description : " + des);
         throw new ProceedFailException("proceed fail");
     }
 }

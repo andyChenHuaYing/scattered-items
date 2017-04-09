@@ -13,12 +13,12 @@ import org.springframework.samples.model.PlainModelTwo;
 public class CompoundPropertyBean {
     private PlainModelTwo plainModelTwoSingleton;
 
-    public void setPlainModelTwoSingleton(PlainModelTwo plainModelTwoSingleton) {
-        this.plainModelTwoSingleton = plainModelTwoSingleton;
-    }
-
     public PlainModelTwo getPlainModelTwoSingleton() {
         return plainModelTwoSingleton;
+    }
+
+    public void setPlainModelTwoSingleton(PlainModelTwo plainModelTwoSingleton) {
+        this.plainModelTwoSingleton = plainModelTwoSingleton;
     }
 
     @Override

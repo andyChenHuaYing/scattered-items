@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.springframework.samples.testbase.TestBase;
 import org.springframework.samples.utils.PrintUtil;
 
-public class SetterInjectionBeanTest extends TestBase{
+public class SetterInjectionBeanTest extends TestBase {
 
     public SetterInjectionBeanTest() {
         super("spring_configuration/ioc/schema/spring-ioc-schema-setter-injection-bean.xml");

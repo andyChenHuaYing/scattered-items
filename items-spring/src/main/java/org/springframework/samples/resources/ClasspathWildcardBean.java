@@ -14,12 +14,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class ClasspathWildcardBean {
     private ClassPathXmlApplicationContext context;
 
-    public ClassPathXmlApplicationContext getContext() {
-        return context;
-    }
-
     public ClasspathWildcardBean(String classpath) {
         context = new ClassPathXmlApplicationContext(classpath);
+    }
+
+    public ClassPathXmlApplicationContext getContext() {
+        return context;
     }
 
     @Override

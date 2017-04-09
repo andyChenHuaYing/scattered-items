@@ -11,9 +11,10 @@ public class LazyInitThreadSafeBySync {
 
     private static LazyInitThreadSafeBySync lazyInitThreadSafeBySync;
 
-    private LazyInitThreadSafeBySync(){}
+    private LazyInitThreadSafeBySync() {
+    }
 
-    public synchronized LazyInitThreadSafeBySync getInstance(){
+    public synchronized LazyInitThreadSafeBySync getInstance() {
         if (lazyInitThreadSafeBySync == null) {
             lazyInitThreadSafeBySync = new LazyInitThreadSafeBySync();
         }

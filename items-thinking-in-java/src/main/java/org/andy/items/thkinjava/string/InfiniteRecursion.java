@@ -11,7 +11,8 @@ import java.util.ArrayList;
  */
 public class InfiniteRecursion {
 
-    public InfiniteRecursion(){}
+    public InfiniteRecursion() {
+    }
 
 
     public int printSelfAddress(int size) {

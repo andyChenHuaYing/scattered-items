@@ -9,6 +9,11 @@ package org.springframework.samples.ioc.schema.instantiation.constructor;
  * Version 1.0-SNAPSHOT
  */
 public class WithInnerStaticBean {
+    @Override
+    public String toString() {
+        return "WithInnerStaticBean{}";
+    }
+
     static class InnerBean {
         private String string;
 
@@ -22,10 +27,5 @@ public class WithInnerStaticBean {
                     "string='" + string + '\'' +
                     '}';
         }
-    }
-
-    @Override
-    public String toString() {
-        return "WithInnerStaticBean{}";
     }
 }

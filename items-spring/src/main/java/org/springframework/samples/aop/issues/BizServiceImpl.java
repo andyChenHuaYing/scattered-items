@@ -10,9 +10,10 @@ import org.springframework.stereotype.Service;
  *          Created date: 2014-12-21 19:26
  */
 @Service
-public class BizServiceImpl implements BizService{
+public class BizServiceImpl implements BizService {
 
-    public BizServiceImpl() { }
+    public BizServiceImpl() {
+    }
 
     /**
      * The methods which locate in the method's body will not be proxy.

@@ -9,6 +9,7 @@ package org.springframework.samples.annotations.beanAndconfiguration;
  */
 public class A {
     private B b;
+
     public A(B b) {
         System.out.println("a....");
         this.b = b;

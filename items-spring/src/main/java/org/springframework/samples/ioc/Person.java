@@ -12,7 +12,7 @@ public class Person {
     private Person spouse;
 
 
-    public void personInfo(){
+    public void personInfo() {
         System.out.println("name : " + name + ", spouse : " + spouse);
     }
 

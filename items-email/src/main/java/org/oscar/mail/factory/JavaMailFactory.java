@@ -10,5 +10,4 @@ package org.oscar.mail.factory;
 public class JavaMailFactory {
 
 
-
 }

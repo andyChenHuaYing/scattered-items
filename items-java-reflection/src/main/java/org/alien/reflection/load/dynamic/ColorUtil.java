@@ -18,7 +18,7 @@ public class ColorUtil {
 
     /**
      * Dynamic load detail color class type.Never mind it exist or not and if you want to change another one,
-     * just add an class which achieve the color interface and implements the showRGB method. 
+     * just add an class which achieve the color interface and implements the showRGB method.
      */
     public void showRGB() {
         Class colorClazz = null;

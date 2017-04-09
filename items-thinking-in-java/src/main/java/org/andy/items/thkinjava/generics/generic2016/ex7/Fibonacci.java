@@ -7,6 +7,12 @@ package org.andy.items.thkinjava.generics.generic2016.ex7;
 public class Fibonacci implements Generator<Integer> {
     private int count = 0;
 
+    public static void main(String[] args) {
+        Fibonacci fibonacci = new Fibonacci();
+        for (int i = 0; i < 10; i++) {
+            System.out.println(fibonacci.next());
+        }
+    }
 
     @Override
     public Integer next() {
@@ -18,13 +24,6 @@ public class Fibonacci implements Generator<Integer> {
             return 1;
         }
         return fib(n - 1) + fib(n - 2);
-    }
-
-    public static void main(String[] args) {
-        Fibonacci fibonacci = new Fibonacci();
-        for (int i = 0; i < 10; i++) {
-            System.out.println(fibonacci.next());
-        }
     }
 
 }

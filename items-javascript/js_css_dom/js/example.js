@@ -12,7 +12,7 @@ function stripeTable() {
     var odd = true;
     for (var i = 0; i < tableElements.length; i++) {
         var trElements = tableElements[i].getElementsByTagName("tr");
-        for (var j = 0; j < trElements.length; j++ ) {
+        for (var j = 0; j < trElements.length; j++) {
             if (odd) {
                 trElements[j].style.backgroundColor = '#ffc';
                 odd = false;
@@ -41,7 +41,7 @@ function useClassStripeTable() {
     var odd = true;
     for (var i = 0; i < tableElements.length; i++) {
         var trElements = tableElements[i].getElementsByTagName("tr");
-        for (var j = 0; j < trElements.length; j++ ) {
+        for (var j = 0; j < trElements.length; j++) {
             if (odd) {
                 addClass(trElements[j], "odd");
                 odd = false;

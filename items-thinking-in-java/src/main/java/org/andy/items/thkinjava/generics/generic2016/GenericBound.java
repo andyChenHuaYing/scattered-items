@@ -1,5 +1,13 @@
 package org.andy.items.thkinjava.generics.generic2016;
 
+interface Animal {
+    void speek();
+}
+
+interface Fish {
+    void bubble();
+}
+
 /**
  * Author: oscar
  * Create Data: 08/03/16
@@ -9,14 +17,6 @@ public class GenericBound {
         Item<GolderFish> item = new Item<>(new GolderFish());
         item.doSomething();
     }
-}
-
-interface Animal {
-    void speek();
-}
-
-interface Fish {
-    void bubble();
 }
 
 class GolderFish implements Animal, Fish {

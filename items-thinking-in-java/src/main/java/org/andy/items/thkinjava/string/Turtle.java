@@ -14,13 +14,9 @@ public class Turtle {
     private String name;
     private Formatter formatter;
 
-    public Turtle(String name, Formatter f){
+    public Turtle(String name, Formatter f) {
         this.name = name;
         this.formatter = f;
-    }
-
-    public void move(int x, int y) {
-        formatter.format("%s The Turtle is at (%d,%d)\n", name, x, y);
     }
 
     public static void main(String[] args) {
@@ -29,8 +25,12 @@ public class Turtle {
         Turtle terry = new Turtle("Terry", new Formatter(printStream));
         tommy.move(0, 0);
         terry.move(2, 4);
-        tommy.move(3,7);
+        tommy.move(3, 7);
         terry.move(6, 4);
         tommy.move(6, 9);
+    }
+
+    public void move(int x, int y) {
+        formatter.format("%s The Turtle is at (%d,%d)\n", name, x, y);
     }
 }

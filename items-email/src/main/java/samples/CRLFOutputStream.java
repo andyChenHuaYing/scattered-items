@@ -44,11 +44,13 @@ import java.io.OutputStream;
  */
 public class CRLFOutputStream extends FilterOutputStream {
     protected static byte[] newline;
+
     static {
         newline = new byte[2];
         newline[0] = (byte) '\r';
         newline[1] = (byte) '\n';
     }
+
     protected int lastb = -1;
 
     public CRLFOutputStream(OutputStream os) {

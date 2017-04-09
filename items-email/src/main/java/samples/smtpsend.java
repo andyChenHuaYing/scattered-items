@@ -152,7 +152,7 @@ public class smtpsend {
         }
 
         try {
-	    /*
+        /*
 	     * Prompt for To and Subject, if not specified.
 	     */
             if (optind < argv.length) {

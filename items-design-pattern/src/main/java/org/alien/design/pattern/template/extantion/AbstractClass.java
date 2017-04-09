@@ -12,7 +12,7 @@ public abstract class AbstractClass {
 
     public abstract void doAndyThing();
 
-    public final void templateMethod(){
+    public final void templateMethod() {
         if (ifDoSomethingDetailHook()) {
             this.doSomethingDetail();
         }
@@ -20,7 +20,7 @@ public abstract class AbstractClass {
         this.doAndyThing();
     }
 
-    public boolean ifDoSomethingDetailHook(){
+    public boolean ifDoSomethingDetailHook() {
         return true;
     }
 }

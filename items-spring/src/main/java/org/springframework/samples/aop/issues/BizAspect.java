@@ -14,7 +14,8 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 public class BizAspect {
-    public BizAspect() { }
+    public BizAspect() {
+    }
 
     @AfterReturning(value = "execution(* org.springframework.samples.aop.issues.*.*(..))", returning = "methodName")
     public void before(String methodName) {

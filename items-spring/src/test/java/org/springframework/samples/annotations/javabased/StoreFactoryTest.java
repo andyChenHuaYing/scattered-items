@@ -3,7 +3,7 @@ package org.springframework.samples.annotations.javabased;
 import org.junit.Test;
 import org.springframework.samples.testbase.TestBase;
 
-public class StoreFactoryTest extends TestBase{
+public class StoreFactoryTest extends TestBase {
     public StoreFactoryTest() {
         super("spring-annotationJavaBase.xml");
     }

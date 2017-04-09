@@ -15,12 +15,12 @@ import org.springframework.samples.utils.ShowReferencesUtil;
 public class InnerBeanModel {
     private String innerBeanModelStr;
 
-    public void setInnerBeanModelStr(String innerBeanModelStr) {
-        this.innerBeanModelStr = innerBeanModelStr;
-    }
-
     public String getInnerBeanModelStr() {
         return innerBeanModelStr;
+    }
+
+    public void setInnerBeanModelStr(String innerBeanModelStr) {
+        this.innerBeanModelStr = innerBeanModelStr;
     }
 
     @Override

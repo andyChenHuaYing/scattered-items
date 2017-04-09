@@ -1,18 +1,18 @@
 package org.andy.items.thkinjava.generics.generic2016.bound;
 
-public class GenericBound {
-    public static void main(String[] args) {
-        Item<GolderFish> item = new Item<>(new GolderFish());
-        item.doSomething();
-    }
-}
-
 interface Animal {
     void speek();
 }
 
 interface Fish {
     void bubble();
+}
+
+public class GenericBound {
+    public static void main(String[] args) {
+        Item<GolderFish> item = new Item<>(new GolderFish());
+        item.doSomething();
+    }
 }
 
 /**

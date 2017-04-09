@@ -23,7 +23,7 @@ public class RequestHeaderAnnotationController {
                                           @RequestHeader(value = "Accept", defaultValue = "") List<String> accepts,
                                           @RequestHeader(value = "user-agent", defaultValue = "default user agent",
                                                   required = false) String userAgent) {
-        map.put("msg", accepts +", " + userAgent);
+        map.put("msg", accepts + ", " + userAgent);
         return "annotation/message";
     }
 }

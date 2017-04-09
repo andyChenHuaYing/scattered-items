@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
  * Created by andychen on 2015/1/19.
  * Version 1.0-SNAPSHOT
  */
-public class HelloSchemaAbstractControllerWithoutModelAndView extends AbstractController{
+public class HelloSchemaAbstractControllerWithoutModelAndView extends AbstractController {
     @Override
     protected ModelAndView handleRequestInternal(HttpServletRequest request, HttpServletResponse response) throws Exception {
         response.getWriter().write("Hello World without ModelAndView !");

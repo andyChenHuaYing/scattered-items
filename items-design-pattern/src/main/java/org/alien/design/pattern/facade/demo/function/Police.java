@@ -10,7 +10,7 @@ import org.alien.design.pattern.facade.demo.subsystem.ILetterProcess;
  */
 public class Police {
 
-    public void checkLetterPolice(ILetterProcess letterProcess){
+    public void checkLetterPolice(ILetterProcess letterProcess) {
         System.out.println("Police.checkLetterPolice");
     }
 }

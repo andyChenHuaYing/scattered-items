@@ -26,13 +26,14 @@ public class FixedNumInstance {
     private String name;
 
     @SuppressWarnings("unused")
-    private FixedNumInstance(){}
+    private FixedNumInstance() {
+    }
 
-    private FixedNumInstance(String name){
+    private FixedNumInstance(String name) {
         this.name = name;
     }
 
-    public static FixedNumInstance getInstance(){
+    public static FixedNumInstance getInstance() {
         return FIXED_NUM_INSTANCES.get(new Random().nextInt(3));
     }
 

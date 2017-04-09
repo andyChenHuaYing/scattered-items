@@ -38,6 +38,11 @@ public class BasicUsageOfLdapTemplate {
         ldapTemplate = new LdapTemplate(cs);
     }
 
+    public static void main(String[] args) {
+        BasicUsageOfLdapTemplate basicUsageOfLdapTemplate = new BasicUsageOfLdapTemplate();
+        basicUsageOfLdapTemplate.getAllRecodes();
+    }
+
     public List getAllRecodes() {
         String filter = "(objectclass=*)";
         return ldapTemplate.search("uid=admin", filter, new AttributesMapper() {
@@ -48,10 +53,5 @@ public class BasicUsageOfLdapTemplate {
                 return attributes.get("uid").get();
             }
         });
-    }
-
-    public static void main(String[] args) {
-        BasicUsageOfLdapTemplate basicUsageOfLdapTemplate = new BasicUsageOfLdapTemplate();
-        basicUsageOfLdapTemplate.getAllRecodes();
     }
 }

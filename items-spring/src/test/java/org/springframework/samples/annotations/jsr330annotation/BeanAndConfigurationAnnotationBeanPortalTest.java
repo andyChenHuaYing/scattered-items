@@ -3,7 +3,7 @@ package org.springframework.samples.annotations.jsr330annotation;
 import org.junit.Test;
 import org.springframework.samples.testbase.TestBase;
 
-public class BeanAndConfigurationAnnotationBeanPortalTest extends TestBase{
+public class BeanAndConfigurationAnnotationBeanPortalTest extends TestBase {
     public BeanAndConfigurationAnnotationBeanPortalTest() {
         super("spring-annotationJavaBase.xml");
     }

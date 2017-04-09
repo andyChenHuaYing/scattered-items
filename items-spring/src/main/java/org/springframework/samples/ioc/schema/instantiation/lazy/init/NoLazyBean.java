@@ -11,6 +11,10 @@ public class NoLazyBean {
     private LazyInitBean lazyInitBean;
 
 
+    public NoLazyBean() {
+        System.out.println(this.getClass().getName() + " is instantiated...");
+    }
+
     @Override
     public String toString() {
         return "NoLazyBean{" +
@@ -20,9 +24,5 @@ public class NoLazyBean {
 
     public void setLazyInitBean(LazyInitBean lazyInitBean) {
         this.lazyInitBean = lazyInitBean;
-    }
-
-    public NoLazyBean() {
-        System.out.println(this.getClass().getName() + " is instantiated...");
     }
 }

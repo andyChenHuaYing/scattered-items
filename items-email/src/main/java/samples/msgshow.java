@@ -295,7 +295,7 @@ public class msgshow {
             level--;
         } else {
             if (!showStructure && !saveAttachments) {
-		/*
+        /*
 		 * If we actually want to see the data, and it's not a
 		 * MIME type we know, fetch it and check its Java type.
 		 */

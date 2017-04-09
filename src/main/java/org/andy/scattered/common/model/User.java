@@ -48,6 +48,9 @@ public class User {
         this.description = description;
     }
 
+    public User() {
+    }
+
     public String getDescription() {
         return description;
     }
@@ -62,9 +65,6 @@ public class User {
 
     public void setObjectClass(String[] objectClass) {
         this.objectClass = objectClass;
-    }
-
-    public User() {
     }
 
     public String getUserName() {

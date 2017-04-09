@@ -3,7 +3,7 @@ package org.springframework.samples.annotations;
 import org.junit.Test;
 import org.springframework.samples.testbase.TestBase;
 
-public class SimpleMovieListerAnnotationTest extends TestBase{
+public class SimpleMovieListerAnnotationTest extends TestBase {
     public SimpleMovieListerAnnotationTest() {
         super("spring-annotation.xml");
     }

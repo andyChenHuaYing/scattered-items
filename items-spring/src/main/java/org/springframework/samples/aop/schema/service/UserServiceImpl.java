@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void addUser(User user){
+    public void addUser(User user) {
         userDao.addUser(user);
         throw new ProceedFailException("custom exception....");
     }

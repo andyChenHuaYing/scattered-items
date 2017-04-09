@@ -18,7 +18,7 @@ public class CookieAnnotationController {
 
     @RequestMapping("cookieValueUseStringType")
     public String cookieValueWithRequired(@CookieValue(value = "JSESSIONID", required = true, defaultValue = "")
-                                              String sessionId, Map<String, Object> map) {
+                                                  String sessionId, Map<String, Object> map) {
         map.put("msg", sessionId);
         return "annotation/message";
     }

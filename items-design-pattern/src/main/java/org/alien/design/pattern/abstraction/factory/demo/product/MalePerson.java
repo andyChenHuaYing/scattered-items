@@ -8,7 +8,7 @@ package org.alien.design.pattern.abstraction.factory.demo.product;
  */
 public abstract class MalePerson {
 
-    public void getSex(){
+    public void getSex() {
         System.out.println("Male...");
     }
 

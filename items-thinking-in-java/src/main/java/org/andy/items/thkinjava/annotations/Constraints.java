@@ -9,7 +9,10 @@ package org.andy.items.thkinjava.annotations;
  */
 public @interface Constraints {
     public boolean allowNull() default true;
+
     public boolean primaryKey() default false;
+
     public boolean foreignKey() default false;
+
     public boolean unique() default false;
 }

@@ -8,7 +8,7 @@ package org.alien.design.pattern.abstraction.factory.common.product;
  */
 public abstract class ProductA {
 
-    public void doSomethingCommon(){
+    public void doSomethingCommon() {
         System.out.println(this.getClass().getSimpleName() + " do something common...");
     }
 

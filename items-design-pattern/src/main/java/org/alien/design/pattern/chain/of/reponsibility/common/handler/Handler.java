@@ -16,7 +16,7 @@ public abstract class Handler {
 
     public final Response handleMessage(Request request) {
         Response response = null;
-        if ( this.getHandlerLevel() != null && this.getHandlerLevel().equals(request.getRequestLevel())) {
+        if (this.getHandlerLevel() != null && this.getHandlerLevel().equals(request.getRequestLevel())) {
             response = this.echo(request);
         } else {
             if (nextHandler != null) {

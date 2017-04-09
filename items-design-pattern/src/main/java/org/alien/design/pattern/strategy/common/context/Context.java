@@ -15,7 +15,7 @@ public class Context {
         this.strategy = strategy;
     }
 
-    public void doAnything(){
+    public void doAnything() {
         this.strategy.doSomething();
     }
 }

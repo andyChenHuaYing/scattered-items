@@ -8,6 +8,7 @@ import org.junit.Test;
 public class ImmutableTest {
 
     private static Immutable immutable = new Immutable();
+
     @Before
     public void setUp() throws Exception {
     }
@@ -18,6 +19,6 @@ public class ImmutableTest {
 
     @Test
     public void testUpcase() throws Exception {
-        Assert.assertEquals("ANDY",immutable.upcase("andy"));
+        Assert.assertEquals("ANDY", immutable.upcase("andy"));
     }
 }

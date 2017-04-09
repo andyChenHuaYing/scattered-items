@@ -14,12 +14,11 @@ import java.util.List;
  */
 public class EmailService implements ApplicationEventPublisherAware {
 
-    public EmailService() {
-        System.out.println(this.getClass().getName() +  " is created...");
-    }
-
     private List<String> blackList;
     private ApplicationEventPublisher publisher;
+    public EmailService() {
+        System.out.println(this.getClass().getName() + " is created...");
+    }
 
     public void setBlackList(List<String> blackList) {
         this.blackList = blackList;

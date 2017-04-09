@@ -14,7 +14,7 @@ public class PostOffice {
     private ILetterProcess letterProcess = new LetterProcessImpl();
     private Police police = new Police();
 
-    public void sendLetter(String address, String content){
+    public void sendLetter(String address, String content) {
         this.letterProcess.setAddress(address);
         this.letterProcess.setContent(content);
         police.checkLetterPolice(letterProcess);

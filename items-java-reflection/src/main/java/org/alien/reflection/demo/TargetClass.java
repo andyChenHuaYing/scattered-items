@@ -9,21 +9,20 @@ package org.alien.reflection.demo;
  */
 @ClassLevelAnnotation
 @SuppressWarnings("unused")
-public class TargetClass extends TargetSuperClass implements TargetInterfaceOne, TargetInterfaceTwo{
-
-/*-----------------------------------Different declared field.--------------------------------------------------------*/
-    private String privateString = "privateString";
-
-    protected String protectedString = "protectedString";
-
-    String string = "string";
+public class TargetClass extends TargetSuperClass implements TargetInterfaceOne, TargetInterfaceTwo {
 
     @FieldLevelAnnotation
     public String publicString = "publicString";
+    protected String protectedString = "protectedString";
+
+    String string = "string";
+    /*-----------------------------------Different declared field.--------------------------------------------------------*/
+    private String privateString = "privateString";
 
 /*------------------------------------Constructor Method.-------------------------------------------------------------*/
 
-    public TargetClass() { }
+    public TargetClass() {
+    }
 
     public TargetClass(String privateString) {
         this.privateString = privateString;
@@ -31,7 +30,7 @@ public class TargetClass extends TargetSuperClass implements TargetInterfaceOne,
 
     /*------------------------------------Different declared method.------------------------------------------------------*/
     @MethodLevelAnnotationOne
-    private void privateMethod() throws MethodException{
+    private void privateMethod() throws MethodException {
         System.out.println("privateMethod");
     }
 
@@ -43,7 +42,7 @@ public class TargetClass extends TargetSuperClass implements TargetInterfaceOne,
         System.out.println("defaultMethod");
     }
 
-    public String publicMethod(String paramStr, TargetSuperClass targetSuperClass) throws MethodException{
+    public String publicMethod(String paramStr, TargetSuperClass targetSuperClass) throws MethodException {
         System.out.println("publicMethod(String s, TargetSuperClass tsc)");
         return "public method return value .";
     }

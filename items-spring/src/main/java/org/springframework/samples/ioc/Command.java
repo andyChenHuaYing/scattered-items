@@ -14,15 +14,15 @@ import java.util.Map;
 public class Command {
     private Map<String, Boolean> state;
 
-    public Object execute(){
+    public Command() {
+        System.out.println("Order : " + OrderUtils.order + ", " + this.getClass().getName() + " is instantiated...");
+    }
+
+    public Object execute() {
         return new Object();
     }
 
     public void setState(Map<String, Boolean> state) {
         this.state = state;
-    }
-
-    public Command() {
-        System.out.println("Order : " + OrderUtils.order + ", " + this.getClass().getName() + " is instantiated...");
     }
 }

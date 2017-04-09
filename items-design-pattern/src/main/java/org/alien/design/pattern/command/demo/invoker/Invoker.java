@@ -11,7 +11,7 @@ import org.alien.design.pattern.command.demo.command.Command;
 public class Invoker {
     private Command command;
 
-    public void action(){
+    public void action() {
         this.command.execute();
         System.out.println("Invoker.action");
     }

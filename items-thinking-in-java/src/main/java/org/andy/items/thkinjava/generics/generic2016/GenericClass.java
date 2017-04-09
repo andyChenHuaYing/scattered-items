@@ -12,11 +12,11 @@ public class GenericClass<T> {
         return t;
     }
 
-    public <E> E genericMethod(E e) {
-        return e;
-    }
-
     public void setT(T t) {
         this.t = t;
+    }
+
+    public <E> E genericMethod(E e) {
+        return e;
     }
 }

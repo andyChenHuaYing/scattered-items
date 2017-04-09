@@ -11,11 +11,8 @@ package org.springframework.samples.utils;
 public class ClasspathUtils {
 
     /**
-     *
-     * @param resourceName
-     *        Resource name.
-     * @return
-     * ]      classpath
+     * @param resourceName Resource name.
+     * @return ]      classpath
      */
     public String getClasspathByResourceName(String resourceName) {
         return this.getClass().getClassLoader().getResource(resourceName).getPath();

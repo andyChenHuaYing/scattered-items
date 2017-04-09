@@ -1,5 +1,5 @@
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
@@ -43,7 +43,7 @@
                 <property name="acquireRetryAttempts" value="0"/>
 
                 <!--重新尝试的时间间隔，默认为：1000毫秒-->
-                <property name="acquireRetryDelay" value="1000" />
+                <property name="acquireRetryDelay" value="1000"/>
 
                 <!--关闭连接时，是否提交未提交的事务，默认为false，即关闭连接，回滚未提交的事务 -->
                 <property name="autoCommitOnClose" value="false"/>

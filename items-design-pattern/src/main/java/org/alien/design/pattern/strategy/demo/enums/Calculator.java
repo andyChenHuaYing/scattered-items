@@ -6,27 +6,27 @@ package org.alien.design.pattern.strategy.demo.enums;
  * @author : oscar
  * @version :1.0, 2016/8/22
  */
-public enum  Calculator {
+public enum Calculator {
 
-    ADD("+"){
+    ADD("+") {
         @Override
         public int exec(int a, int b) {
             return a + b;
         }
     },
 
-    DEL("-"){
+    DEL("-") {
         @Override
         public int exec(int a, int b) {
             return a - b;
         }
     };
 
+    String value = " ";
+
     private Calculator(String value) {
         this.value = value;
     }
-
-    String value = " ";
 
     public String getValue() {
         return value;

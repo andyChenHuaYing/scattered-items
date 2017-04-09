@@ -8,7 +8,7 @@ package org.alien.design.pattern.command.common.reciver;
  */
 public abstract class Receiver {
 
-    public void doSomethingCommon(){
+    public void doSomethingCommon() {
         System.out.println(this.getClass().getSimpleName() + " do something common...");
     }
 

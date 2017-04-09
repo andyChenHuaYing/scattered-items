@@ -16,16 +16,16 @@ public class ShowReferencesUtil {
         for (Object object : objects) {
             if (object instanceof Set) {
                 showSetReferences((Set<Object>) object);
-            }else if (object instanceof Array) {
+            } else if (object instanceof Array) {
                 showArrayReference((Object[]) object);
-            }else if (object instanceof Map) {
+            } else if (object instanceof Map) {
                 showMapReferences((Map<String, Object>) object);
             } else {
                 System.out.println(refactorToString(object));
             }
         }
     }
-    
+
     private static void showArrayReference(Object[] objects) {
         for (Object obj : objects) {
             System.out.println(refactorToString(obj));
@@ -51,10 +51,9 @@ public class ShowReferencesUtil {
 
     /**
      * Show class full name.
-     * @param  object
-     *          Target class instance.
-     * @return
-     *          class full name.
+     *
+     * @param object Target class instance.
+     * @return class full name.
      */
     public static String showClassFullName(Object object) {
         return object.getClass().getName();
@@ -62,10 +61,9 @@ public class ShowReferencesUtil {
 
     /**
      * Show class simple name.
-     * @param  object
-     *          Target class instance.
-     * @return
-     *          class simple name.
+     *
+     * @param object Target class instance.
+     * @return class simple name.
      */
     public static String showClassSimpleName(Object object) {
         return object.getClass().getSimpleName();

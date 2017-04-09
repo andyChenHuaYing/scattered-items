@@ -17,7 +17,7 @@ public class SimpleMovieListerAnnotation {
         this.movieFinder = movieFinder;
     }
 
-    public void showReferences(){
+    public void showReferences() {
         System.out.println("movieFinder : " + movieFinder);
     }
 }

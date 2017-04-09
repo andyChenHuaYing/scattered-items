@@ -1,6 +1,5 @@
 package org.alien.design.pattern.adpter.common.object.adapter.adapter;
 
-import org.alien.design.pattern.adpter.common.clazz.adapter.adaptee.Adaptee;
 import org.alien.design.pattern.adpter.common.object.adapter.adaptee.AdapteeA;
 import org.alien.design.pattern.adpter.common.object.adapter.adaptee.AdapteeB;
 import org.alien.design.pattern.adpter.common.object.adapter.target.Target;

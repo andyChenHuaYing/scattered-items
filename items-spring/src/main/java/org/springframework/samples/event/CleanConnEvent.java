@@ -10,7 +10,7 @@ import org.springframework.context.event.ContextClosedEvent;
  * @version 1.0-SNAPSHOT
  *          Created date: 2014-11-28 20:12
  */
-public class CleanConnEvent extends ContextClosedEvent{
+public class CleanConnEvent extends ContextClosedEvent {
     public CleanConnEvent(ApplicationContext source) {
         super(source);
         System.out.println(this.getClass().getName() + " is created...");

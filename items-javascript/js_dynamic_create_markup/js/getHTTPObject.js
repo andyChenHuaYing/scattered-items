@@ -2,12 +2,21 @@
  * Created by andy on 1/7/2015.
  */
 
-function getHTTPObject () {
+function getHTTPObject() {
     if (typeof XMLHttpRequest == "undefined") {
         XMLHttpRequest = function () {
-            try {return new ActiveXObject("Msxml2.XMLHTTP.6.0");} catch (e) {}
-            try {return new ActiveXObject("Msxml2.XMLHTTP.3.0");} catch (e) {}
-            try {return new ActiveXObject("Msxml2.XMLHTTP");} catch (e) {}
+            try {
+                return new ActiveXObject("Msxml2.XMLHTTP.6.0");
+            } catch (e) {
+            }
+            try {
+                return new ActiveXObject("Msxml2.XMLHTTP.3.0");
+            } catch (e) {
+            }
+            try {
+                return new ActiveXObject("Msxml2.XMLHTTP");
+            } catch (e) {
+            }
         };
         return false;
     }

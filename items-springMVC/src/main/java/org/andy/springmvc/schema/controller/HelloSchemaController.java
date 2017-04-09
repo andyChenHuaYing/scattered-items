@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
  * Created by andychen on 2015/1/19.
  * Version 1.0-SNAPSHOT
  */
-public class HelloSchemaController implements Controller{
+public class HelloSchemaController implements Controller {
 
     @Override
     public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {

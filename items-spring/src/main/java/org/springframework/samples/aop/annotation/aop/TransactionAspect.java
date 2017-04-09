@@ -47,31 +47,36 @@ public class TransactionAspect {
      * with aspectJ.
      */
     @Pointcut("execution(private * *(..))")
-    private void privateModifiersPattern() {}
+    private void privateModifiersPattern() {
+    }
 
     /**
      * The same as above mentioned.
-      */
+     */
     @Pointcut("execution(protected * *(..))")
-    private void protectedModifiersPattern(){}
+    private void protectedModifiersPattern() {
+    }
 
     /**
      * The execution of any public method:
      */
     @Pointcut("execution(public * *(..))")
-    private void publicMethodPointcut(){}
+    private void publicMethodPointcut() {
+    }
 
     /**
      * The execution of any method in xxx.service package,exclude service's sub package.
      */
     @Pointcut("execution(* org.springframework.samples.aop.annotation.service.*.*(..))")
-    private void servicePointcut(){}
+    private void servicePointcut() {
+    }
 
     /**
      * The execution of any method in xxx.service package or service's sub package.
      */
     @Pointcut("execution(* org.springframework.samples.aop.annotation.action..*.*(..))")
-    private void actionPointcut(){}
+    private void actionPointcut() {
+    }
 
 /*-----------------------------------------------------within and @within---------------------------------------------*/
 
@@ -79,20 +84,23 @@ public class TransactionAspect {
      * The execution of any method in xxx.service package,exclude service's sub package.
      */
     @Pointcut("within(org.springframework.samples.aop.annotation.service.*)")
-    private void servicePackagePointcutWithin(){}
+    private void servicePackagePointcutWithin() {
+    }
 
     /**
      * The execution of any method in xxx.service package or service's sub package.
      */
     @Pointcut("within(org.springframework.samples.aop.annotation.service..*)")
-    private void servicePackageAndSubPackagePointcutWithin(){}
+    private void servicePackageAndSubPackagePointcutWithin() {
+    }
 
     /**
      * Andy join point(method execution only in Spring AOP) where the declared type of
      * the target object has an @CustomTransaction annotation.
      */
     @Pointcut("@within(org.springframework.samples.aop.annotation.annotation.CustomTransaction)")
-    private void customTransactionAnnotationPointcut(){}
+    private void customTransactionAnnotationPointcut() {
+    }
 
 /*-----------------------------------------------------target and @target---------------------------------------------*/
 
@@ -101,14 +109,16 @@ public class TransactionAspect {
      * interface.Do not support wildcard.
      */
     @Pointcut("target(org.springframework.samples.aop.annotation.service.SuperActionService)")
-    private void targetObjectImlSuperActionServicePointcut(){}
+    private void targetObjectImlSuperActionServicePointcut() {
+    }
 
     /**
      * Any join point (method execution only in Spring AOP) where the target object has an @Transactional annotation,
      * just like @within expression. Do not support wildcard.
      */
     @Pointcut("@target(org.springframework.samples.aop.annotation.annotation.CustomTransaction)")
-    private void targetObjectAnnotatedCustomTransactionAnnotationPointcut(){}
+    private void targetObjectAnnotatedCustomTransactionAnnotationPointcut() {
+    }
 
 /*-----------------------------------------------------this-----------------------------------------------------------*/
 
@@ -117,7 +127,8 @@ public class TransactionAspect {
      * The expression must be the detail of Interface's package.name. Do not support wildcard.
      */
     @Pointcut("this(org.springframework.samples.aop.annotation.service.SuperActionService)")
-    private void targetObjectImlSuperActionService(){}
+    private void targetObjectImlSuperActionService() {
+    }
 
 /*-----------------------------------------------------args and @args-------------------------------------------------*/
 
@@ -129,14 +140,16 @@ public class TransactionAspect {
      * parameter(s) could be any number and any type.
      */
     @Pointcut("args(org.springframework.samples.aop.dto.User, java.lang.String)")
-    private void specifiedArgsPointcut(){}
+    private void specifiedArgsPointcut() {
+    }
 
     /**
      * Any join point (method execution only in Spring AOP) which takes a single parameter, and where the runtime type
      * of the argument passed has the @Classified annotation
      */
     @Pointcut("@args(org.springframework.samples.aop.annotation.annotation.CustomDeprecatedAnnotation)")
-    private void methodParameterAnnotatedCustomDeprecated(){}
+    private void methodParameterAnnotatedCustomDeprecated() {
+    }
 
 /*-----------------------------------------------------@annotation----------------------------------------------------*/
 
@@ -147,7 +160,8 @@ public class TransactionAspect {
     @Pointcut(value = "@annotation(org.springframework.samples.aop.annotation.annotation.CustomDeprecatedAnnotation) " +
             "&& args(user, desc)", argNames = "user, desc")
     private void methodAnnotatedByCustomDeprecatedAnnotation(org.springframework.samples.aop.dto.User user,
-                                                             java.lang.String desc){}
+                                                             java.lang.String desc) {
+    }
 
 /*-----------------------------------------------------bean-----------------------------------------------------------*/
 
@@ -156,12 +170,13 @@ public class TransactionAspect {
      * wildcard expression *Action.
      */
     @Pointcut("bean(*Action)")
-    public void beanNameEndWithAction(){}
+    public void beanNameEndWithAction() {
+    }
 
 
 /*-----------------------------------------------------pointcut usage demonstrate-------------------------------------*/
 
-//    @AfterReturning("servicePackagePointcutWithin()")
+    //    @AfterReturning("servicePackagePointcutWithin()")
 //    @AfterReturning("servicePackageAndSubPackagePointcutWithin()")
 //    @After("customTransactionAnnotationPointcut()")
 //    @After("targetObjectImlSuperActionServicePointcut()")
@@ -174,14 +189,14 @@ public class TransactionAspect {
         System.out.println("after returning...");
     }
 
-//    @Before("execution(* org.springframework.samples.aop.annotation.action.*.*(..))")
+    //    @Before("execution(* org.springframework.samples.aop.annotation.action.*.*(..))")
 //    @Before("publicMethodPointcut() && actionPointcut()")
 //    @Before("publicMethodPointcut()")
     public void before() {
         System.out.println("before...");
     }
 
-//    @After("execution(public * *(..))")
+    //    @After("execution(public * *(..))")
 //    @After("execution(public * *())")
 //    @After("execution(public * *(org.springframework.samples.aop.demo.User, String))")
 //    @After("execution(public * *(*))")
@@ -202,8 +217,8 @@ public class TransactionAspect {
 
     /**
      * Demonstrate after throwing advice usage and obtain the join point's Exception
-     * @param ex
-     *        the Exception produced by join point.
+     *
+     * @param ex the Exception produced by join point.
      */
     @AfterThrowing(pointcut = "beanNameEndWithAction()", throwing = "ex")
     public void afterThrowing(ProceedFailException ex) {
@@ -214,21 +229,18 @@ public class TransactionAspect {
     /**
      * Demonstrate around advice usage and obtain the join point's parameters.
      * <B>Note:</B>
-     *         This method should have return value instead of void . If it's not then some method like
-     *         after returning advice will failed when it try to get the join point's return value.
-     * @param proceedingJoinPoint
-     *        Implements of JoinPoint interface, ProceedingJoinPoint. the method of ProceedingJoinPoint proceed will
-     *        be invoked automatically and return an Object instance.
-     * @param user
-     *        Join point's parameter, it will be full filled automatically.
-     * @param desc
-     *        Join point's parameter, it will be full filled automatically.
-     * @throws Throwable
-     *        Join point's Exception.
+     * This method should have return value instead of void . If it's not then some method like
+     * after returning advice will failed when it try to get the join point's return value.
+     *
+     * @param proceedingJoinPoint Implements of JoinPoint interface, ProceedingJoinPoint. the method of ProceedingJoinPoint proceed will
+     *                            be invoked automatically and return an Object instance.
+     * @param user                Join point's parameter, it will be full filled automatically.
+     * @param desc                Join point's parameter, it will be full filled automatically.
+     * @throws Throwable Join point's Exception.
      */
     //@Around("methodAnnotatedByCustomDeprecatedAnnotation(user, desc)")
     public Object around(ProceedingJoinPoint proceedingJoinPoint,
-                       org.springframework.samples.aop.dto.User user, java.lang.String desc) throws Throwable {
+                         org.springframework.samples.aop.dto.User user, java.lang.String desc) throws Throwable {
         Object object;
         System.out.println("Parameter -- user : " + user + ", desc : " + desc);
         System.out.println("before proxy method....");
@@ -239,8 +251,8 @@ public class TransactionAspect {
 
     /**
      * Demonstrate the usage of Order annotation.
-     * @param user
-     *        Join point's parameter, it will be full filled automatically.
+     *
+     * @param user Join point's parameter, it will be full filled automatically.
      */
     @AfterReturning(pointcut = "beanNameEndWithAction()", returning = "user")
     public void afterReturningWithReturnValue(org.springframework.samples.aop.dto.User user) {

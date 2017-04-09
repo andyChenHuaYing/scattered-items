@@ -13,7 +13,7 @@ public class Request {
     /**
      * 获取当前Request的处理等级
      */
-    public Level getRequestLevel(){
+    public Level getRequestLevel() {
         return null;
     }
 }

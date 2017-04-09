@@ -9,7 +9,9 @@ package org.springframework.samples.aop.issues;
  */
 public interface BizService {
     String proxiedMethod() throws Exception;
+
     String thisMethod() throws Exception;
+
     String withoutThisMethod() throws Exception;
 
 }

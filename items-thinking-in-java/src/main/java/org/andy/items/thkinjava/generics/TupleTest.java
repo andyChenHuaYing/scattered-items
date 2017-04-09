@@ -29,13 +29,14 @@ public class TupleTest {
     }
 }
 
-class Amphibian{
+class Amphibian {
     @Override
     public String toString() {
         return "Amphibian{}";
     }
 }
-class Vehicle{
+
+class Vehicle {
     @Override
     public String toString() {
         return "Vehicle{}";

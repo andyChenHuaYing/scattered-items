@@ -11,7 +11,8 @@ import java.util.Map;
  */
 @SuppressWarnings("unused")
 public class ExplicitTypeSpecification {
-    static void f(Map<EntityOne, List<String>> string) { }
+    static void f(Map<EntityOne, List<String>> string) {
+    }
 
     public static void main(String[] args) {
         f(New.<EntityOne, List<String>>map());

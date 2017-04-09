@@ -31,7 +31,7 @@ public class CircularDependencyASingleton {
         return ShowReferencesUtil.showClassFullName(this.getClass());
     }
 
-    public void invokingB(){
+    public void invokingB() {
         System.out.println(circularDependencyBSingleton.toString());
     }
 }

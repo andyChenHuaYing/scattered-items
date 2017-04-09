@@ -11,14 +11,16 @@ public class Print {
 
     /**
      * System.out.println();
+     *
      * @param obj output origin.
      */
-    public static void ln(Object obj){
+    public static void ln(Object obj) {
         System.out.println(obj);
     }
 
     /**
      * System.out.print();
+     *
      * @param obj output origin.
      */
     public static void p(Object obj) {

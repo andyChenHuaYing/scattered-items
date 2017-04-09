@@ -112,7 +112,7 @@ public class msgsend {
         }
 
         try {
-	    /*
+        /*
 	     * Prompt for To and Subject, if not specified.
 	     */
             if (optind < argv.length) {

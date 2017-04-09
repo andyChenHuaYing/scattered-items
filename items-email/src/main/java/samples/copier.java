@@ -30,7 +30,6 @@ package samples;/*
  */
 
 /**
- *
  * @author Christopher Cotton
  */
 

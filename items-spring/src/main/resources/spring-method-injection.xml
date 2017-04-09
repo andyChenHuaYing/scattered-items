@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd"
        default-autowire-candidates="*Repository"
-        >
+>
     <bean id="command" class="org.springframework.samples.ioc.Command" scope="prototype"/>
     <bean class="org.springframework.samples.utils.OrderUtils"/>
     <bean id="commandManager" class="org.springframework.samples.ioc.CommandManager"/>

@@ -8,13 +8,14 @@ package org.alien.design.pattern.singleton.common;
  */
 public class Singleton {
 
-    private Singleton(){}
-
-    private static class SingletonBuilder{
-        private static final Singleton SINGLETON = new Singleton();
+    private Singleton() {
     }
 
-    public static Singleton getInstance(){
+    public static Singleton getInstance() {
         return SingletonBuilder.SINGLETON;
+    }
+
+    private static class SingletonBuilder {
+        private static final Singleton SINGLETON = new Singleton();
     }
 }

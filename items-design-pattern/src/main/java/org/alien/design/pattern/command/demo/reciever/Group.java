@@ -9,8 +9,12 @@ package org.alien.design.pattern.command.demo.reciever;
 public abstract class Group {
 
     public abstract void add();
+
     public abstract void delete();
+
     public abstract void find();
+
     public abstract void plan();
+
     public abstract void change();
 }
