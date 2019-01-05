@@ -16,13 +16,16 @@
         <module>items-springMVC</module>
         <module>items-design-pattern</module>
         <module>items-java-reflection</module>
-        <module>items-spring-ldap</module>
         <module>items-servlet</module>
         <module>items-mybatis</module>
         <module>items-email</module>
+        <module>items-concurrent</module>
     </modules>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <maven.compiler.version>3.8.0</maven.compiler.version>
         <junit.version>4.1</junit.version>
         <testng.version>6.8.8</testng.version>
         <sources.plugin.verion>2.1.1</sources.plugin.verion>
@@ -137,6 +140,16 @@
                 <artifactId>cobertura-maven-plugin</artifactId>
                 <version>2.6</version>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.version}</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 

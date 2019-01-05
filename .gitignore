@@ -4,8 +4,9 @@
 
 #Intellij jetbrain tool files
 
-
-target
+.idea/**
+*.iml
+target/**
 rebel.xml
 
 out/
