@@ -5,7 +5,7 @@ import org.alien.design.pattern.strategy.demo.normal.strategy.AddStrategy;
 import org.alien.design.pattern.strategy.demo.normal.strategy.DelStrategy;
 
 /**
- * Description :
+ * Description : 策略模式
  *
  * @author : oscar
  * @version :1.0, 2016/8/22

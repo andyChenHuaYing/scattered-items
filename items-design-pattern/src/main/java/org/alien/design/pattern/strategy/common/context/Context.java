@@ -3,7 +3,7 @@ package org.alien.design.pattern.strategy.common.context;
 import org.alien.design.pattern.strategy.common.strategy.Strategy;
 
 /**
- * Description :
+ * Description : 上下文or执行器
  *
  * @author : oscar
  * @version :1.0, 2016/8/22
