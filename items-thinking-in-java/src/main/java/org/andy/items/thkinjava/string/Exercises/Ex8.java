@@ -10,7 +10,7 @@ import java.util.Arrays;
  *
  * @author andy
  * @version 1.0-SNAPSHOT
- *          Created date: 2014-10-28 19:00
+ * Created date: 2014-10-28 19:00
  */
 public class Ex8 {
     public static void main(String[] args) {

@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
  *
  * @author andy
  * @version 1.0-SNAPSHOT
- *          Created date: 2014-10-28 19:01
+ * Created date: 2014-10-28 19:01
  */
 public class Ex9 {
     public static void main(String[] args) {

@@ -7,7 +7,7 @@ import java.util.List;
  *
  * @author andy
  * @version 1.0-SNAPSHOT
- *          Created date: 2014-11-06 20:52
+ * Created date: 2014-11-06 20:52
  */
 @SuppressWarnings("unused")
 public class PassWordUtils {

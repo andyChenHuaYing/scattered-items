@@ -5,7 +5,7 @@ package org.andy.items.thkinjava.string;
  *
  * @author andy
  * @version 1.0-SNAPSHOT
- *          Created date: 2014-10-27 21:25
+ * Created date: 2014-10-27 21:25
  */
 public class SimpleFormat {
     public static void main(String[] args) {

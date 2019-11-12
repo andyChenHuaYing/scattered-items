@@ -10,7 +10,7 @@ import java.util.List;
  *
  * @author andy
  * @version 1.0-SNAPSHOT
- *          Created date: 2014-11-06 21:02
+ * Created date: 2014-11-06 21:02
  */
 public class UseCaseTracker {
 

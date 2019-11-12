@@ -5,7 +5,7 @@ package org.andy.items.thkinjava.string;
  *
  * @author andy
  * @version 1.0-SNAPSHOT
- *          Created date: 2014-10-28 19:33
+ * Created date: 2014-10-28 19:33
  */
 public class Rudolph {
     public static void main(String[] args) {

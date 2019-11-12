@@ -10,7 +10,7 @@ import java.util.List;
  *
  * @author andy
  * @version 1.0-SNAPSHOT
- *          Created date: 2014-10-29 20:25
+ * Created date: 2014-10-29 20:25
  */
 public class Shapes {
     public static void main(String[] args) {

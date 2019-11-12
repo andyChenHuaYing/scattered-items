@@ -10,12 +10,12 @@ import java.lang.annotation.Target;
  *
  * @author andy
  * @version 1.0-SNAPSHOT
- *          Created date: 2014-11-06 20:34
+ * Created date: 2014-11-06 20:34
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface UseCase {
     int id();
 
-    public String description() default "no description";
+    String description() default "no description";
 }

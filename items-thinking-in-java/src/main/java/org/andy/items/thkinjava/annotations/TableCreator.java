@@ -10,7 +10,7 @@ import java.util.List;
  *
  * @author andy
  * @version 1.0-SNAPSHOT
- *          Created date: 2014-11-26 19:47
+ * Created date: 2014-11-26 19:47
  */
 public class TableCreator {
     public static void createTable(Class<?>... classes) {

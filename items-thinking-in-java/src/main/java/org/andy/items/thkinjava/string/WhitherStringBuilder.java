@@ -5,7 +5,7 @@ package org.andy.items.thkinjava.string;
  *
  * @author andy
  * @version 1.0-SNAPSHOT
- *          Created date: 2014-10-20 19:25
+ * Created date: 2014-10-20 19:25
  */
 public class WhitherStringBuilder {
     public static void main(String[] args) {

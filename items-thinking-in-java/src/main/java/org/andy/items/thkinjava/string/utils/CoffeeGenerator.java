@@ -1,6 +1,11 @@
 package org.andy.items.thkinjava.string.utils;
 
-import org.andy.items.thkinjava.string.dto.*;
+import org.andy.items.thkinjava.string.dto.Americano;
+import org.andy.items.thkinjava.string.dto.Breve;
+import org.andy.items.thkinjava.string.dto.Cappuccino;
+import org.andy.items.thkinjava.string.dto.Coffee;
+import org.andy.items.thkinjava.string.dto.Latte;
+import org.andy.items.thkinjava.string.dto.Mocha;
 
 import java.util.Iterator;
 import java.util.Random;
@@ -10,7 +15,7 @@ import java.util.Random;
  *
  * @author andy
  * @version 1.0-SNAPSHOT
- *          Created date: 2014-10-27 18:09
+ * Created date: 2014-10-27 18:09
  */
 public class CoffeeGenerator implements Generator, Iterable<Coffee> {
     private static Random random = new Random(47);

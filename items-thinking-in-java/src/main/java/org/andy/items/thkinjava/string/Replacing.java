@@ -7,7 +7,7 @@ import org.andy.items.thkinjava.string.utils.Print;
  *
  * @author andy
  * @version 1.0-SNAPSHOT
- *          Created date: 2014-10-28 18:39
+ * Created date: 2014-10-28 18:39
  */
 public class Replacing {
     static String s = Splitting.knights;

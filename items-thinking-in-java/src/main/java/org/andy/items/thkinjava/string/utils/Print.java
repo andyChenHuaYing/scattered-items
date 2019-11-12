@@ -5,7 +5,7 @@ package org.andy.items.thkinjava.string.utils;
  *
  * @author andy
  * @version 1.0-SNAPSHOT
- *          Created date: 2014-10-28 18:28
+ * Created date: 2014-10-28 18:28
  */
 public class Print {
 

@@ -5,7 +5,7 @@ package org.andy.items.thkinjava.string;
  *
  * @author andy
  * @version 1.0-SNAPSHOT
- *          Created date: 2014-10-20 18:48
+ * Created date: 2014-10-20 18:48
  */
 public class Immutable {
     public static String upcase(String str) {

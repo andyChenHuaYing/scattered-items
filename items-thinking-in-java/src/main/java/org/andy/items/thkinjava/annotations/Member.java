@@ -5,7 +5,7 @@ package org.andy.items.thkinjava.annotations;
  *
  * @author andy
  * @version 1.0-SNAPSHOT
- *          Created date: 2014-11-26 19:37
+ * Created date: 2014-11-26 19:37
  */
 @SuppressWarnings("unused")
 @DBTable(name = "MEMBER")

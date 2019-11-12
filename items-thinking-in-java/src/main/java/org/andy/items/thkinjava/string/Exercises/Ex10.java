@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
  *
  * @author andy
  * @version 1.0-SNAPSHOT
- *          Created date: 2014-10-28 20:09
+ * Created date: 2014-10-28 20:09
  */
 public class Ex10 {
     private static String input = "Java now has regular expressions";

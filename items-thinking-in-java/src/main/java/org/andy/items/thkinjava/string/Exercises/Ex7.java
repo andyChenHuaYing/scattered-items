@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
  *
  * @author andy
  * @version 1.0-SNAPSHOT
- *          Created date: 2014-10-28 18:45
+ * Created date: 2014-10-28 18:45
  */
 public class Ex7 {
     public boolean regularTest(String s) {

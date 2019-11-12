@@ -8,7 +8,7 @@ import java.util.Formatter;
  *
  * @author andy
  * @version 1.0-SNAPSHOT
- *          Created date: 2014-10-27 21:31
+ * Created date: 2014-10-27 21:31
  */
 public class Turtle {
     private String name;

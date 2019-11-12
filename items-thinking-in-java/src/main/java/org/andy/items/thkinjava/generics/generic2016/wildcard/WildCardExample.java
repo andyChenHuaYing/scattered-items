@@ -21,11 +21,11 @@ public class WildCardExample {
     public static void genericUpperWildcard(List<? extends Animal> animals) {
         animals.forEach(Animal::animalMethod);
 
-            /*
-             * 下面两行都是编译错误，如果了解前面文章中提到的擦除，则很好理解。
-             * 编译后的方法签名参数List所用的泛型类会被转换成Animal。假如此时向List中添加的是Dog类，那么当我们使用Dog类特有的方法时
-             * 肯定是不存在的。所以出于类型安全问题，不允许向含有通配符下界的泛型类中添加元素——null除外，但是添加null没有任何意义。
-             */
+        /*
+         * 下面两行都是编译错误，如果了解前面文章中提到的擦除，则很好理解。
+         * 编译后的方法签名参数List所用的泛型类会被转换成Animal。假如此时向List中添加的是Dog类，那么当我们使用Dog类特有的方法时
+         * 肯定是不存在的。所以出于类型安全问题，不允许向含有通配符下界的泛型类中添加元素——null除外，但是添加null没有任何意义。
+         */
 //        animals.add(new Dog());
 //        animals.add(new Animal());
 

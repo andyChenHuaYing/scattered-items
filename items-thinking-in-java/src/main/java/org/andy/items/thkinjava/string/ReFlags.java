@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
  *
  * @author andy
  * @version 1.0-SNAPSHOT
- *          Created date: 2014-10-28 21:21
+ * Created date: 2014-10-28 21:21
  */
 public class ReFlags {
     public static void main(String[] args) {

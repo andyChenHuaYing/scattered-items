@@ -10,7 +10,7 @@ import java.util.ArrayList;
  *
  * @author andy
  * @version 1.0-SNAPSHOT
- *          Created date: 2014-10-27 18:55
+ * Created date: 2014-10-27 18:55
  */
 public class ArrayListDisplay {
     public static int displayArrayList() {

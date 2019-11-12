@@ -10,10 +10,10 @@ import java.lang.annotation.Target;
  *
  * @author andy
  * @version 1.0-SNAPSHOT
- *          Created date: 2014-11-26 19:12
+ * Created date: 2014-11-26 19:12
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface DBTable {
-    public String name() default "";
+    String name() default "";
 }

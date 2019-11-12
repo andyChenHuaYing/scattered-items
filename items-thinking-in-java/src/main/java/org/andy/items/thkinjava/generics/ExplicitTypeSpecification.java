@@ -15,6 +15,6 @@ public class ExplicitTypeSpecification {
     }
 
     public static void main(String[] args) {
-        f(New.<EntityOne, List<String>>map());
+        f(New.map());
     }
 }

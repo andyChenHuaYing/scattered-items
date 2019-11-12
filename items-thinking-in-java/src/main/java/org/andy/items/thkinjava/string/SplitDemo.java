@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
  *
  * @author andy
  * @version 1.0-SNAPSHOT
- *          Created date: 2014-10-27 22:14
+ * Created date: 2014-10-27 22:14
  */
 public class SplitDemo {
 

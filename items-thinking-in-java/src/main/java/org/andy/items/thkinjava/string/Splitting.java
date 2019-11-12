@@ -9,7 +9,7 @@ import java.util.Arrays;
  *
  * @author andy
  * @version 1.0-SNAPSHOT
- *          Created date: 2014-10-28 18:27
+ * Created date: 2014-10-28 18:27
  */
 public class Splitting {
     public static String knights =

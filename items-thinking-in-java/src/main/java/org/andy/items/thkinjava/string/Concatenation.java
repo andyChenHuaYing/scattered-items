@@ -5,7 +5,7 @@ package org.andy.items.thkinjava.string;
  *
  * @author andy
  * @version 1.0-SNAPSHOT
- *          Created date: 2014-10-20 19:15
+ * Created date: 2014-10-20 19:15
  */
 public class Concatenation {
     public static void main(String[] args) {

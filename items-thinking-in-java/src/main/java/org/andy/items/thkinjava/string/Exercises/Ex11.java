@@ -5,7 +5,7 @@ package org.andy.items.thkinjava.string.Exercises;
  *
  * @author andy
  * @version 1.0-SNAPSHOT
- *          Created date: 2014-10-28 20:24
+ * Created date: 2014-10-28 20:24
  */
 public class Ex11 {
     public static void main(String[] args) {
