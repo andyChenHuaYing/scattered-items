@@ -9,15 +9,18 @@ package com.bjsxt.base.multi001.sync001;
 public class MyThread extends Thread{
 	
 	private int count = 5 ;
-	
-	//synchronized加锁
+
+	/**
+	 * synchronized加锁
+	 */
+	@Override
 	public void run(){
 		count--;
-		System.out.println(this.currentThread().getName() + " count = "+ count);
+		System.out.println(currentThread().getName() + " count = "+ count);
 	}
 	
 	public static void main(String[] args) {
-		/**
+		/*
 		 * 分析：当多个线程访问myThread的run方法时，以排队的方式进行处理（这里排对是按照CPU分配的先后顺序而定的），
 		 * 		一个线程想要执行synchronized修饰的方法里的代码：
 		 * 		1 尝试获得锁
