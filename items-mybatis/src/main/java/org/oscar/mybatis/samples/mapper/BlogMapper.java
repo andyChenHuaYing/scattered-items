@@ -1,6 +1,6 @@
-package org.alien.mybatis.samples.mapper;
+package org.oscar.mybatis.samples.mapper;
 
-import org.alien.mybatis.samples.model.Blog;
+import org.oscar.mybatis.samples.model.Blog;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

@@ -1,8 +1,8 @@
-package org.alien.mybatis.samples.service.impl;
+package org.oscar.mybatis.samples.service.impl;
 
 import junit.framework.Assert;
-import org.alien.mybatis.samples.model.Blog;
-import org.alien.mybatis.samples.service.BlogService;
+import org.oscar.mybatis.samples.model.Blog;
+import org.oscar.mybatis.samples.service.BlogService;
 import org.junit.Before;
 import org.junit.Test;
 

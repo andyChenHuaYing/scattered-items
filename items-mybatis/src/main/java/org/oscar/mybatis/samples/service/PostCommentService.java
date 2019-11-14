@@ -1,6 +1,6 @@
-package org.alien.mybatis.samples.service;
+package org.oscar.mybatis.samples.service;
 
-import org.alien.mybatis.samples.model.PostComment;
+import org.oscar.mybatis.samples.model.PostComment;
 
 /**
  * Created by andy on 5/19/2015.<br>

@@ -1,6 +1,6 @@
-package org.alien.mybatis.samples.base;
+package org.oscar.mybatis.samples.base;
 
-import org.alien.mybatis.samples.util.MybatisUtil;
+import org.oscar.mybatis.samples.util.MybatisUtil;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.After;
 import org.junit.Before;

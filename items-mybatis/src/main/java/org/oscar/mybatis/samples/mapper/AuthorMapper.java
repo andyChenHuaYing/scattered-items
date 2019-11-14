@@ -1,6 +1,6 @@
-package org.alien.mybatis.samples.mapper;
+package org.oscar.mybatis.samples.mapper;
 
-import org.alien.mybatis.samples.model.Author;
+import org.oscar.mybatis.samples.model.Author;
 
 import java.util.List;
 import java.util.Map;

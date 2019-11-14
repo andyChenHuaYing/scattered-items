@@ -1,6 +1,6 @@
-package org.alien.mybatis.samples.service;
+package org.oscar.mybatis.samples.service;
 
-import org.alien.mybatis.samples.model.Author;
+import org.oscar.mybatis.samples.model.Author;
 
 import java.util.List;
 

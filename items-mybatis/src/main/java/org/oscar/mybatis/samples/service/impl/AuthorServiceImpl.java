@@ -1,9 +1,9 @@
-package org.alien.mybatis.samples.service.impl;
+package org.oscar.mybatis.samples.service.impl;
 
-import org.alien.mybatis.samples.mapper.AuthorMapper;
-import org.alien.mybatis.samples.model.Author;
-import org.alien.mybatis.samples.service.AuthorService;
-import org.alien.mybatis.samples.util.MybatisUtil;
+import org.oscar.mybatis.samples.mapper.AuthorMapper;
+import org.oscar.mybatis.samples.model.Author;
+import org.oscar.mybatis.samples.service.AuthorService;
+import org.oscar.mybatis.samples.util.MybatisUtil;
 import org.apache.ibatis.session.SqlSession;
 
 import java.util.List;

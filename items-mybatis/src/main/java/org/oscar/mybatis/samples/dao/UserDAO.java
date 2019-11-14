@@ -1,4 +1,4 @@
-package org.alien.mybatis.samples.dao;
+package org.oscar.mybatis.samples.dao;
 
 /**
  * Created by andychen on 2015/5/11.<br>

@@ -1,9 +1,9 @@
-package org.alien.mybatis.samples.mapper;
+package org.oscar.mybatis.samples.mapper;
 
 import junit.framework.Assert;
-import org.alien.mybatis.samples.entity.Page;
-import org.alien.mybatis.samples.model.Author;
-import org.alien.mybatis.samples.util.MybatisUtil;
+import org.oscar.mybatis.samples.entity.Page;
+import org.oscar.mybatis.samples.model.Author;
+import org.oscar.mybatis.samples.util.MybatisUtil;
 import org.junit.Test;
 
 import java.util.HashMap;

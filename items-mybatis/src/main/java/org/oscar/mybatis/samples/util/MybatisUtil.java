@@ -1,4 +1,4 @@
-package org.alien.mybatis.samples.util;
+package org.oscar.mybatis.samples.util;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;

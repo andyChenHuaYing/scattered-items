@@ -1,6 +1,6 @@
-package org.alien.mybatis.samples.interceptor;
+package org.oscar.mybatis.samples.interceptor;
 
-import org.alien.mybatis.samples.entity.Page;
+import org.oscar.mybatis.samples.entity.Page;
 import org.apache.ibatis.executor.parameter.ParameterHandler;
 import org.apache.ibatis.executor.statement.StatementHandler;
 import org.apache.ibatis.mapping.BoundSql;

@@ -1,7 +1,7 @@
-package org.alien.mybatis.samples.util;
+package org.oscar.mybatis.samples.util;
 
 import junit.framework.Assert;
-import org.alien.mybatis.samples.mapper.AuthorMapper;
+import org.oscar.mybatis.samples.mapper.AuthorMapper;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.Test;

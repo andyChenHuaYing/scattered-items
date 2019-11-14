@@ -26,15 +26,15 @@
 
     <!--A type alias is simply a shorter name for a Java type.-->
     <typeAliases>
-        <!--<typeAlias type="org.alien.mybatis.samples.model.Employee" alias="Employee"/>-->
-        <!--<typeAlias type="org.alien.mybatis.samples.model.Department" alias="Department"/>-->
+        <!--<typeAlias type="Employee" alias="Employee"/>-->
+        <!--<typeAlias type="Department" alias="Department"/>-->
 
         <!--That is domain.blog.Author will be registered as author. If the @Alias annotation is found its value will be
             used as an alias.@Alias("author")-->
         <package name="org.alien.mybatis.samples.model"/>
     </typeAliases>
     <plugins>
-        <plugin interceptor="org.alien.mybatis.samples.interceptor.PageInterceptor">
+        <plugin interceptor="org.oscar.mybatis.samples.interceptor.PageInterceptor">
             <property name="dialect" value="mysql"/>
         </plugin>
     </plugins>

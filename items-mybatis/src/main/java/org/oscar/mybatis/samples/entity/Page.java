@@ -1,4 +1,4 @@
-package org.alien.mybatis.samples.entity;
+package org.oscar.mybatis.samples.entity;
 
 /**
  * Created by andy on 5/25/2015.<br>

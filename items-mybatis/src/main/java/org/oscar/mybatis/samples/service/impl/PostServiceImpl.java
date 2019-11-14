@@ -1,9 +1,9 @@
-package org.alien.mybatis.samples.service.impl;
+package org.oscar.mybatis.samples.service.impl;
 
-import org.alien.mybatis.samples.mapper.PostMapper;
-import org.alien.mybatis.samples.model.Post;
-import org.alien.mybatis.samples.service.PostService;
-import org.alien.mybatis.samples.util.MybatisUtil;
+import org.oscar.mybatis.samples.mapper.PostMapper;
+import org.oscar.mybatis.samples.model.Post;
+import org.oscar.mybatis.samples.service.PostService;
+import org.oscar.mybatis.samples.util.MybatisUtil;
 import org.apache.ibatis.session.SqlSession;
 
 /**

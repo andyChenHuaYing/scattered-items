@@ -1,4 +1,4 @@
-package org.alien.mybatis.samples.exception;
+package org.oscar.mybatis.samples.exception;
 
 /**
  * Created by andy on 5/25/2015.<br>

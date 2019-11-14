@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.alien.mybatis.samples.mapper.BlogMapper">
+<mapper namespace="org.oscar.mybatis.samples.mapper.BlogMapper">
     <resultMap id="oneToMany" type="blog">
         <id property="id" column="blog_id" javaType="int"/>
         <result property="title" column="title" javaType="string"/>
@@ -18,7 +18,7 @@
         <collection property="posts" ofType="post">
             <id property="id" column="post_id"/>
             <result property="section" column="section"/>
-            <collection property="comments" resultMap="org.alien.mybatis.samples.mapper.PostCommentMapper.postComment"/>
+            <collection property="comments" resultMap="org.oscar.mybatis.samples.mapper.PostCommentMapper.postComment"/>
             <collection property="tags" ofType="tag">
                 <id property="id" column="tag_id"/>
                 <result property="name" column="tag_name"/>
@@ -29,7 +29,7 @@
     <resultMap id="oneToManyResultMap" type="blog">
         <id property="id" column="blog_id" javaType="int"/>
         <result property="title" column="title" javaType="string"/>
-        <collection property="posts" ofType="post" resultMap="org.alien.mybatis.samples.mapper.PostMapper.post"/>
+        <collection property="posts" ofType="post" resultMap="org.oscar.mybatis.samples.mapper.PostMapper.post"/>
     </resultMap>
 
     <select id="getBlogDynamic" resultMap="oneToManyNested">

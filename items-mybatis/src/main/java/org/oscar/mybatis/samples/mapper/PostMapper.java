@@ -1,6 +1,6 @@
-package org.alien.mybatis.samples.mapper;
+package org.oscar.mybatis.samples.mapper;
 
-import org.alien.mybatis.samples.model.Post;
+import org.oscar.mybatis.samples.model.Post;
 
 /**
  * Created by andychen on 2015/5/18.<br>

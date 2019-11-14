@@ -1,4 +1,4 @@
-package org.alien.mybatis.samples.model;
+package org.oscar.mybatis.samples.model;
 
 import java.sql.Date;
 
