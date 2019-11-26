@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class CollectionGenericEssence {
 
     public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        ArrayList<String> arrayList = new ArrayList<String>();
+        ArrayList<String> arrayList = new ArrayList<>();
         Class clazz = arrayList.getClass();
         Method method = clazz.getMethod("add", Object.class);
         method.invoke(arrayList, 20);
@@ -30,20 +30,11 @@ public class CollectionGenericEssence {
      * @param value     An object which will be added in ArrayList of String.
      */
     public ArrayList<String> addElementsByMethodReflect(ArrayList<String> arrayList, Object value) {
-        /*
-         * Illegal value type:
-         * arrayList.add(value);
-         */
-
         Class arrayListClass = arrayList.getClass();
         try {
             Method method = arrayListClass.getMethod("add", Object.class);
             method.invoke(arrayList, value);
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
+        } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
             e.printStackTrace();
         }
         return arrayList;
