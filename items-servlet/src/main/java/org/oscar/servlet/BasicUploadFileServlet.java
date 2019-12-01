@@ -1,4 +1,4 @@
-package org.alien.servlet;
+package org.oscar.servlet;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

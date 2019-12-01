@@ -7,7 +7,7 @@
 
     <servlet>
         <servlet-name>basicUploadFile</servlet-name>
-        <servlet-class>org.alien.servlet.BasicUploadFileServlet</servlet-class>
+        <servlet-class>org.oscar.servlet.BasicUploadFileServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
