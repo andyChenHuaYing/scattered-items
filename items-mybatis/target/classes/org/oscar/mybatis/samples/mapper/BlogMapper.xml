@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.oscar.mybatis.samples.mapper.BlogMapper">
+    <resultMap id="oneToMany" type="blog">
+        <id property="id" column="blog_id" javaType="int"/>
+        <result property="title" column="title" javaType="string"/>
+        <collection property="posts" ofType="post">
+            <id property="id" column="post_id"/>
+            <result property="section" column="section"/>
+        </collection>
+    </resultMap>
+
+    <resultMap id="oneToManyNested" type="blog">
+        <id property="id" column="blog_id" javaType="int"/>
+        <result property="title" column="title" javaType="string"/>
+        <collection property="posts" ofType="post">
+            <id property="id" column="post_id"/>
+            <result property="section" column="section"/>
+            <collection property="comments" resultMap="org.oscar.mybatis.samples.mapper.PostCommentMapper.postComment"/>
+            <collection property="tags" ofType="tag">
+                <id property="id" column="tag_id"/>
+                <result property="name" column="tag_name"/>
+            </collection>
+        </collection>
+    </resultMap>
+
+    <resultMap id="oneToManyResultMap" type="blog">
+        <id property="id" column="blog_id" javaType="int"/>
+        <result property="title" column="title" javaType="string"/>
+        <collection property="posts" ofType="post" resultMap="org.oscar.mybatis.samples.mapper.PostMapper.post"/>
+    </resultMap>
+
+    <select id="getBlogDynamic" resultMap="oneToManyNested">
+        select t1.id blog_id, t1.title, t2.id post_id, t2.section
+        from blog t1 left outer join post t2 on t1.id = t2.blog_id where 1=1
+        <if test="title != null and title !=''">
+            and t1.title like '%'||#{title}||'%'
+        </if>
+        <if test="section != null and section != ''">
+            and t2.section like '%'||#{section}||'%'
+        </if>
+    </select>
+
+    <select id="getBlogByTitleOrSection" resultMap="oneToManyNested">
+        select t1.id blog_id, t1.title, t2.id post_id, t2.section
+        from blog t1 left outer join post t2 on t1.id = t2.blog_id where 1=1
+        <choose>
+            <when test="title != null and title !=''">
+                and t1.title like '%'||#{title}||'%'
+            </when>
+            <when test="section != null and section != ''">
+                and t2.section like '%'||#{section}||'%'
+            </when>
+            <otherwise>
+                and t1.title is not null and t2.section is not null
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="getBlogByConditionDynamic" resultMap="oneToManyNested">
+        select t1.id blog_id, t1.title, t2.id post_id, t2.section
+        from blog t1 left outer join post t2 on t1.id = t2.blog_id
+        <where>
+            <if test="title != null and title !=''">
+                and t1.title like '%'||#{title}||'%'
+            </if>
+            <if test="section != null and section != ''">
+                and t2.section like '%'||#{section}||'%'
+            </if>
+        </where>
+    </select>
+
+    <select id="getBlogByConditionDynamicTrim" resultMap="oneToManyNested">
+        select t1.id blog_id, t1.title, t2.id post_id, t2.section
+        from blog t1 left outer join post t2 on t1.id = t2.blog_id
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="title != null and title !=''">
+                and t1.title like '%'||#{title}||'%'
+            </if>
+            <if test="section != null and section != ''">
+                and t2.section like '%'||#{section}||'%'
+            </if>
+        </trim>
+    </select>
+
+    <update id="updateBlogTitle" parameterType="blog">
+        update blog set id = id
+        <if test="title != null and title != ''">
+            , title = #{title}
+        </if>
+        where id = #{id}
+    </update>
+
+    <update id="updateBlogTitleSet" parameterType="blog">
+        update blog
+        <set>
+            <if test="title != null and title != ''">
+                title = #{title}
+            </if>
+            <if test="id != null and id != ''">
+                , id = #{id}
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+
+    <!--<select id="getBlogWithPosts" resultMap="oneToMany">-->
+    <select id="getBlogWithPosts" resultMap="oneToManyResultMap">
+        SELECT
+        t1.id blog_id,
+        t1.title,
+        t2.id post_id,
+        t2.section
+        FROM blog t1 LEFT OUTER JOIN post t2 ON t1.id = t2.blog_id
+        WHERE t1.id = 1
+    </select>
+
+    <select id="getBlogWithPostsNested" resultMap="oneToManyNested">
+        SELECT
+        t1.id blog_id,
+        t1.title,
+        t2.id post_id,
+        t2.section,
+        t3.id post_comment_id,
+        t3.name post_comment_name,
+        t3.comment_text post_comment_text,
+        t5.id tag_id,
+        t5.name tag_name
+        FROM blog t1 LEFT OUTER JOIN post t2 ON t1.id = t2.blog_id
+        LEFT OUTER JOIN post_comment t3 ON t2.id = t3.post_id
+        LEFT OUTER JOIN post_tag t4 ON t2.id = t4.post_id
+        LEFT OUTER JOIN tag t5 ON t4.tag_id = t5.id
+        WHERE t1.id = 1
+    </select>
+</mapper>

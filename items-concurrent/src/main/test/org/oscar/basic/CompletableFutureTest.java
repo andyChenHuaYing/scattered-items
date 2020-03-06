@@ -3,6 +3,7 @@ package org.oscar.basic;
 import org.junit.Test;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -13,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 public class CompletableFutureTest {
 
     @Test
-    public void name() {
+    public void name() throws ExecutionException, InterruptedException {
         CompletableFuture<Void> f1 = CompletableFuture.runAsync(() -> {
             System.out.println("T1 洗水壶。。。");
             sleep(1);
@@ -41,6 +42,9 @@ public class CompletableFutureTest {
         });
 
         f3.join();
+
+        String s = f3.get();
+        System.out.println(s);
     }
 
     private void sleep(long second) {

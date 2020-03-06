@@ -9,16 +9,11 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>items-thinking-in-java</module>
-        <module>items-arithmetic</module>
-        <module>items-spring</module>
-        <module>items-springMVC</module>
         <module>items-design-pattern</module>
         <module>items-java-reflection</module>
-        <module>items-servlet</module>
         <module>items-mybatis</module>
-        <module>items-email</module>
         <module>items-concurrent</module>
+        <module>items-algorithm</module>
     </modules>
 
     <properties>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.oscar.mybatis.samples.mapper.AuthorMapper">
+
+    <resultMap id="author" type="author">
+        <id property="id" column="author_id"/>
+        <result property="username" column="username"/>
+        <result property="password" column="password"/>
+        <result property="email" column="email"/>
+        <result property="bio" column="bio"/>
+        <result property="favouriteSection" column="favouriteSection"/>
+    </resultMap>
+
+    <select id="selectAuthorByPage" resultType="author" parameterType="hashMap">
+        SELECT
+        t.id,
+        t.username,
+        t.password,
+        t.email,
+        t.bio,
+        t.favourite_section favouriteSection
+        FROM author t
+    </select>
+
+    <insert id="addAuthor" parameterType="author">
+        INSERT INTO author(id, username) VALUES (#{id}, #{username})
+        <selectKey keyProperty="id" resultType="int">
+            SELECT max(id) FROM author
+        </selectKey>
+    </insert>
+
+    <delete id="deleteAuthor" parameterType="int">
+        DELETE FROM author
+        WHERE id = #{id}
+    </delete>
+
+    <update id="updateAuthor" parameterType="author">
+        UPDATE author
+        SET username = #{username}
+    </update>
+
+    <select id="getAllAuthors" resultType="author">
+        SELECT
+        t.id,
+        t.username,
+        t.password,
+        t.email,
+        t.bio,
+        t.favourite_section favouriteSection
+        FROM author t
+    </select>
+
+    <select id="getAllAuthorsCount" resultType="int">
+        SELECT count(1)
+        FROM author
+    </select>
+</mapper>

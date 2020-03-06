@@ -12,6 +12,11 @@
     <artifactId>items-design-pattern</artifactId>
 
     <dependencies>
+        <dependency>
+            <groupId>net.bytebuddy</groupId>
+            <artifactId>byte-buddy</artifactId>
+            <version>1.7.1</version>
+        </dependency>
     </dependencies>
 
 </project>
