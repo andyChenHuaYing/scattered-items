@@ -18,6 +18,7 @@
         <module>items-concurrent</module>
         <module>items-algorithm</module>
         <module>items-jvm</module>
+        <module>items-zookeeper</module>
     </modules>
 
     <properties>
@@ -248,14 +249,7 @@
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>${junit.version}</version>
-                <scope>test</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.testng</groupId>
-                <artifactId>testng</artifactId>
-                <version>${testng.version}</version>
+                <version>4.11</version>
                 <scope>test</scope>
             </dependency>
 

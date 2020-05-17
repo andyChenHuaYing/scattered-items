@@ -32,15 +32,6 @@
     <name>items-springMVC</name>
     <artifactId>items-springMVC</artifactId>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.codehaus.cargo</groupId>
-                <artifactId>cargo-maven2-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
-
     <dependencies>
 
         <dependency>
