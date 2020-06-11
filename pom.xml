@@ -19,6 +19,7 @@
         <module>items-algorithm</module>
         <module>items-jvm</module>
         <module>items-zookeeper</module>
+        <module>items-io</module>
     </modules>
 
     <properties>
@@ -117,19 +118,9 @@
                     <version>3.1</version>
                 </plugin>
                 <plugin>
-                    <groupId>org.apache.maven</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.12.4</version>
-                </plugin>
-                <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>cobertura-maven-plugin</artifactId>
                     <version>2.6</version>
-                </plugin>
-
-                <plugin>
-                    <groupId>org.codehaus.cargo</groupId>
-                    <artifactId>cargo-maven2-plugin</artifactId>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -187,22 +178,6 @@
             </dependency>
 
             <dependency>
-                <groupId>org.springframework.ldap</groupId>
-                <artifactId>spring-ldap-core</artifactId>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.springframework</groupId>
-                        <artifactId>spring-core</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.springframework</groupId>
-                        <artifactId>spring-beans</artifactId>
-                    </exclusion>
-                </exclusions>
-                <version>${spring.ldap.version}</version>
-            </dependency>
-
-            <dependency>
                 <groupId>c3p0</groupId>
                 <artifactId>c3p0</artifactId>
                 <version>${c3p0.version}</version>
@@ -213,6 +188,12 @@
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
                 <version>${slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>22.0</version>
             </dependency>
 
             <dependency>
@@ -324,7 +305,32 @@
             <name>jboss</name>
             <url>http://repository.jboss.org/maven2/</url>
         </repository>
+        <repository>
+            <id>aliyun</id>
+            <name>aliyun</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
     </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>nexus</id>
+            <name>local private nexus</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 
     <distributionManagement>
         <repository>

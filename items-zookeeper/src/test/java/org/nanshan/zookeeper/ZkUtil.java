@@ -16,7 +16,7 @@ public class ZkUtil {
         CountDownLatch cc =new CountDownLatch(1);
         ZooKeeper zooKeeper = null;
         try {
-             zooKeeper = new ZooKeeper("10.211.55.5:2181,10.211.55.6:2181,10.211.55.7:2181,10.211.55.8:2181" + namespace, 300000, new DefaultWatcher(cc));
+             zooKeeper = new ZooKeeper("10.211.55.5:2181,10.211.55.6:2181,10.211.55.7:2181,10.211.55.8:2181" + namespace, 3000, new DefaultWatcher(cc));
             cc.await();
         } catch (Exception e) {
             e.printStackTrace();
