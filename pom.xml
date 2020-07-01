@@ -37,7 +37,7 @@
         <org.hibernate>5.0.2.Final</org.hibernate>
         <org.aspectj>1.7.4</org.aspectj>
         <c3p0.version>0.9.1.2</c3p0.version>
-        <mysql.version>5.1.34</mysql.version>
+        <mysql.version>8.0.16</mysql.version>
         <slf4j.version>1.7.10</slf4j.version>
         <spring.ldap.version>2.0.2.RELEASE</spring.ldap.version>
         <commons.pool>1.6</commons.pool>
