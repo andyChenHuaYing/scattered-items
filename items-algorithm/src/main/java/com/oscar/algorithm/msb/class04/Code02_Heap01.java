@@ -40,7 +40,8 @@ public class Code02_Heap01 {
         }
 
         /**
-         * 单点从下往上堆化
+         * 整个数组从上往下（从前往后）建堆，数组中元素从index之前的都已经堆化完成
+         * 每个元素从下往上堆化
          *
          * @param arr   堆存储数组
          * @param index 需要开始向上堆化的点
@@ -53,7 +54,8 @@ public class Code02_Heap01 {
         }
 
         /**
-         * 从上往下堆化到heapSize位置
+         * 整个数组从下往上（从后往前）建堆，数组中从heapSize到结尾的已经堆化完成
+         * 每个元素从上往下堆化到heapSize位置
          *
          * @param arr 堆存储数组
          * @param index 需要开始向下堆化的点

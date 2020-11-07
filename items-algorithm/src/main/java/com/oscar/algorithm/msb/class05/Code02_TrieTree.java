@@ -13,6 +13,13 @@ public class Code02_TrieTree {
 		public Node1() {
 			pass = 0;
 			end = 0;
+			// nexts[0] == null
+			//0   a
+			//1   b
+			//..  ..
+			//25  z
+			//nexts[i] == null i方向的路不存在
+			//nexts[i] != null i方向的路存在
 			nexts = new Node1[26];
 		}
 	}
@@ -29,15 +36,16 @@ public class Code02_TrieTree {
 				return;
 			}
 			char[] chs = word.toCharArray();
+			//
 			Node1 node = root;
 			node.pass++;
-			int index = 0;
+			int path;
 			for (int i = 0; i < chs.length; i++) { // 从左往右遍历字符
-				index = chs[i] - 'a'; // 由字符，对应成走向哪条路
-				if (node.nexts[index] == null) {
-					node.nexts[index] = new Node1();
+				path = chs[i] - 'a'; // 由字符，对应成走向哪条路
+				if (node.nexts[path] == null) {
+					node.nexts[path] = new Node1();
 				}
-				node = node.nexts[index];
+				node = node.nexts[path];
 				node.pass++;
 			}
 			node.end++;

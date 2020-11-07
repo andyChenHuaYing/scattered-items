@@ -20,6 +20,7 @@
         <module>items-jvm</module>
         <module>items-zookeeper</module>
         <module>items-io</module>
+        <module>items-sb-mybatis</module>
     </modules>
 
     <properties>
@@ -94,6 +95,13 @@
             </properties>
         </contributor>
     </contributors>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.6.RELEASE</version>
+        <relativePath/>
+    </parent>
 
     <build>
         <pluginManagement>

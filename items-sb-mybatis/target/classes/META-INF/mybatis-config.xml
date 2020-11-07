@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <typeAliases>
+        <package name="com.cxytiandi.sharding.po"/>
+    </typeAliases>
+    <plugins>
+        <!-- 已配置过插件的将该插件放在第一位 -->
+        <plugin interceptor="com.cxytiandi.sharding.config.SqlCostTimeInterceptor">
+            <property name="someProperty" value="100"/>
+        </plugin>
+    </plugins>
+    <mappers>
+        <mapper resource="META-INF/mappers/User.xml"/>
+        <mapper resource="META-INF/mappers/LouDong.xml"/>
+    </mappers>
+
+</configuration>
