@@ -30,7 +30,7 @@
         <junit.version>4.1</junit.version>
         <testng.version>6.8.8</testng.version>
         <sources.plugin.verion>2.1.1</sources.plugin.verion>
-        <org.springframework>4.1.1.RELEASE</org.springframework>
+        <org.springframework>5.3.0</org.springframework>
         <servlet-api>3.1.0</servlet-api>
         <jsp-api>2.0</jsp-api>
         <javax.inject>1</javax.inject>
