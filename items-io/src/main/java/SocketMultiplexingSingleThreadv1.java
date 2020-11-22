@@ -11,7 +11,7 @@ import java.util.Set;
 public class SocketMultiplexingSingleThreadv1 {
 
     private ServerSocketChannel server = null;
-    private Selector selector = null;   //linux 多路复用器（select poll    epoll kqueue） nginx  event{}
+    private Selector selector = null;   //linux 多路复用器（select poll epoll kqueue）
     int port = 9090;
 
     public void initServer() {
@@ -77,11 +77,7 @@ public class SocketMultiplexingSingleThreadv1 {
                             //epoll： 我们希望通过epoll_ctl把新的客户端fd注册到内核空间
                             acceptHandler(key);
                         } else if (key.isReadable()) {
-                            readHandler(key);  //连read 还有 write都处理了
-                            //在当前线程，这个方法可能会阻塞  ，如果阻塞了十年，其他的IO早就没电了。。。
-                            //所以，为什么提出了 IO THREADS
-                            //redis  是不是用了epoll，redis是不是有个io threads的概念 ，redis是不是单线程的
-                            //tomcat 8,9  异步的处理方式  IO  和   处理上  解耦
+                            readHandler(key);
                         }
                     }
                 }
@@ -99,8 +95,6 @@ public class SocketMultiplexingSingleThreadv1 {
 
             ByteBuffer buffer = ByteBuffer.allocate(8192);  //前边讲过了
 
-            // 0.0  我类个去
-            //你看，调用了register
             /*
             select，poll：jvm里开辟一个数组 fd7 放进去
             epoll：  epoll_ctl(fd3,ADD,fd7,EPOLLIN

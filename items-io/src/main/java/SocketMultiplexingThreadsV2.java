@@ -46,23 +46,15 @@ class ServerBootStrap {
         sAcceptr = new ServerAcceptr(chiledGroup, server);
         EventLoop eventloop = group.chosser();
         //把启动server，bind端口的操作变成task，推送到eventloop中执行。
-        eventloop.execute(new Runnable() {
-            @Override
-            public void run() {
-                eventloop.execute(new Runnable() {
-                    @Override
-                    public void run() {
-                        try {
-                            eventloop.name = Thread.currentThread() + eventloop.name;
-                            System.out.println("bind...server...to " + eventloop.name);
-                            server.register(eventloop.selector, SelectionKey.OP_ACCEPT, sAcceptr);
-                        } catch (ClosedChannelException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                });
+        eventloop.execute(() -> eventloop.execute(() -> {
+            try {
+                eventloop.name = Thread.currentThread() + eventloop.name;
+                System.out.println("bind...server...to " + eventloop.name);
+                server.register(eventloop.selector, SelectionKey.OP_ACCEPT, sAcceptr);
+            } catch (ClosedChannelException e) {
+                e.printStackTrace();
             }
-        });
+        }));
     }
 }
 

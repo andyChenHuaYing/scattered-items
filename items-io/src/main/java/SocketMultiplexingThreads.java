@@ -14,9 +14,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class SocketMultiplexingThreads {
 
     private ServerSocketChannel server = null;
-    private  Selector selector1 = null;
-    private  Selector selector2 = null;
-    private  Selector selector3 = null;
+    private Selector selector1 = null;
+    private Selector selector2 = null;
+    private Selector selector3 = null;
     int port = 9090;
 
     public void initServer() {
@@ -36,7 +36,7 @@ public class SocketMultiplexingThreads {
     public static void main(String[] args) {
         SocketMultiplexingThreads service = new SocketMultiplexingThreads();
         service.initServer();
-        NioThread T1 = new NioThread(service.selector1 ,2);
+        NioThread T1 = new NioThread(service.selector1, 2);
         NioThread T2 = new NioThread(service.selector2);
         NioThread T3 = new NioThread(service.selector3);
 
@@ -61,29 +61,30 @@ public class SocketMultiplexingThreads {
 }
 
 class NioThread extends Thread {
-     Selector selector = null;
-     static int selectors = 0;
+    Selector selector = null;
+    static int selectors = 0;
 
-     int id = 0;
+    int id = 0;
 
-     volatile static BlockingQueue<SocketChannel>[] queue;
+    static BlockingQueue<SocketChannel>[] queue;
 
     static AtomicInteger idx = new AtomicInteger();
 
-    NioThread(Selector sel,int n ) {
+    NioThread(Selector sel, int n) {
         this.selector = sel;
-        this.selectors =  n;
+        this.selectors = n;
 
-        queue =new LinkedBlockingQueue[selectors];
+        queue = new LinkedBlockingQueue[selectors];
         for (int i = 0; i < n; i++) {
             queue[i] = new LinkedBlockingQueue<>();
         }
         System.out.println("Boss 启动");
     }
-   NioThread(Selector sel  ) {
+
+    NioThread(Selector sel) {
         this.selector = sel;
-       id = idx.getAndIncrement() % selectors  ;
-       System.out.println("worker: "+id +" 启动");
+        id = idx.getAndIncrement() % selectors;
+        System.out.println("worker: " + id + " 启动");
 
     }
 
@@ -105,12 +106,12 @@ class NioThread extends Thread {
                         }
                     }
                 }
-                if( ! queue[id].isEmpty()) {
+                if (!queue[id].isEmpty()) {
                     ByteBuffer buffer = ByteBuffer.allocate(8192);
                     SocketChannel client = queue[id].take();
                     client.register(selector, SelectionKey.OP_READ, buffer);
                     System.out.println("-------------------------------------------");
-                    System.out.println("新客户端：" + client.socket().getPort()+"分配到："+ (id));
+                    System.out.println("新客户端：" + client.socket().getPort() + "分配到：" + (id));
                     System.out.println("-------------------------------------------");
                 }
             }

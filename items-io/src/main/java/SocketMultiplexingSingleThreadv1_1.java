@@ -11,7 +11,7 @@ import java.util.Set;
 public class SocketMultiplexingSingleThreadv1_1 {
 
     private ServerSocketChannel server = null;
-    private Selector selector = null;   //linux 多路复用器（select poll epoll） nginx  event{}
+    private Selector selector = null;   //linux 多路复用器（select poll epoll）
     int port = 9090;
 
     public void initServer() {
