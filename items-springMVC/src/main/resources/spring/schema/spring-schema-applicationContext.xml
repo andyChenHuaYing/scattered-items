@@ -14,16 +14,16 @@
     <!--#################################### Controller&AbstractController ##############################################-->
 
     <!-- HandlerAdapter adapter /hello url to HelloSchemaController -->
-    <bean name="/hello" class="org.andy.springmvc.schema.controller.HelloSchemaController"/>
+    <bean name="/hello" class="org.nanshan.springmvc.schema.controller.HelloSchemaController"/>
 
     <bean name="/helloAbstractController"
-          class="org.andy.springmvc.schema.controller.HelloSchemaControllerExtendsAbstractController"/>
+          class="org.nanshan.springmvc.schema.controller.HelloSchemaControllerExtendsAbstractController"/>
 
     <bean name="/helloWithoutModelAndView"
-          class="org.andy.springmvc.schema.controller.HelloSchemaAbstractControllerWithoutModelAndView"/>
+          class="org.nanshan.springmvc.schema.controller.HelloSchemaAbstractControllerWithoutModelAndView"/>
 
     <bean name="/helloOnlyPostMethod"
-          class="org.andy.springmvc.schema.controller.HelloSchemaOnlyPostController">
+          class="org.nanshan.springmvc.schema.controller.HelloSchemaOnlyPostController">
         <!-- Only support POST -->
         <property name="supportedMethods" value="POST"/>
         <!-- Session must exist when this request reach the specified controller -->
@@ -32,13 +32,13 @@
 
     <!-- Control browser cache time -->
     <bean name="/helloCacheSeconds"
-          class="org.andy.springmvc.schema.controller.HelloSchemaCacheTimeController">
+          class="org.nanshan.springmvc.schema.controller.HelloSchemaCacheTimeController">
         <property name="cacheSeconds" value="5"/>
     </bean>
 
     <!-- LastModified in spring -->
     <bean name="/helloLastModified"
-          class="org.andy.springmvc.schema.controller.HelloSchemaLastModifiedController"/>
+          class="org.nanshan.springmvc.schema.controller.HelloSchemaLastModifiedController"/>
     <!--#################################################################################################################-->
 
 
@@ -142,14 +142,14 @@
         http://localhost:8080/myMultiAction/delete == MyMultiActionController.delete()
      -->
     <bean name="/myMultiAction/**"
-          class="org.andy.springmvc.schema.controller.MyMultiActionController">
+          class="org.nanshan.springmvc.schema.controller.MyMultiActionController">
         <!--<property name="methodNameResolver" ref="methodNameResolver"/>-->
         <!--<property name="methodNameResolver" ref="parameterMethodNameResolver"/>-->
     </bean>
 
     <!-- delegate -->
     <bean id="multiActionDelegate"
-          class="org.andy.springmvc.schema.controller.MyMultiActionDelegate"/>
+          class="org.nanshan.springmvc.schema.controller.MyMultiActionDelegate"/>
 
     <bean name="/myMultiActionDelegate/**"
           class="org.springframework.web.servlet.mvc.multiaction.MultiActionController">

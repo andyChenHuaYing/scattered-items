@@ -6,7 +6,7 @@ import org.alien.design.pattern.bridge.common.implementor.ConcreteImplA;
 import org.alien.design.pattern.bridge.common.implementor.ConcreteImplB;
 
 /**
- * Author: oscar
+ * @author oscar
  * Create Data: 29/08/16
  */
 public class Client {

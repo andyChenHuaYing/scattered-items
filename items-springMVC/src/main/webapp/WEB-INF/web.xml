@@ -22,7 +22,7 @@
 
     <servlet>
         <servlet-name>forwarding</servlet-name>
-        <servlet-class>org.andy.springmvc.servlet.ForwardingServlet</servlet-class>
+        <servlet-class>org.nanshan.springmvc.servlet.ForwardingServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>

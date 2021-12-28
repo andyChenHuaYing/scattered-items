@@ -22,7 +22,7 @@
           class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
         <property name="converters">
             <set>
-                <bean class="org.andy.springmvc.schema.conversion.ArrayToCollection"/>
+                <bean class="org.nanshan.springmvc.schema.conversion.ArrayToCollection"/>
             </set>
         </property>
     </bean>
@@ -41,37 +41,37 @@
         <property name="cacheSeconds" value="120"/>
     </bean>
 
-    <bean class="org.andy.springmvc.annotation.controller.IndexController"/>
+    <bean class="org.nanshan.springmvc.annotation.controller.IndexController"/>
 
-    <bean class="org.andy.springmvc.annotation.controller.ClassRequestMappingController"/>
+    <bean class="org.nanshan.springmvc.annotation.controller.ClassRequestMappingController"/>
 
-    <bean class="org.andy.springmvc.annotation.controller.UrlMappingRuleController"/>
+    <bean class="org.nanshan.springmvc.annotation.controller.UrlMappingRuleController"/>
 
-    <bean class="org.andy.springmvc.annotation.controller.MethodTypeMappingController"/>
+    <bean class="org.nanshan.springmvc.annotation.controller.MethodTypeMappingController"/>
 
-    <bean class="org.andy.springmvc.annotation.controller.ParametersMappingController"/>
+    <bean class="org.nanshan.springmvc.annotation.controller.ParametersMappingController"/>
 
-    <bean class="org.andy.springmvc.annotation.controller.RequestHeaderMappingController"/>
+    <bean class="org.nanshan.springmvc.annotation.controller.RequestHeaderMappingController"/>
 
-    <bean class="org.andy.springmvc.annotation.controller.MethodParamTypeController"/>
+    <bean class="org.nanshan.springmvc.annotation.controller.MethodParamTypeController"/>
 
-    <bean class="org.andy.springmvc.annotation.controller.RequestParamAnnotationController"/>
+    <bean class="org.nanshan.springmvc.annotation.controller.RequestParamAnnotationController"/>
 
-    <bean class="org.andy.springmvc.annotation.controller.PathVariableAnnotationController"/>
+    <bean class="org.nanshan.springmvc.annotation.controller.PathVariableAnnotationController"/>
 
-    <bean class="org.andy.springmvc.annotation.controller.CookieAnnotationController"/>
+    <bean class="org.nanshan.springmvc.annotation.controller.CookieAnnotationController"/>
 
-    <bean class="org.andy.springmvc.annotation.controller.RequestHeaderAnnotationController"/>
+    <bean class="org.nanshan.springmvc.annotation.controller.RequestHeaderAnnotationController"/>
 
-    <bean class="org.andy.springmvc.annotation.controller.ShowFormController"/>
+    <bean class="org.nanshan.springmvc.annotation.controller.ShowFormController"/>
 
-    <bean class="org.andy.springmvc.annotation.controller.ModelAttributeAnnotationController"/>
+    <bean class="org.nanshan.springmvc.annotation.controller.ModelAttributeAnnotationController"/>
 
-    <bean class="org.andy.springmvc.annotation.controller.SessionAttributeController"/>
+    <bean class="org.nanshan.springmvc.annotation.controller.SessionAttributeController"/>
 
-    <bean class="org.andy.springmvc.annotation.controller.ValueAnnotationController"/>
+    <bean class="org.nanshan.springmvc.annotation.controller.ValueAnnotationController"/>
 
-    <bean class="org.andy.springmvc.annotation.controller.ValidateController"/>
+    <bean class="org.nanshan.springmvc.annotation.controller.ValidateController"/>
 </beans>
 
 
